@@ -5,9 +5,9 @@ import Home from "./pages/Home";
 const App = () => {
   return (
     <div>
-      hello
+   
       <Home />
-      <PopularHotel />
+ 
     </div>
   );
 };

@@ -1,0 +1,26 @@
+@import '~bootstrap/scss/functions';
+
+
+$theme-colors: (
+  'primary': #FF9200,
+  'secondary': #7E57C2,
+  'success': #ffe1ba,
+  'info': #9e925e,
+  'light': #cce2de,
+  'lighter': #d0e5e0,
+  'lightest': #eff5f4,
+  'dark': #cce2de,
+  'danger': #FF0000,
+  'reject': gray,
+  'gray-100': #f7f7f7,
+  'gray-200': #f4f4f4,
+  'gray-300': #e3e3e3,
+  'gray-400': #d0d0d0,
+  'gray-500': #b5b5b5,
+  'gray-600': #a8a8a8,
+  'gray-700': #9f9f9f,
+  'gray-800': #656464,
+  'gray-900': #333333,
+) !default;
+
+@import '~bootstrap/scss/bootstrap.scss';
