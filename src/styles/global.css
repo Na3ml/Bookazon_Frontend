@@ -5,8 +5,20 @@ background-color: #FF9200;
     background-color: #7E57C2;
 }
 .text-orange{
-    color: #FF9200;;
+    color: #FF9200;
 }
 .text-purple{
     color: #7E57C2;;
+}
+.border-orange{
+    border-color: #FF9200;
+}
+.text-gray{
+    color: gray;
+}
+.bg-red{
+    background-color: red;
+}
+text-red{
+    color: red;
 }
