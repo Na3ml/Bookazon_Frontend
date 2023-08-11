@@ -1,16 +1,24 @@
 import React from "react";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
-// import PopularHotel from "./components/popularHotel";
-// import Home from "./pages/Home"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+
+import Navbar from "./components/Navbar/Navbar";
+import Login from "./components/login/Login.jsx";
+
 const App = () => {
   return (
-    <div>
-    {/* <PopularHotel/> */}
-    {/* <Home/> */}
-      <SignIn />
-      <SignUp />
-    </div>
+
+    <>
+    <BrowserRouter>
+    <Navbar/>
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/login" element={<Login/>} />
+    </Routes>
+    
+    </BrowserRouter>
+   
+    </>
   );
 };
 
