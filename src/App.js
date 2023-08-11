@@ -1,13 +1,15 @@
 import React from "react";
-import PopularHotel from "./components/popularHotel";
-import Home from "./pages/Home";
-
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+// import PopularHotel from "./components/popularHotel";
+// import Home from "./pages/Home"
 const App = () => {
   return (
     <div>
-   
-      <Home />
- 
+    {/* <PopularHotel/> */}
+    {/* <Home/> */}
+      <SignIn />
+      <SignUp />
     </div>
   );
 };
