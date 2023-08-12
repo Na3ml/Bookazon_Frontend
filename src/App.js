@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 
 import Navbar from "./components/Navbar/Navbar";
-import Login from "./components/login/Login";
+import Login from "./components/login/Login.jsx";
 
 const App = () => {
   return (

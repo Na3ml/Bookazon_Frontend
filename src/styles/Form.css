@@ -1,0 +1,86 @@
+/* start sign in and sign up */
+.login {
+  width: 25%;
+}
+
+.register label {
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.register input {
+  border: 1px solid #000 !important;
+}
+
+.line{
+  height: 1px;
+  width: 100%;
+  position: relative;
+  background: rgba(112, 104, 104, 0.7);
+  margin: 36px 0;
+}
+
+.line::before {
+  content: "OR";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  padding: 0 15px;
+}
+
+.btn-social {
+  background-color: transparent !important;
+  border: 1px solid #424242 !important;
+  width: 100%;
+  color: #817f7f !important;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.account {
+  color: rgba(0, 0, 0, 0.4);
+}
+.forget-password label {
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+}
+.forget-password a {
+  color: #606060;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.register .agree {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@media (max-width: 576px) {
+  .login {
+    width: 90%;
+  }
+  .login-title {
+    font-size: 23px;
+  }
+  .register .agree{
+    font-size: 13px;
+  }
+}
+@media (min-width: 577px) and (max-width: 1200px) {
+  .login {
+    width: 50%;
+  }
+  .register .login-title {
+    font-size: 25px;
+  }
+}
+
+/* end sign in and sign up */
+
