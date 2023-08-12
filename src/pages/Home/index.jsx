@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import axios from "axios";
 import PopularHotel from "../../components/popularHotel";
+import Offers from "../../components/offers/Offers";
 function Home() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -24,6 +25,7 @@ function Home() {
   return (
     <Container>
         <Row>
+        <Offers/>
         {data.map((item) => {
           return (
             <Col >
