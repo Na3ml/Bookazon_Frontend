@@ -1,0 +1,226 @@
+.headerSearch{
+    height: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 36px;
+    width: 100%;
+    gap: 10px;
+}
+.headerSearchItem1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    background-color:#FF9200;
+    border-radius: 10px;
+    width: 181px;
+    height: 59px;
+    
+}
+.headerSearchItem1 a{
+    text-decoration: none;
+    color: #f3ecec;
+    margin-left: 50px;
+}
+.headerSearchItem{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+    height: 59px;
+    padding: 10px;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    box-shadow: 1px 2px  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.headerSearchInput {
+    border: none!important;
+    background-color: #F2F2F2;
+    outline: none;
+    width: 350px;
+}
+
+.check{
+    display: grid;
+}
+.headerSearchText{
+    color: lightgray;
+    cursor: pointer;
+    
+}
+/* .line{
+    background-color: black;
+    width: 1px;
+    height: 25px;
+} */
+.date {
+    border: none!important;
+    background-color: #F2F2F2;
+    outline: none;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.right {
+    margin-left: 3%;
+}
+.options{
+    position: absolute;
+    top: -5px;
+    background-color: white;
+    color: gray;
+    border-radius: 5px;
+    box-shadow: 1px 2px  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.optionItem {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.optionCounter{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: black;
+
+}
+.optionCounterButton{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #FF9200;
+    cursor: pointer;
+    background-color: white;
+}
+.optionCounterButton:disabled{
+    cursor: not-allowed;
+}
+@media only screen and (max-width: 280px){
+    
+}
+@media only screen and (max-width: 393px){
+    .headerIcon1 {
+        position: relative;
+        left: 9px;
+    }
+    .check {
+        margin-left: -20px;
+    }
+
+}
+@media only screen and (max-width: 414px) {
+    .headerSearchItem {
+        display: inline-block;
+        width: 1320px;
+        padding: 10px;
+    }
+    .headerSearchInput{
+        width: auto;
+        height: 17px;
+        margin-left: 20px;
+    }
+    .headerSearchText {
+        margin-left: 4%;
+    }
+    .headerIcon1 {
+        position: relative;
+        right: -50px;
+    }
+    
+    .options{
+        margin-top:70% !important;
+    }
+}
+@media only screen and (width: 540px) {
+    .headerSearchItem {
+        display: inline-block;
+        width: 520px;
+    }
+    .headerSearchInput{
+        width: auto;
+        height: 17px;
+        
+    }
+    .headerIcon1 {
+        position: relative;
+        left: 170px;
+    }
+    .check {
+        margin-left: 30px;
+        padding: 10px;
+    }
+    .date {
+        margin-left: 20px;
+    }
+    .options{
+        margin-top:49% !important;
+    }
+}
+@media only screen and (width: 768px) {
+    .headerSearchItem {
+        display: inline-block;
+        width: 320px;
+    }
+    .headerSearchInput{
+        width: auto;
+        height: 17px;
+        margin-left: 20px;
+    }
+    .headerIcon1 {
+        position: relative;
+        left: 40px;
+    }
+    .options{
+        margin-top:14% !important;
+    }
+}
+@media only screen and (width: 820px){
+    .options{
+        margin-top:14% !important;
+    }
+}
+@media only screen and (width: 912px){
+    .options{
+        margin-top:14% !important;
+    }
+}
+@media only screen and (width: 1024px){
+    .options{
+        margin-top:12% !important;
+    }
+}
+@media only screen and (width: 1280px){
+    .options{
+        margin-top:12% !important;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .headerSearchItem{
+        display: flex;
+        margin: 1%;
+        padding: 20px;
+    }
+    .check{
+        display: flow-root;
+    }
+    .line{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    .headerSearch {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .headerSearchItem {
+        gap: 12px;
+        padding: 10px;
+    }
+}
+
