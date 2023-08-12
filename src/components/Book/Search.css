@@ -67,7 +67,6 @@
 .right {
     margin-left: 3%;
 }
-
 .options{
     position: absolute;
     top: -5px;
@@ -112,7 +111,7 @@
     .check {
         margin-left: -20px;
     }
-    
+
 }
 @media only screen and (max-width: 414px) {
     .headerSearchItem {
