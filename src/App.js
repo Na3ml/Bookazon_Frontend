@@ -10,15 +10,13 @@ import Login from "./components/login/Login.jsx";
 const App = () => {
   return (
     <>
-    <BrowserRouter>
-    <Navbar/>
-    <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/login" element={<Login/>} />
-    </Routes>
-    
-    </BrowserRouter>
-    
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };

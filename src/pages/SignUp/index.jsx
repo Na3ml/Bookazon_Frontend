@@ -146,7 +146,7 @@ const SignUp = () => {
             />
           </Form.Group>
 
-          <Button variant="secondary" className="btn-login bg-secondary w-100 text-white mt-4 "
+          <Button variant="secondary" className=" bg-secondary w-100 text-white my-3 "
             type="submit"
           >
                Sign up

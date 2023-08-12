@@ -50,7 +50,7 @@ const SignIn = () => {
             </a>
           </div>
    
-          <Button variant="secondary" className="btn-login bg-secondary text-white w-100 mt-3">
+          <Button variant="secondary" className=" bg-secondary text-white w-100 my-3">
               Sign in
           </Button>
 
