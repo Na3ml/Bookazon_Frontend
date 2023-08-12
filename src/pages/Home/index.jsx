@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Book from '../../components/Book/index'
 import { Col, Container, Row } from "react-bootstrap";
 import axios from "axios";
 import PopularHotel from "../../components/popularHotel";
@@ -24,13 +25,15 @@ function Home() {
   }, []);
   return (
     <Container>
+      <Book />
+      <Offers />
         <Row>
         <Offers/>
         {data.map((item) => {
           return (
             <Col >
               <PopularHotel item={item} />
-             </Col>
+              </Col>
           );
         })}
       </Row>
