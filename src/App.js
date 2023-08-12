@@ -1,5 +1,6 @@
 import React from "react";
 import PopularHotel from "./components/popularHotel";
+import Book from './components/Book/index'
 import Home from "./pages/Home";
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
       hello
       <Home />
       <PopularHotel />
+      <Book />
     </div>
   );
 };

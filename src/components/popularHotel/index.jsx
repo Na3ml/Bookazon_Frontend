@@ -2,8 +2,13 @@ import React from 'react'
 
 function PopularHotel() {
   return (
-    <div>PopularHotel</div>
+    <div>PopularHotel
+      
+      
+    </div>
 
+
+    
   )
 }
 
