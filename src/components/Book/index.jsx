@@ -24,7 +24,7 @@ const index = () => {
   }
   return (
   <div className='container'>
-      <h1>Where do you want to go?</h1>
+      <h2 className='mb-5'>Where do you want to go?</h2>
         <div className="headerSearch">
           <div className="headerSearchItem">
             <FaSearch className='headerIcon' />

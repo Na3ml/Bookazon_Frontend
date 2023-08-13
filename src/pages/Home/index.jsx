@@ -27,35 +27,29 @@ function Home() {
   }, []);
   return (
     <>
+  
+   <Container>
+    <Book></Book>
+    <Offers></Offers>
+    <Row>
+    <h2 className="mb-4">Popular Hotels</h2>
 
-      <Container />
-        <Book />
-        <Offers />
-          <Row>
-          {data.map((item) => {
-            return (
-              <Col >
-                <PopularHotel item={item} />
-              </Col>
-            );
-          })}
-        </Row>
-      <Container />
-    </>
-          <h2 className="mb-4">Popular Hotels</h2>
+{data.map((item) => {
+  return (
+    <Col sx={12} md={12} >
+      <PopularHotel item={item} />
+      </Col>
+  );
+})}
 
-        {data.map((item) => {
-          return (
-            <Col sx={12} md={12} >
-              <PopularHotel item={item} />
-              </Col>
-          );
-        })}
-      </Row>
-     
-    </Container>
+    </Row>
+   </Container>
+        {/* <Book />
+        <Offers /> */}
+      
+
     
-
+    </>
   );
 }
 
