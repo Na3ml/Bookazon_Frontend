@@ -4,8 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import axios from "axios";
 import PopularHotel from "../../components/popularHotel";
 import Offers from "../../components/offers/Offers";
-import SignIn from "../SignIn";
-import SignUp from "../SignUp";
+
 function Home() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -27,9 +26,9 @@ function Home() {
   }, []);
   return (
     <>
-  <Book/>
         <Container>
-      
+        <Book></Book>
+        <Offers></Offers>
 
      
       <div>
@@ -37,10 +36,8 @@ function Home() {
       <Offers />
       </div>
         <Row>
-
-        <Offers/>
-
           <h2 className="mb-4">Popular Hotels</h2>
+
         {data.map((item) => {
           return (
             <Col sx={12} md={12} >
@@ -53,7 +50,6 @@ function Home() {
     </Container>
     
     </>
-
   );
 }
 
