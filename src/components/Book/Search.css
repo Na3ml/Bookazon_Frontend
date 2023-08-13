@@ -48,11 +48,11 @@
     cursor: pointer;
     
 }
-.line{
+/* .line{
     background-color: black;
     width: 1px;
     height: 25px;
-}
+} */
 .date {
     border: none!important;
     background-color: #F2F2F2;
