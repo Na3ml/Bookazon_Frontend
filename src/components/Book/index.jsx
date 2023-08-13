@@ -23,8 +23,8 @@ const index = () => {
     });
   }
   return (
-  <div className='all'>
-      <h1>Where do you want togo?</h1>
+  <div className='container'>
+      <h1>Where do you want to go?</h1>
         <div className="headerSearch">
           <div className="headerSearchItem">
             <FaSearch className='headerIcon' />
@@ -40,8 +40,7 @@ const index = () => {
               </span>
             </span>
             <span>
-              <RxCaretLeft />
-              <RxCaretRight />
+              
             </span>
           </div>
           <div className="headerSearchItem">
@@ -53,8 +52,7 @@ const index = () => {
               </span>
             </span>
             <span >
-            <RxCaretLeft />
-            <RxCaretRight />
+            
             </span>
           </div>
           <div className="headerSearchItem">

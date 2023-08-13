@@ -24,19 +24,21 @@ function Home() {
       });
   }, []);
   return (
-    <Container>
-      <Book />
-      <Offers />
-        <Row>
-        {data.map((item) => {
-          return (
-            <Col >
-              <PopularHotel item={item} />
+    <>
+      <Container />
+        <Book />
+        <Offers />
+          <Row>
+          {data.map((item) => {
+            return (
+              <Col >
+                <PopularHotel item={item} />
               </Col>
-          );
-        })}
-      </Row>
-    </Container>
+            );
+          })}
+        </Row>
+      <Container />
+    </>
   );
 }
 
