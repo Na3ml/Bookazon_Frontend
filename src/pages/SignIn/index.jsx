@@ -41,6 +41,7 @@ const SignIn = () => {
           </Form.Group>
 
           <div className="d-flex justify-content-between align-items-center forget-password mt-2">
+
             <div className="d-flex align-items-center">
               <Form.Check className="me-1" type="checkbox" />
               <label>Remember me</label>
@@ -50,7 +51,7 @@ const SignIn = () => {
             </a>
           </div>
    
-          <Button variant="secondary" className=" bg-secondary text-white w-100 my-3">
+          <Button variant="secondary" className="bg-secondary text-white w-100 my-3">
               Sign in
           </Button>
 
@@ -69,7 +70,7 @@ const SignIn = () => {
           Continue With Google
         </Button>
         </div>
-
+        
         <p className="account text-center">
           Don’t have an account yet? {" "}
           <a href="#" className="text-secondary text-decoration-none">

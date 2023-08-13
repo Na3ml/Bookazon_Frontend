@@ -14,7 +14,7 @@
 }
 
 .line{
-  height: 1px;
+  height: 2px;
   width: 100%;
   position: relative;
   background: rgba(112, 104, 104, 0.7);
@@ -29,7 +29,7 @@
   transform: translate(-50%, -50%);
   background: #fff;
   color: rgba(0, 0, 0, 0.5);
-  font-weight: 600;
+  font-weight: bold;
   padding: 0 15px;
 }
 
@@ -40,7 +40,7 @@
   color: #817f7f !important;
   font-size: 15px;
   font-weight: 600;
-  margin-bottom: 15px !important;
+  margin-bottom: 15px;
 }
 .account {
   color: rgba(0, 0, 0, 0.4);

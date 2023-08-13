@@ -208,9 +208,9 @@
     .check{
         display: flow-root;
     }
-    .line{
+    /* .line{
         display: none;
-    }
+    } */
 }
 
 @media only screen and (max-width: 1400px){

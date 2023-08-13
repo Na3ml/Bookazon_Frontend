@@ -146,21 +146,20 @@ const SignUp = () => {
             />
           </Form.Group>
 
-          <Button variant="secondary" className=" bg-secondary w-100 text-white my-3 "
+          <Button variant="secondary" className="btn-login bg-secondary w-100 text-white mt-3"
             type="submit"
           >
                Sign up
           </Button>
 
           
-        <div className="d-flex align-items-center mt-2">
+        <div className="d-flex align-items-start mt-2">
             <Form.Check className="me-1" type="checkbox" />
             <p className="m-0 agree">
-              Agree to the <span className="text-secondary">Terms of Use </span> 
+            I have read  and accepted the <span className="text-secondary">Terms of Use </span> 
               and {" "}  <span className="text-secondary"> {" "} Privacy Policy </span> 
             </p>
         </div>
-
         </Form>
         
           <div className="line"></div>
