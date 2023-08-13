@@ -27,22 +27,23 @@ function Home() {
   }, []);
   return (
     <>
-  {/* <Book/> */}
-        <Container>
-   
-    <SignIn></SignIn>
-    {/* <SignUp></SignUp> */}
-     
-      <div>
-      <h2 className="mb-4">Offers</h2>
-      <Offers />
-      </div>
-        <Row>
-<<<<<<< HEAD
-        <Offers/>
-=======
+
+      <Container />
+        <Book />
+        <Offers />
+          <Row>
+          {data.map((item) => {
+            return (
+              <Col >
+                <PopularHotel item={item} />
+              </Col>
+            );
+          })}
+        </Row>
+      <Container />
+    </>
           <h2 className="mb-4">Popular Hotels</h2>
->>>>>>> bb6212ecdc1d0e86fdddc4c9a3628827ab03cf01
+
         {data.map((item) => {
           return (
             <Col sx={12} md={12} >
@@ -54,7 +55,6 @@ function Home() {
      
     </Container>
     
-    </>
 
   );
 }
