@@ -11,20 +11,32 @@
     padding: 10px;
     background-color:#FF9200;
     border-radius: 10px;
-    width: 151px;
+    width: 150px;
     height: 59px;
     
 }
 .headerSearchItem1 a{
     text-decoration: none;
     color: #f3ecec;
-    margin-left: 45px;
+    margin-left: 40px;
 }
 .headerSearchItem{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 275px;
+    width: 330px;
+    gap: 15px;
+    height: 59px;
+    padding: 10px;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    box-shadow: 1px 2px  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.headerSearchItem2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 250px;
     gap: 15px;
     height: 59px;
     padding: 10px;
@@ -39,7 +51,10 @@
     outline: none;
     width: 170px;
 }
-
+.headerIcon1{
+    position: relative;
+    left: 25%;
+}
 .check{
     display: flex;
 }
@@ -47,11 +62,6 @@
     color: lightgray;
     cursor: pointer;
     
-}
-.line{
-    background-color: black;
-    width: 1px;
-    height: 25px;
 }
 .date {
     border: none!important;
@@ -112,8 +122,7 @@
 }
 @media only screen and (max-width: 393px){
     .headerIcon1 {
-        position: relative;
-        left: 60px;
+        display: none;
     }
     .check {
         margin-left: 10px;
@@ -121,12 +130,20 @@
     .headerSearchItem1 {
         margin-left: 30%;
     }
+    .headerSearch{
+        margin-left: 2%;
+    }
+    
 }
 @media only screen and (max-width: 414px) {
     .headerSearchItem {
         display: inline-block;
         width: 1320px;
-        padding: 10px;
+        padding: 15px;
+    }
+    .headerSearchItem2 {
+        width: 370px;
+        padding: 15px;
     }
     .headerSearchInput{
         width: auto;
@@ -137,8 +154,7 @@
         margin-left: 4%;
     }
     .headerIcon1 {
-        position: relative;
-        right: -100px;
+        display: none;
     }
     
     .options{
@@ -147,16 +163,19 @@
     .headerSearchItem1 {
         margin-left: 30%;
     }
+    .headerSearch{
+        margin-left: 2%;
+    }
 }
 @media only screen and (width: 540px) {
     .headerSearchItem {
         display: flex;
-        width: 230px;
+        width: 550px;
         gap: 19px;
     }
     .headerSearch{
-        padding: 13px;
         display: flex;
+        margin-left: 10px;
     }
     .headerSearchInput{
         height: 17px;
@@ -164,7 +183,7 @@
     }
     .headerIcon1 {
         position: relative;
-        
+        left: 55%;
     }
     .check{
         display: grid;
@@ -175,12 +194,22 @@
     .headerSearchItem1 {
         margin-left: 35%;
     }
+    .headerSearchItem1 {
+        margin-left: 0%;
+        width: 240px;
+    }
+    .headerSearchItem2{
+        width: 235px;
+    }
 }
 @media only screen and (width: 768px) {
     .headerSearchInput{
         width: auto;
         height: 17px;
         margin-left: 20px;
+    }
+    .headerSearch{
+        margin-left: 10%;
     }
     .options{
         margin-top:14% !important;
@@ -189,8 +218,19 @@
         padding: 45px;
         gap: 30px;
     }
+    .headerIcon1{
+        position: relative;
+        left: 50%;
+    }
     .headerSearchItem1 {
-        margin-left: 37%;
+        margin-left: 0%;
+        width: 260px;
+    }
+    .headerSearchItem{
+        width: 550px;
+    }
+    .headerSearchItem2{
+        width: 260px;
     }
 }
 @media only screen and (width: 820px){
@@ -206,7 +246,10 @@
     }
     .headerIcon1{
         position: relative;
-        left: 30px;
+        left: 60px;
+    }
+    .headerSearchItem{
+        width: 310px;
     }
 }
 @media only screen and (width: 912px){
@@ -222,12 +265,23 @@
     }
     .headerIcon1{
         position: relative;
-        left: 30px;
+        left: 80px;
     }
 }
 @media only screen and (width: 1024px){
     .options{
         margin-top:12% !important;
+    }
+    .headerSearchItem2{
+        margin-top: 1%;
+    }
+    .headerSearchItem1{
+        margin-left: 2%;
+        margin-top: 1%;
+    }
+    .headerIcon1{
+        position: relative;
+        margin-left: 25%;
     }
 }
 @media only screen and (width: 1280px){
@@ -238,9 +292,13 @@
         width: 420px;
         display: flex;
     }
+    .headerSearchItem2{
+        width: 300px;
+        margin-top: 1%;
+    }
     .headerSearchItem1{
-        margin-top: -3%;
         margin-left: 2%;
+        margin-top: 1%;
     }
     .headerIcon1{
         position: relative;
@@ -256,7 +314,6 @@
 }
 
 @media only screen and (max-width: 1400px){
-    
     .headerSearchItem {
         gap: 12px;
         padding: 10px;

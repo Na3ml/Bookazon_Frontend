@@ -5,7 +5,9 @@ import { Container } from "react-bootstrap";
 export default function Offers() {
   return (
     <Container>
+      <h2>Offers</h2>
       <div className="offers">
+        
         {Array.from({ length: 6 }, (_, i) => i + 1).map((i) => (
           <Offer key={i} />
         ))}

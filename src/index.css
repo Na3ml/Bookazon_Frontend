@@ -15,8 +15,3 @@ input::placeholder {
   color: #d0d0d0;
   font-weight: bolder;
 }
-@media only screen and (width: 1500px){
-  .br {
-    display: none;
-  }
-}

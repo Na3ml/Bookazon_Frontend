@@ -23,15 +23,16 @@ const index = () => {
     });
   }
   return (
+
   <div className='container'>
       <h1>Where do you want to go?</h1>
-        <div className="headerSearch">
+        <div className="headerSearch p-2">
           <div className="headerSearchItem">
             <FaSearch className='headerIcon' />
             <input type="text" placeholder='Going To' className='headerSearchInput'/>
             <RxCross1 className='headerIcon1'/>
           </div>
-          <div className="headerSearchItem">
+          <div className="headerSearchItem2">
             <FaCalendarDay className='headerIcon' size={30}/>
             <span className='headerSearchText'>
               <span className='check'>
@@ -39,11 +40,8 @@ const index = () => {
                 <input type="date" className="date" id="" size={16}/>
               </span>
             </span>
-            <span>
-              
-            </span>
           </div>
-          <div className="headerSearchItem">
+          <div className="headerSearchItem2">
             <FaCalendarDay className='headerIcon' size={30}/>
             <span className='headerSearchText'>
               <span className='check'>
@@ -51,11 +49,8 @@ const index = () => {
                 <input type="date" className="date" id="" size={16}/>
               </span>
             </span>
-            <span >
-            
-            </span>
           </div>
-          <div className="headerSearchItem">
+          <div className="headerSearchItem2">
             <FaPerson className='headerIcon'/>
             <span onClick={()=>setOpenOptions(!openOptions)} className='headerSearchText'>
               {`${options.adult} adult  ${options.children}  children  ${options.room} room `} </span>
@@ -91,6 +86,7 @@ const index = () => {
           </div>
         </div>
     </div>
+
   );
 };
 
