@@ -7,8 +7,12 @@ export default function Offers() {
     <Container>
       <h2>Offers</h2>
       <div className="offers">
+
         
-        {Array.from({ length: 6 }, (_, i) => i + 1).map((i) => (
+   
+
+        {Array.from({ length: 2 }, (_, i) => i + 1).map((i) => (
+
           <Offer key={i} />
         ))}
       </div>
@@ -17,7 +21,10 @@ export default function Offers() {
 }
 function Offer() {
   return (
-    <div className=" offer ">
+
+
+<div className=" offer ">
+      
       <div className="left-side">
         <h3>Plan your trip</h3>
         <p>Choose your favourate destination and plan your next excape</p>
@@ -26,5 +33,7 @@ function Offer() {
       </div>
       <img src={Image} alt="girl-travel" />
     </div>
+
+
   );
 }

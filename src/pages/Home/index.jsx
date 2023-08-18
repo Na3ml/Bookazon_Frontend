@@ -1,45 +1,15 @@
-import React, { useEffect, useState } from "react";
-import Book from '../../components/Book/index'
-import { Col, Container, Row } from "react-bootstrap";
-import axios from "axios";
-import PopularHotel from "../../components/popularHotel";
-import Offers from "../../components/offers/Offers";
+import React from "react";
+import AllHotels from "../../components/all-hotels";
+import Packages from "../../components/packages";
+import Features from "../../components/features";
+
 function Home() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    // fetch data
-    axios
-      .get("https://ayarabia.github.io/jsonData/friends.json")
-      .then(function (response) {
-        // handle success
-        setData(response.data);
-        //console.log(response.data);
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .finally(function () {
-        // always executed
-      });
-  }, []);
   return (
-    <>
-      <Container />
-        <Book />
-        <Offers />
-          <Row>
-          {data.map((item) => {
-            return (
-              <Col >
-                <PopularHotel item={item} />
-              </Col>
-            );
-          })}
-        </Row>
-      <Container />
-    </>
+      <div>
+    <AllHotels/>  
+    <Packages/> 
+    <Features/>
+      </div>
   );
 }
-
 export default Home;

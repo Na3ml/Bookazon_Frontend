@@ -1,0 +1,24 @@
+ .owl-carousel{
+    display: block !important;
+}
+.all-hotels .owl-carousel .owl-nav button.owl-prev,
+.all-hotels  .owl-carousel .owl-nav button.owl-next {
+	width: 30px;
+	height: 30px;
+	background-color: #FF9200;
+	color: white;
+	margin: 0 30px;
+}
+
+.all-hotels  .owl-nav button span {
+	font-size: 20px;
+    font-weight: bold;
+	
+}
+.all-hotels  .owl-theme .owl-nav .disabled,
+button.disabled {
+    border: 2px solid #FF9200 !important;
+    background-color: transparent !important;
+    color: #FF9200 !important;
+	/* opacity: 0.1; */
+}

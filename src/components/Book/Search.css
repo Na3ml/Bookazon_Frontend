@@ -101,6 +101,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
     width: 145px;
     gap: 15px;
     height: 59px;
@@ -111,6 +112,9 @@
     display: flex;
     align-items: center;
     width: 185px;
+
+    width: 265px;
+
     gap: 15px;
     height: 59px;
     padding: 10px;
@@ -148,6 +152,7 @@
     cursor: pointer;
     
 }
+
 .date {
     background-color: #743cd600;
     border: none!important;
@@ -555,6 +560,7 @@
         width: 420px;
         margin-left: 4%;
     }
+  
     .headerSearchItem2{
         width: 180px;
         margin-left: 5%;
@@ -568,6 +574,12 @@
         height: 350px;
         padding: 30px;
         gap: 10px;
+
+    .check{
+        display: flow-root;
     }
+    
 }
+
+
 

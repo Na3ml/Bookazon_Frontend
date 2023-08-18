@@ -32,6 +32,9 @@ const index = () => {
       <span className='title'>
         <h1 className='text-white font-bold mr-10'>Enjoy Your Dream <br />  Vacation</h1>
       </span>
+
+      <h2 className='mb-5'>Where do you want to go?</h2>
+
         <div className="headerSearch">
           <div className="headerSearchItem">
             <HiOutlineLocationMarker className='headerIcon1'/>
