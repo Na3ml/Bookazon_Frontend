@@ -47,6 +47,18 @@ const SignIn = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div className="  my-5 login">
      
@@ -111,7 +123,6 @@ const SignIn = () => {
               <Form.Check className="me-1" type="checkbox" />
               <label>Remember me</label>
             </div>
-
             <Link to={"/forget-password"} className=" text-decoration-none text-primary">
             Forgot password?
             </Link>
