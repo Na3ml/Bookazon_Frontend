@@ -1,19 +1,28 @@
 import React from "react";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Home from "./pages/Home";
-// import Login from "./components/login/Login";
-import Navigation from "./components/Navigation/Navigation";
-import Deals from "./components/Deals/Deals";
-import Reviews from "./components/Reviews/Reviews";
+import PopularHotel from "./components/popularHotel";
+import Offers from "./components/offers/Offers";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+
+import Navbar from "./components/Navbar/Navbar";
+import Login from "./components/login/Login.jsx";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 const App = () => {
   return (
     <>
-      <Navigation />
-      <Deals />
-      <Reviews />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
 
-export default App;
+export default App;
