@@ -1,0 +1,17 @@
+.packages .package-card {
+    background-image: url("../../assets/imgs/package1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+.packages .package-card p{
+    font-size: 18px;
+}
+.packages .package-card  img{
+/* width:140px ;
+height: 20px; */
+top: 53%;
+right: 33%;
+transform: translateY(-53%);
+}
