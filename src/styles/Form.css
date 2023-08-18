@@ -1,6 +1,20 @@
 /* start sign in and sign up */
 .login {
-  width: 25%;
+  overflow: hidden;
+}
+.bg-gradient-100,.bg-gradient-200{
+  background: linear-gradient(128deg, rgba(126, 87, 194, 0.58) 5.21%, #FFBE66 100%);
+}
+.bg-gradient-100{
+  height: 730px;
+
+}
+.bg-gradient-200{
+  height: 1200px;
+}
+
+.login .login-form{
+  width: 25% !important;
 }
 
 .register label {
@@ -33,7 +47,7 @@
   padding: 0 15px;
 }
 
-.btn-social {
+.login .btn-social {
   background-color: transparent !important;
   border: 1px solid #424242 !important;
   width: 100%;
@@ -42,17 +56,10 @@
   font-weight: 600;
   margin-bottom: 15px;
 }
-.account {
-  color: rgba(0, 0, 0, 0.4);
-}
+
 .forget-password label {
   color: #000;
   font-size: 14px;
-  font-weight: 500;
-}
-.forget-password a {
-  color: #606060;
-  font-size: 15px;
   font-weight: 500;
 }
 
@@ -63,22 +70,27 @@
 }
 
 @media (max-width: 576px) {
-  .login {
-    width: 90%;
-  }
-  .login-title {
-    font-size: 23px;
-  }
-  .register .agree{
+  .register .agree {
     font-size: 13px;
   }
-}
-@media (min-width: 577px) and (max-width: 1200px) {
-  .login {
-    width: 50%;
+  .login .login-form{
+    width: 80% !important;
   }
-  .register .login-title {
-    font-size: 25px;
+  .login   .bg-login{
+    display: none;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px){
+  .login .login-form{
+    width: 50% !important;
+  }
+  .login  .bg-login{
+   display: none;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .login .login-form{
+    width: 40% !important;
   }
 }
 
