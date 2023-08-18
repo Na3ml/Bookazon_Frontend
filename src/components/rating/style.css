@@ -1,9 +1,14 @@
 .rating__star{
-color: #464646 !important;
+/* color: #464646 !important; */
+color: #757095 !important;
+}
+.go2062499365{
+    margin: 1px !important;
 }
 .rating__star--full{
-    color: #FF9200;
+    color: #757095 !important;
 }
 .go4197845992{
-    font-size: 21px !important;
+    font-size: 19px !important;
+   
 }

@@ -15,4 +15,7 @@ input::placeholder {
   font-size: 14px;
   font-weight: 400;
 }
+p{
+  line-height: 1.7;
+}
 
