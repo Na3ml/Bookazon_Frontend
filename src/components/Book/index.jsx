@@ -1,13 +1,16 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from 'react';
-import { FaSearch , FaCalendarDay,  } from 'react-icons/fa'
-import { FaDisplay, FaPerson } from 'react-icons/fa6'
-import { RxCross1 ,RxCaretLeft ,RxCaretRight} from 'react-icons/rx'
-import './Search.css'
+import { HiOutlineLocationMarker } from 'react-icons/hi'
+import { BsCalendarWeek, BsPerson } from 'react-icons/bs'
+import { Stack , Avatar} from '@mui/material'
+
+
+import './Search.css';
 
 
 const index = () => {
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [openOptions, setOpenOptions] = useState(false);
   const [options,setOptions] = useState({
     adult: 1,
@@ -25,34 +28,37 @@ const index = () => {
   return (
 
   <div className='container'>
-      <h1>Where do you want to go?</h1>
-        <div className="headerSearch p-2">
+    <div className='home'>
+      <span className='title'>
+        <h1 className='text-white font-bold mr-10'>Enjoy Your Dream <br />  Vacation</h1>
+      </span>
+        <div className="headerSearch">
           <div className="headerSearchItem">
-            <FaSearch className='headerIcon' />
-            <input type="text" placeholder='Going To' className='headerSearchInput'/>
-            <RxCross1 className='headerIcon1'/>
+            <HiOutlineLocationMarker className='headerIcon1'/>
+            <input type="search" placeholder='Where To?' className='headerSearchInput'/>
+            <span className='result'>Egypt</span>
           </div>
           <div className="headerSearchItem2">
-            <FaCalendarDay className='headerIcon' size={30}/>
+            <BsCalendarWeek className='headerIcon' />
             <span className='headerSearchText'>
-              <span className='check'>
+              <span className='check text-white'>
                 Check in 
-                <input type="date" className="date" id="" size={16}/>
               </span>
+              <input type="date" className="date" id="" size={16}/>
             </span>
           </div>
           <div className="headerSearchItem2">
-            <FaCalendarDay className='headerIcon' size={30}/>
+          <BsCalendarWeek className='headerIcon'/>
             <span className='headerSearchText'>
-              <span className='check'>
-                Check out 
-                <input type="date" className="date" id="" size={16}/>
+              <span className='check text-white'>
+                Check out
               </span>
+              <input type="date" className="date" id="" size={16}/>
             </span>
           </div>
-          <div className="headerSearchItem2">
-            <FaPerson className='headerIcon'/>
-            <span onClick={()=>setOpenOptions(!openOptions)} className='headerSearchText'>
+          <div className="headerSearchItem3">
+            <BsPerson className='headerIcon2' />
+            <span onClick={()=>setOpenOptions(!openOptions)} className='headerSearchText1'>
               {`${options.adult} adult  ${options.children}  children  ${options.room} room `} </span>
               {openOptions && <div className='options'>
                 <div className='optionItem'>
@@ -82,11 +88,24 @@ const index = () => {
               </div>}
           </div>
           <div className="headerSearchItem1">
-              <a href='#' className='headerBtn'>Search</a>
+              <a href='#' className='headerBtn'>Find Now</a>
           </div>
         </div>
+        <div className="avatar">
+          <Stack spacing={1}>
+            <Stack direction='row' spacing={-1}>
+              <Avatar sx={{ bgcolor: 'primary.light' }}>FE</Avatar>
+              <Avatar sx={{ bgcolor: 'success.light' }}>BE</Avatar>
+              <Avatar sx={{ bgcolor: 'primary.light' }}></Avatar>
+              <Avatar sx={{ bgcolor: 'success.light' }}>FE</Avatar>
+              <Avatar sx={{ bgcolor: 'primary.light' }}>BE</Avatar>
+              <Avatar src=''>+</Avatar>
+            </Stack>
+          </Stack>
+          <p>2,500 people booked in last 24 hours</p>
+        </div>
     </div>
-
+  </div>
   );
 };
 
