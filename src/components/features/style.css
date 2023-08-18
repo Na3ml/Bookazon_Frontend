@@ -32,8 +32,15 @@ font-size: 18px;
     position: absolute;
     bottom: 40px;
 }
-@media(max-width: 768px) {
+@media(max-width: 779px) {
    .services{
     position: static !important;
    } 
+   
+   .feature .describtion{
+    padding-right: 5px;
+}
+
   }
+
+
