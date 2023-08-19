@@ -12,7 +12,7 @@ function Footer() {
   return (
     <div className="main">
       <div className="footer">
-        <div className="left">
+        <div className="footer-left">
           <img src={logo} alt="logo" />
           <p>
             Vel officiis dolor ea illo aut eligendi ullam non <br />
@@ -54,14 +54,18 @@ function Footer() {
             </a>
           </ul>
         </div>
-        <div className="right">
+        <div className="footer-right">
           <h5>Subscribe to our newsletter</h5>
           <input type="email" placeholder="Your Email" className="mail-input" />
+
           <img src={mail} alt="mail" className="mail-img"/>
+
+          <img src={mail} alt="mail" className="mail-img" />
+
         </div>
       </div>
       <div className="under">
-        <div className="right-under">
+        <div className="footer-right-under">
           <Link href="/">
             <LinkedInIcon fontSize="medium" style={{ color: "white" }} />
           </Link>
@@ -77,7 +81,7 @@ function Footer() {
             <FacebookIcon fontSize="medium" style={{ color: "white" }} />{" "}
           </Link>
         </div>
-        <div className="left-under">
+        <div className="footer-left-under">
           <p>Copyright © 2023 Bookazon. All Rights Reserved </p>
         </div>
       </div>

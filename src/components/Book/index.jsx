@@ -8,7 +8,7 @@ import { Stack , Avatar} from '@mui/material'
 import './Search.css';
 
 
-const index = () => {
+const Book = () => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [openOptions, setOpenOptions] = useState(false);
@@ -27,13 +27,12 @@ const index = () => {
   }
   return (
 
-  <div className='container'>
+  <div className='search'>
     <div className='home'>
       <span className='title'>
         <h1 className='text-white font-bold mr-10'>Enjoy Your Dream <br />  Vacation</h1>
       </span>
 
-      <h2 className='mb-5'>Where do you want to go?</h2>
 
         <div className="headerSearch">
           <div className="headerSearchItem">
@@ -112,4 +111,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Book;
