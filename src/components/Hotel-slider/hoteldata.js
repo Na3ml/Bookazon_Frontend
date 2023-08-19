@@ -1,6 +1,6 @@
-import author from "../../assests/imgs/author.png";
-import hotel1 from "../../assests/imgs/hotel1.png";
-import hotel2 from "../../assests/imgs/hotel2.png";
+import author from "../../assets/imgs/author.png";
+import hotel1 from "../../assets/imgs/hotel1.png";
+import hotel2 from "../../assets/imgs/hotel2.png";
 
 export const hotelData = [
   {
