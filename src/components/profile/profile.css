@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+.profile {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+.profile .sidebar {
+  width: 395px;
+  border-right: 1px solid #cfcdcd;
+  z-index: 99999;
+  padding: 45px 74px 174px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile .sidebar h4 {
+  color: black;
+  font-size: 24px;
+  font-weight: 400;
+}
+.profile .sidebar a {
+  color: #6c6b6b;
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  width: 220px;
+}
+.sidebar a:hover {
+  color: #7e57c2;
+}
+.profile .sidebar .icon {
+  margin-right: 12px;
+  width: 24px;
+  height: 24px;
+}
+.profile p {
+  margin: 0;
+}
+.profile .sidebar .link p::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  bottom: -4px;
+  left: 0;
+  background-color: #7e57c2;
+  transition: all 0.3s ease;
+}
+.profile .sidebar .link:hover p::before {
+  width: 100%;
+}
+.profile .sidebar .link::after {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  color: #292d32;
+  transition: all 0.3s ease;
+}
+.profile .sidebar .link:hover::after {
+  top: 0%;
+  transform: rotate(90deg);
+}
+.profile .sidebar a:last-of-type {
+  color: #f75555;
+  font-size: 22px;
+  font-weight: 500;
+}
+/* ============================================================================== */
+.profile .section {
+  /* width: 100%; */
+  margin: 46px 20px;
+}
+.profile .section form {
+  width: 453px;
+}
+.profile .section form label {
+  font-size: 14px;
+  color: #555;
+}
+.profile .section .image {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 8px 0 34px;
+}
+.profile .section .image img:not(.profile-edit-icon) {
+  width: 97px;
+}
+.profile .section .image .profile-edit-icon {
+  position: absolute;
+  background-color: #bab1ca;
+  border-radius: 50%;
+  color: white;
+  width: 30px;
+  height: 30px;
+  bottom: 0;
+  left: 52%;
+}
+.profile .section .image img {
+  width: 80px;
+}
+.profile .section .name-form {
+  gap: 33px;
+  display: flex;
+  justify-content: space-between;
+}
+.profile .section .form-group {
+  margin-top: 22px;
+}
+
+.profile .section form input {
+  border-radius: 6px;
+  border: 1px solid #817f7f;
+}
+.profile .section .btn-sumbit {
+  width: 100%;
+  background-color: #7e57c2;
+  border: none;
+  color: white;
+  margin-top: 48px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.profile .section .btn-sumbit:hover {
+  background-color: #6d3cc3;
+  color: white;
+}
+.profile input::-webkit-outer-spin-button,
+.profile input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.profile input[type="number"] {
+  -moz-appearance: textfield;
+}
