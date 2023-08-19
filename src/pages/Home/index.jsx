@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+import Book from '../../components/Book/index'
 import { Col, Container, Row } from "react-bootstrap";
 import axios from "axios";
 import PopularHotel from "../../components/popularHotel";
+import Offers from "../../components/offers/Offers";
+
 function Home() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -22,17 +25,31 @@ function Home() {
       });
   }, []);
   return (
-    <Container>
+    <>
+        <Container>
+        <Book></Book>
+        <Offers></Offers>
+
+     
+      <div>
+      <h2 className="mb-4">Offers</h2>
+      <Offers />
+      </div>
         <Row>
+          <h2 className="mb-4">Popular Hotels</h2>
+
         {data.map((item) => {
           return (
-            <Col >
+            <Col sx={12} md={12} >
               <PopularHotel item={item} />
-             </Col>
+              </Col>
           );
         })}
       </Row>
+     
     </Container>
+    
+    </>
   );
 }
 
