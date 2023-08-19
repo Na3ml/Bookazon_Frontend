@@ -1,0 +1,141 @@
+.main-div {
+  background: #f4f4f4;
+  /* opacity: 0.9; */
+}
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.right ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+  list-style: none;
+}
+
+.right ul li {
+  list-style: none;
+  margin-left: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 10px 15px;
+}
+.right a {
+  text-decoration: none;
+  color: #333;
+}
+.right ul li:hover {
+  color: #7e57c2;
+  transition: 0.3s;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #cccbcb;
+}
+.nav-btn {
+  border: none;
+  padding: 5px 30px;
+  border-radius: 5px;
+  /* margin-left: 70px; */
+  margin-top: 5px;
+  cursor: pointer;
+  background-color: #7e57c2;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+}
+.mobile-btn {
+  display: none;
+  position: absolute;
+  right: 3rem;
+  top: 15px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 821px) {
+  .mobile-btn {
+    display: block;
+  }
+  .right {
+    /* display: none; */
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    margin-top: 560px;
+    width: 50%;
+    z-index: 5;
+    margin-right: -60px;
+    height: 500px;
+    right: 0;
+  }
+  .right-click {
+    display: none;
+  }
+  .right ul {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .right ul li {
+    margin: 20px 0;
+    padding: 10px 15px;
+  }
+  .nav-btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .right {
+    margin-right: -37px;
+  }
+}
+
+/* @media screen and (max-width:770px){
+    .mobile-btn{
+      display: block;
+      position: absolute;
+      right: 1rem;
+      top: 10px;
+      cursor: pointer;
+    }
+    .right{
+      display: none;
+    }
+} */
+
+@media screen and (max-width: 600px) {
+  .right {
+    margin-right: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    margin-top: 900px;
+    width: 50%;
+    z-index: 5;
+    margin-right: -12px;
+    height: 850px;
+  }
+  .right ul {
+  }
+}
+@media screen and (max-width: 1200px) {
+  .right ul {
+    margin: 0;
+  }
+  .right ul li {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 993px) {
+  .nav-btn {
+    padding: 5px 10px;
+  }
+}
