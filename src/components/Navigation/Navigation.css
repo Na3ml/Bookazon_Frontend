@@ -1,6 +1,6 @@
 .main-div {
   background: #f4f4f4;
-  /* opacity: 0.9; */
+  opacity: 0.9;
 }
 .nav-bar {
   display: flex;
@@ -112,6 +112,10 @@
 } */
 
 @media screen and (max-width: 600px) {
+  .main-div {
+    background: #f4f4f4;
+    opacity: 1;
+  }
   .right {
     margin-right: 0;
     flex-direction: column;

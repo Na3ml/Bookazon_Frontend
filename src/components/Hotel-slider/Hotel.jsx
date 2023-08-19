@@ -24,14 +24,14 @@ function Hotel() {
           <div className="author">
             <img src={author} alt="author" />
             <div className="name">
-              <p className="main">Hotel Manager</p>
+              <p className="manager">Hotel Manager</p>
               <p>George</p>
             </div>
           </div>
         </div>
         <div className="imgs">
           <div className="circle"></div>
-          <div className="line"></div>
+          <div className="line-img"></div>
           <img src={hotel1} alt="" className="hotel1" />
           <img src={hotel2} alt="" className="hotel2" />
           <div className="hotelrate">

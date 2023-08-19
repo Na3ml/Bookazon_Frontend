@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Navigation.css";
 import Logo from "../../assets/imgs/Group 21.png";
 import { AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [click, setClick] = useState(true);
@@ -17,14 +18,14 @@ const Navigation = () => {
         </div>
         <div className={click ? "right" : "right-click"}>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">EN</a></li>     
-            <li><a href="/">Hotels</a></li>
-            <li><a href="/">Deals</a></li>
-            <li><a href="/">Features</a></li>
-            <li><a href="/">Contact Us</a></li>
+            <li><Link to={"/"}>Home</Link></li>
+            <li><Link to={"/"}>EN</Link></li>     
+            <li><Link to={"/"}>Hotels</Link></li>
+            <li><Link to={"/"}>Deals</Link></li>
+            <li><Link to={"/"}>Features</Link></li>
+            <li><Link to={"/"}>Contact Us</Link></li>
             <li>
-                 <a href="/"> <button className="nav-btn">Login</button></a>
+                 <Link to={"/signin"}> <button className="nav-btn">Login</button></Link>
             </li>
           </ul>
         </div>
