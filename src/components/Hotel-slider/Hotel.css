@@ -1,114 +1,114 @@
- .container {
-     width: 80vw;
-     height: 120vh;
-     margin: auto;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     gap: 25px;
- }
+.about .container {
+    width: 80vw;
+    height: 120vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
 
- .info {
-     flex-basis: 60%;
-     display: flex;
-     flex-direction: column;
-     gap: 25px;
-     
- }
+.about .info {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 
- .container h1 {
-     font-size: 55px;
-     letter-spacing: 1.8px;
-     font-weight: 500;
-     margin: 0;
- }
+}
 
- .info>p {
-     line-height: 1.8;
-     font-size: 20px;
-     margin: 0;
- }
+.about .container h1 {
+    font-size: 55px;
+    letter-spacing: 1.8px;
+    font-weight: 500;
+    margin: 0;
+}
 
- .author {
-     display: flex;
-     align-items: center;
-     gap: 20px;
- }
+.about .info>p {
+    line-height: 1.8;
+    font-size: 20px;
+    margin: 0;
+}
 
- .author p {
-     margin: 5px 0;
- }
+.about .author {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
- .author .main {
-     color: #ff9200;
-     font-size: 20px;
-     font-weight: 500;
- }
+.about .author p {
+    margin: 5px 0;
+}
 
- .author img {
-     width: 70px;
-     height: 70px;
- }
+.about .author .manager {
+    color: #ff9200;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.about .author img {
+    width: 70px;
+    height: 70px;
+}
 
 
- .imgs {
-     position: relative;
-     flex-basis: 40%;
- }
+.about .imgs {
+    position: relative;
+    flex-basis: 40%;
+}
 
- .hotel1 {
-     position: absolute;
-     width: 368px;
-     height: 453px;
-     top: 30px;
-     left: 30px;
- }
+.about .hotel1 {
+    position: absolute;
+    width: 368px;
+    height: 453px;
+    top: 30px;
+    left: 30px;
+}
 
- .hotel2 {
-     position: absolute;
-     width: 368px;
-     height: 453px;
-     top: -80px;
-     right: -80px;
- }
+.about .hotel2 {
+    position: absolute;
+    width: 368px;
+    height: 453px;
+    top: -80px;
+    right: -80px;
+}
 
- .line {
-     border-radius: 4px;
-     border: 4px solid #7E57C2;
-     width: 368px;
-     height: 453px;
- }
+.about .line-img {
+    border-radius: 4px;
+    border: 4px solid #7E57C2;
+    width: 368px;
+    height: 453px;
+}
 
- .circle {
-     position: absolute;
-     background: rgba(164, 141, 203, 0.18);
-     border-radius: 50%;
-     width: 184px;
-     height: 184px;
-     top: -170px;
-     left: 140px;
- }
+.about .circle {
+    position: absolute;
+    background: rgba(164, 141, 203, 0.18);
+    border-radius: 50%;
+    width: 184px;
+    height: 184px;
+    top: -170px;
+    left: 140px;
+}
 
- .hotelrate {
-     position: absolute;
-     top: -150px;
-     right: -50px;
-     /* border: solid 1px #FFFFFF; */
-     box-shadow: 0px 0px 5px #eeeeee;
-     border-radius: 4px;
-     background: #fff;
-     padding: 20px;
-     text-align: center;
- }
+.hotelrate {
+    position: absolute;
+    top: -150px;
+    right: -50px;
+    /* border: solid 1px #FFFFFF; */
+    box-shadow: 0px 0px 5px #eeeeee;
+    border-radius: 4px;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+}
 
- .reviews-count {
-     color: #757575;
-     font-size: 14px;
-     opacity: 0.5;
- }
+.reviews-count {
+    color: #757575;
+    font-size: 14px;
+    opacity: 0.5;
+}
 
- .rating {
-     color: #000;
-     font-family: Besley;
-     font-size: 38px;
- }
+.rating {
+    color: #000;
+    font-family: Besley;
+    font-size: 38px;
+}

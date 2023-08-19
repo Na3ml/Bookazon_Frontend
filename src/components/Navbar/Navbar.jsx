@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
-import { AiOutlineDown, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineDown} from "react-icons/ai";
 import { FaFaceSmile } from "react-icons/fa6";
-import { HiOutlineUser } from "react-icons/hi";
+// import { HiOutlineUser } from "react-icons/hi";
 import Logo from "../../assets/imgs/Group 21.png";
-import Smile from "../../assets/imgs/Smile.png";
+// import Smile from "../../assets/imgs/Smile.png";
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
