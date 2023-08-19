@@ -57,7 +57,11 @@ function Footer() {
         <div className="footer-right">
           <h5>Subscribe to our newsletter</h5>
           <input type="email" placeholder="Your Email" className="mail-input" />
+
+          <img src={mail} alt="mail" className="mail-img"/>
+
           <img src={mail} alt="mail" className="mail-img" />
+
         </div>
       </div>
       <div className="under">

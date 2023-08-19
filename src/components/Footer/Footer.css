@@ -1,6 +1,10 @@
 .main {
     background-image: linear-gradient(rgba(255, 224, 166, 1), rgba(126, 87, 194, 1));
+
+    position: absolute;
+
     /* position: absolute; */
+
     bottom: 0;
     width: 100%;
 }
@@ -13,6 +17,15 @@
 
 }
 
+
+.main .right .mail-img {
+    position: absolute;
+    right: 70px;
+    top: 100px;
+}
+
+.main .left p {
+
 .main .footer-right .mail-img {
     position: absolute;
     right: 60px;
@@ -20,16 +33,25 @@
 }
 
 .main .footer-left p {
+
     color: #000000;
     line-height: 2;
     font-weight: 450;
 }
+
+
+.main .list ul li {
+    list-style: none;
+}
+
+.main .list ul a {
 
 .main ul li {
     list-style: none;
 }
 
 .main ul a {
+
     text-decoration: none;
     color: #000000;
     line-height: 1.5;
@@ -37,7 +59,10 @@
     text-indent: -30px;
 }
 
+.main .right .mail-input {
+
 .footer-right .mail-input {
+
     position: relative;
     width: 270px;
     height: 60px;
@@ -48,11 +73,19 @@
     padding-left: 20px;
 }
 
+
+.main .right px input::placeholder {
+    padding-left: 15px;
+}
+
+.main .right input:focus {
+
 .main .footer-right px input::placeholder {
     padding-left: 15px;
 }
 
 .main .footer-right input:focus {
+
     outline: none
 }
 
@@ -68,7 +101,11 @@
     color: #FFFFFF;
 }
 
+
+.main .under .right-under {
+
 .main .under .footer-right-under {
+
     display: flex;
     justify-content: space-between;
     gap: 20px;
