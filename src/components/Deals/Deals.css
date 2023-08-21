@@ -1,7 +1,7 @@
 .main-deals {
   /* display: flex;
   justify-content: space-around; */
-  margin-top: 70px;
+  margin-top: 170px;
   /* padding-right: 70px;    */
   /* flex-basis: 80%;*/
   /* width: 80%;  */
@@ -10,7 +10,8 @@
 }
 
 .deals-right {
-  /* margin-right: 170px; */
+  /* margin-right: 170px; */  
+  padding-bottom: 175px; ;
 }
 
 .main-deals-title {
