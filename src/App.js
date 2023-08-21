@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Login from "./components/login/Login";
-import Profile from "./components/profile/Profile";
+// import Login from "./components/login/Login";
+// import Profile from "./components/profile/Profile";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import { Toaster } from "react-hot-toast";
