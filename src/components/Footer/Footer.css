@@ -1,69 +1,43 @@
 .main {
     background-image: linear-gradient(rgba(255, 224, 166, 1), rgba(126, 87, 194, 1));
-
-    position: absolute;
-
     /* position: absolute; */
-
     bottom: 0;
     width: 100%;
 }
 
 .main .footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-
-
+    /* display: flex;
+    justify-content: space-between; */
+    padding-top: 50px;
+    width: 100%;
 }
 
-
-.main .right .mail-img {
-    position: absolute;
-    right: 70px;
-    top: 100px;
+.main .footer-right {
+    margin-right: 70px;
+    margin-bottom: 80px;
 }
-
-.main .left p {
 
 .main .footer-right .mail-img {
     position: absolute;
     right: 60px;
-    margin-top: 16px;
+    left: 230px;
+    top: 15px;
 }
 
-.main .footer-left p {
-
-    color: #000000;
-    line-height: 2;
-    font-weight: 450;
+.main .footer-right .input-img {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
-
-.main .list ul li {
-    list-style: none;
+.main .footer-right .input-img h5 {
+    position: absolute;
+    bottom: 10px;
+    width: 250px;
 }
-
-.main .list ul a {
-
-.main ul li {
-    list-style: none;
-}
-
-.main ul a {
-
-    text-decoration: none;
-    color: #000000;
-    line-height: 1.5;
-    font-weight: 600;
-    text-indent: -30px;
-}
-
-.main .right .mail-input {
 
 .footer-right .mail-input {
-
-    position: relative;
+    position: absolute;
     width: 270px;
     height: 60px;
     border: none;
@@ -73,21 +47,32 @@
     padding-left: 20px;
 }
 
-
-.main .right px input::placeholder {
-    padding-left: 15px;
-}
-
-.main .right input:focus {
-
 .main .footer-right px input::placeholder {
     padding-left: 15px;
 }
 
 .main .footer-right input:focus {
-
     outline: none
 }
+
+.main .footer-left p {
+    color: #000000;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.main ul li {
+    list-style: none;
+}
+
+.main ul a {
+    text-decoration: none;
+    color: #000000;
+    line-height: 1.5;
+    font-weight: 600;
+    text-indent: -30px;
+}
+
 
 .main .under {
     display: flex;
@@ -101,11 +86,7 @@
     color: #FFFFFF;
 }
 
-
-.main .under .right-under {
-
 .main .under .footer-right-under {
-
     display: flex;
     justify-content: space-between;
     gap: 20px;
