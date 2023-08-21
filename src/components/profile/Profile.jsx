@@ -5,6 +5,7 @@ import { FiEye } from "react-icons/fi";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { TbLogout } from "react-icons/tb";
 import { IoNotificationsOutline } from "react-icons/io5";
+import { TbTicket } from "react-icons/tb";
 import ProfileImage from "../../assets/imgs/profile.jpeg";
 import Brush from "../../assets/imgs/brush-icon.png";
 import "./profile.css";
@@ -25,6 +26,12 @@ function SideBar() {
         <p>
           <CgProfile className="icon" />
           Edit Profile
+        </p>
+      </a>
+      <a href="./" className="link">
+        <p>
+          <TbTicket className="icon" />
+          My Booking
         </p>
       </a>
       <a href="./" className="link">

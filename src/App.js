@@ -17,6 +17,7 @@ const App = () => {
         </Routes>
       </BrowserRouter>
       <Offers />
+      <Profile />
     </>
   );
 };
