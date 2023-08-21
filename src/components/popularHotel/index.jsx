@@ -9,7 +9,7 @@ import Rating from "../rating";
 function PopularHotel() {
   return (
     <div className="rounded mb-4 d-flex flex-column flex-md-row  justify-content-between px-0 " style={{boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px'}}>
-      <img src={img} className="rounded-top"/>
+      <img src={img} className="rounded-top" alt=""/>
      <div className="p-4">
         <div className="d-flex align-items-center">
         <h4 className="text-secondary me-5">Hotel Gasteresidenz pelikanviertel</h4>
@@ -30,7 +30,7 @@ function PopularHotel() {
         <div className="d-flex align-items-center justify-content-between  flex-wrap">
           <p className="fs-4" >Gasteresidenz hotels</p>
           <div className="d-flex  ms-md-5 ms-0 border-danger border mb-3 ">
-            <span className="h-100 text-white bg-red px-1 py-1">20%</span>
+            <span className="h-100 text-white bg-danger px-1 py-1">20%</span>
             <p className="bg-white px-3 py-1 mb-0 ">Less than usual</p>
           </div>
         </div>

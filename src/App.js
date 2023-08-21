@@ -1,25 +1,27 @@
 import React from "react";
-import PopularHotel from "./components/popularHotel";
-import Offers from "./components/offers/Offers";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/login/Login";
 import Profile from "./components/profile/Profile";
+// import Navbar from "./components/Navbar/Navbar";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import Navigation from "./components/Navigation/Navigation";
+
 const App = () => {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
-      <Offers />
-      <Profile />
     </>
   );
 };
 
-export default App;
+export default App;
