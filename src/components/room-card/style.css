@@ -1,0 +1,11 @@
+.room-card {
+    height:400px
+}
+.room-card .rating__star {
+  /* color: #464646 !important; */
+  color: #ffffff !important;
+}
+.room-card .rating__star--full {
+  color: #FFBA0A !important;
+}
+
