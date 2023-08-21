@@ -1,0 +1,32 @@
+.all-rooms .owl-carousel .owl-nav button.owl-prev,
+.all-rooms  .owl-carousel .owl-nav button.owl-next {
+	width: 30px;
+	height: 30px;
+	background-color: #7E57C2;
+	color: white;
+	margin: 0 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.all-rooms .owl-carousel .owl-nav button.owl-prev{
+    left: -75px;
+}.all-rooms  .owl-carousel .owl-nav button.owl-next {
+     right: -75px;
+}
+.all-rooms   .owl-nav button span {
+	font-size: 20px;
+    font-weight: bold;	
+}
+.all-rooms  .owl-theme .owl-nav .disabled,
+button.disabled {
+    border: 2px solid #7E57C2 !important;
+    background-color: transparent !important;
+    color: #7E57C2 !important;
+}
+.all-rooms .owl-theme .owl-dots .owl-dot span{
+background-color: rgba(126, 87, 194, 0.22)
+}
+.all-rooms  .owl-theme .owl-dots .owl-dot.active span,.all-rooms  .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #7E57C2;
+}
