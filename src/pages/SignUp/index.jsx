@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
@@ -8,17 +8,44 @@ import {Link, useNavigate } from "react-router-dom";
 import {useFormik } from "formik";
 import * as Yup from "yup"
 import "../../styles/Form.css";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+import { RotatingLines } from "react-loader-spinner";
+
+
+
+
+let baseUrl="https://bookazon.tadafoq.com/Bookazon_Backend/public";
+
+
+
+
+
 
 
 const SignUp = () => {
 
-  
+  const [loading, setLoading] = useState(false);
   const navigate=useNavigate();
 
 
 
-  const handleRegister=(values)=>{
-    navigate("/signin")
+  const handleRegister=async(values)=>{
+    try {
+      setLoading(true)
+      let {data}= await axios.post(`${baseUrl}/api/auth/register`,values)
+    console.log(data);
+      if(data.message){
+        toast.success(data.message,{duration:2000,className:"text-primary px-4 fw-bolder"});       
+      navigate("/signin")
+      }
+    } catch (error) {
+     
+      toast.error(error.response.data.message,{duration:2000,className:"text-danger px-4 fw-bolder"});
+    }
+    finally {
+      setLoading(false);
+    }
   }
 
 
@@ -193,8 +220,14 @@ const SignUp = () => {
            disabled={!(formik.isValid && formik.dirty)}
            className="btn-login bg-secondary w-100 text-white mt-3"
             type="submit">
-               Sign up
-          </Button>
+            {!loading ? "Sign up" :
+    <RotatingLines strokeColor="#fff" strokeWidth="5" animationDuration="0.75" width="20" 
+      />}  
+         </Button>
+
+     
+
+     
 
           
         <div className="d-flex align-items-start mt-2">

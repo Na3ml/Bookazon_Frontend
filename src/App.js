@@ -5,10 +5,12 @@ import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/login/Login.jsx";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <>
+    <Toaster />
       <BrowserRouter>
         <Navbar />
         <Routes>

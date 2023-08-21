@@ -1,0 +1,51 @@
+.banner-amenities {
+  background-image: url(../../assets/imgs/Rectangle\ 19406.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+}
+.banner-amenities .card-amenities {
+  right: 80px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 500px;
+  height: 450px;
+  border-radius: 4px;
+  border: 2px solid #7e57c2;
+  background: #fff;
+  /* background: rgba(255, 255, 255, 0.8); */
+  box-shadow: 0px 4px 4px 8px #fff;
+
+}
+.banner-amenities .card-amenities p{
+  font-size: 12px;
+  font-weight: 500;
+}
+.banner-amenities .text-amenities{
+  font-size: 14px;
+  font-weight: 500;
+}
+@media(max-width:767px){
+  .banner-amenities{
+    background-image: none;
+  }
+  .banner-amenities .card-amenities p{
+    font-size: 14px;
+  }
+  .banner-amenities .card-amenities{
+    position: static !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: none ;
+    width: 80%;
+    margin:auto;
+  } 
+  .banner-amenities .text-amenities{
+    font-size: 10px !important;
+  }
+}
+
+
+
