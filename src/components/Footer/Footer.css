@@ -1,11 +1,52 @@
 .main {
-    background-image: linear-gradient(rgba(255, 224, 166, 1), rgba(126, 87, 194, 1));
-    /* position: absolute; */
-    bottom: 0;
-    width: 100%;
+  background-image: linear-gradient(
+    rgba(255, 224, 166, 1),
+    rgba(126, 87, 194, 1)
+  );
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
 }
 
 .main .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.main .footer-right .mail-img {
+  position: absolute;
+  right: 68px;
+  margin-top: -42px;
+}
+
+.main .footer-left p {
+  color: #000000;
+  line-height: 2;
+  font-weight: 450;
+}
+
+.main ul li {
+  list-style: none;
+}
+
+.main ul a {
+  text-decoration: none;
+  color: #000000;
+  line-height: 1.5;
+  font-weight: 600;
+  text-indent: -30px;
+}
+
+.footer-right .mail-input {
+  position: relative;
+  width: 270px;
+  height: 60px;
+  border: none;
+  background-color: #ffffff;
+  color: #282828;
+  border-radius: 5px;
+  padding-left: 20px;
     /* display: flex;
     justify-content: space-between; */
     padding-top: 50px;
@@ -48,11 +89,11 @@
 }
 
 .main .footer-right px input::placeholder {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 
 .main .footer-right input:focus {
-    outline: none
+  outline: none;
 }
 
 .main .footer-left p {
@@ -75,19 +116,19 @@
 
 
 .main .under {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 70px;
-    border-top: solid 1px #B8B6B6;
-    margin: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 70px;
+  border-top: solid 1px #b8b6b6;
+  margin: 0 50px;
 }
 
 .main .under .left-under p {
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .main .under .footer-right-under {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
