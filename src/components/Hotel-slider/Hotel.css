@@ -111,4 +111,38 @@
     color: #000;
     font-family: Besley;
     font-size: 38px;
+
 }
+
+.owl-carousel {
+    display: block !important;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    width: 30px;
+    height: 30px;
+    background-color: #FF9200;
+    color: white;
+    margin: 0 30px;
+}
+
+
+
+/* 
+.owl-nav button span {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.owl-theme .owl-nav .disabled,
+button.disabled {
+    border: 2px solid #FF9200 !important;
+    background-color: transparent !important;
+    color: #FF9200 !important;
+    opacity: 0.1;
+} */
+
+
+

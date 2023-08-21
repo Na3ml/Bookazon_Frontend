@@ -3,7 +3,7 @@ import "./Navigation.css";
 import Logo from "../../assets/imgs/Group 21.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
-
+import GenericButton from "../generic-button";
 const Navigation = () => {
   const [click, setClick] = useState(true);
   const handleChange = () => {
@@ -25,7 +25,7 @@ const Navigation = () => {
             <li><Link to={"#features"}>Features</Link></li>
             <li><Link to={"/"}>Contact Us</Link></li>
             <li>
-                 <Link to={"/signin"}> <button className="nav-btn">Login</button></Link>
+                 <GenericButton to="/signin" text="Login" className="text-white bg-secondary border-secondary border-1 border"></GenericButton>
             </li>
           </ul>
         </div>

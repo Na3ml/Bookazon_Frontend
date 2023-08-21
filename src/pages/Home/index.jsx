@@ -14,9 +14,9 @@ function Home() {
       <Book />
       <Hotel />
       <AllHotels />
-      <Deals />
       <Packages />
       <Features />
+      <Deals />
       <Reviews />
       <Footer />
     </div>

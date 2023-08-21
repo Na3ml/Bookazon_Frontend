@@ -8,7 +8,7 @@ import "./DealsCopm.css";
 export const DealsCopm = (props) => {
   return (
     <div
-      className="deals"
+      className="deals me-0 me-md-5"
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(56, 56, 56, 0) 0%, #000 100%), url(${props.image})`
       }}
