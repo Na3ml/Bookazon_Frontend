@@ -7,7 +7,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const Reviews = () => {
   return (
-    <Container>
+    <Container id="features">
       <div className="reviews-title">
         <h1 className="reviews-title-text text-primary">
           See What Our Clients Say

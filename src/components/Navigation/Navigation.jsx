@@ -20,9 +20,9 @@ const Navigation = () => {
           <ul>
             <li><Link to={"/"}>Home</Link></li>
             <li><Link to={"/"}>EN</Link></li>     
-            <li><Link to={"/"}>Hotels</Link></li>
+            <li><Link to={"/hotels"}>Hotels</Link></li>
             <li><Link to={"/"}>Deals</Link></li>
-            <li><Link to={"/"}>Features</Link></li>
+            <li><Link to={"#features"}>Features</Link></li>
             <li><Link to={"/"}>Contact Us</Link></li>
             <li>
                  <Link to={"/signin"}> <button className="nav-btn">Login</button></Link>
