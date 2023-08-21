@@ -157,7 +157,7 @@ const SignIn = () => {
            disabled={!(formik.isValid && formik.dirty)}
            variant="secondary" 
            type="submit"
-           className="bg-secondary text-white w-100 my-3">
+           className="bg-secondary text-white w-100 my-3 d-flex justify-content-center">
            {!loading ? "Sign in" :
           <RotatingLines strokeColor="#fff" strokeWidth="5" animationDuration="0.75" width="20" 
           />}  

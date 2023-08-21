@@ -12,7 +12,7 @@ import AllHotels from "../../components/all-hotels";
 function Home() {
   return (
     <div>
-      <Book />
+      {/* <Book /> */}
       <Hotel />
       <AllHotels />
       <Packages />
