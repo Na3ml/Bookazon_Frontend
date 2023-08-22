@@ -21,4 +21,6 @@ p{
   line-height: 1.7;
 }
 
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
