@@ -16,7 +16,7 @@
 	
 }
 .all-hotels  .owl-theme .owl-nav .disabled,
-button.disabled {
+.all-hotels button.disabled {
     border: 2px solid #FF9200 !important;
     background-color: transparent !important;
     color: #FF9200 !important;

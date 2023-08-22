@@ -14,7 +14,7 @@ function Hotel() {
     margin: 50,
     responsiveClass: true,
     nav: true,
-    dots: false,
+    dots: true,
     responsive: {
       0: {
         items: 1,
@@ -34,7 +34,8 @@ function Hotel() {
     },
   };
   return (
-    <OwlCarousel {...options} className="owl-theme">
+   <div className="bestHotel position-relative">
+     <OwlCarousel {...options} className="owl-theme">
       {hotelData.map((item, index) => {
         return (
           <div className="about">
@@ -60,8 +61,8 @@ function Hotel() {
                 <img src={item.img2} alt="" className="hotel2" />
                 <div className="hotelrate">
                   <span className="rating">0.5</span>
-                  <br />
-                  <span>
+                 
+                  <p className="d-flex mb-1">
                     <BsFillStarFill
                       size={25}
                       style={{ color: "rgba(126, 87, 194, 1)" }}
@@ -82,8 +83,8 @@ function Hotel() {
                       size={25}
                       style={{ color: "rgba(126, 87, 194, 1)" }}
                     />
-                  </span>
-                  <br />
+                  </p>
+                
                   <span className="reviews-count">2000, Reviews</span>
                 </div>
               </div>
@@ -92,6 +93,7 @@ function Hotel() {
         );
       })}
     </OwlCarousel>
+   </div>
   );
 }
 

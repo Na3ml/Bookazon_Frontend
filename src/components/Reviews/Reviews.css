@@ -75,3 +75,8 @@
   margin-bottom: 20px;
   transform: translate(-50%, -50%);
 }
+@media (max-width:830px) {
+  .reviews-title-text {
+    width: fit-content;
+  }
+}

@@ -14,21 +14,19 @@ function Footer() {
     <div className="main">
       <Container>
         <Row
-          className="footer d-flex justify-content-between align-items-center mx-auto"
-          sx={12}
-          md={6}
-          lg={12}
+          className="footer"
         >
-          <Col className="footer-left ">
+          <Col className="footer-left sx={12} lg={4}">
             <img src={logo} alt="logo" />
-            <p>
+            <p className="mt-3">
               Vel officiis dolor ea illo aut eligendi ullam
               <br /> non laudantium magnam et recusandae <br />
               molestiae sit iure unde aut voluptate quaerat.
             </p>
           </Col>
-          <Col className="list">
-            <h3>Company</h3>
+          <Col  sx={12} lg={4} className="d-flex align-items-center justify-md-content-around justify-content-between my-4 my-md-0">
+           <div className="">
+           <h3>Company</h3>
             <ul>
               <a href="/">
                 <li>About us</li>
@@ -43,8 +41,8 @@ function Footer() {
                 <li>Contact us</li>
               </a>
             </ul>
-          </Col>
-          <Col className="list">
+           </div>
+           <div className="" >
             <h3>Help</h3>
             <ul>
               <a href="/">
@@ -60,22 +58,27 @@ function Footer() {
                 <li>Term of servicse</li>
               </a>
             </ul>
+          </div>
           </Col>
-          <Col className="footer-right">
-            <div className="input-img">
+        
+          {/* footer-right */}
+          <Col sx={12}  lg={4} className="d-lg-flex justify-content-end d-block">
+            <div>
               <h5>Subscribe to our newsletter</h5>
-              <input
+            <div className="bg-white px-3  py-3 d-flex align-content-center justify-content-center">
+            <input
                 type="email"
                 placeholder="Your Email"
-                className="mail-input"
+                className="mail-input w-100 border-0"
               />
               <img src={mail} alt="mail" className="mail-img" />
+            </div>
             </div>
           </Col>
         </Row>
       </Container>
-      <div className="under">
-        <div className="footer-right-under">
+      <div className="under d-flex align-items-center justify-content-between flex-wrap">
+        <div className="footer-right-under mb-4 mb-0">
           <Link href="/">
             <LinkedInIcon fontSize="medium" style={{ color: "white" }} />
           </Link>

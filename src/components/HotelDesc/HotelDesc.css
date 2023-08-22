@@ -1,23 +1,16 @@
-.hotel-desc .container {
-    width: 90vw;
-    height: 120vh;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
+.hotel-desc .wrapper {
+margin-top: 100px;
 }
 
 .hotel-desc .desc {
-    flex-basis: 60%;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+    /* flex-basis: 60%; */
+    /* display: flex;
+    flex-direction: column; */
+    /* gap: 25px; */
     padding-bottom: 130px;
-
 }
 
-.hotel-desc .container h1 {
+.hotel-desc .wrapper h1 {
     font-size: 55px;
     letter-spacing: 1.8px;
     font-weight: 500;
@@ -58,9 +51,8 @@
 }
 
 .hotel-desc .hotel-imgs {
-    display: flex;
-    flex-direction: row;
-    flex-basis: 40%;
+    /* display: flex;
+    flex-direction: row; */
 }
 
 .hotel-desc .hotel-imgs .img-1 {
