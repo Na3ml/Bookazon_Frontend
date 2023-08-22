@@ -17,9 +17,6 @@ input::placeholder {
 }
 
 
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 .fs-20{
   font-size: 20px;
 }
