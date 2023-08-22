@@ -1,12 +1,13 @@
 .navbar {
-    background-color: #fff;
+    /* background-color: #fff; */
+    display: none;
     }
   
   .nav-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: none ;
   }
   
   .nav-item {
@@ -39,11 +40,9 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
   }
-.mobile-btn{
-  display: none;
-} 
 
-@media screen and (max-width:770px){
+
+/* @media screen and (max-width:770px){
   .mobile-btn{
     display: block;
     position: absolute;
@@ -54,7 +53,7 @@
   .nav-item {
     display: none;
   }
-}
+} */
 @media  screen and (max-width: 998px) {
   .nav-item {
     margin-left: 50px;

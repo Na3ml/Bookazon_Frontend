@@ -17,10 +17,9 @@ input::placeholder {
 }
 
 
-p{
-  line-height: 1.7;
+.fs-20{
+  font-size: 20px;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.fs-26{
+  font-size: 26px;
+}

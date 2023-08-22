@@ -31,15 +31,27 @@ font-size: 18px;
 .feature .services{
     position: absolute;
     bottom: 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
 }
-@media(max-width: 779px) {
-   .services{
+@media(max-width: 830px) {
+  .feature .services{
     position: static !important;
+    margin-top: 40px;
+    justify-content: center;
    } 
-   
+   .feature .services img{
+    margin-bottom: 30px;
+   }
    .feature .describtion{
     padding-right: 5px;
 }
+.feature .background{
+    display: none !important;
+}
+
 
   }
 

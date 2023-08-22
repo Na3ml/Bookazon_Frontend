@@ -52,10 +52,10 @@ const index = () => {
                   <HiOutlineLocationMarker className='icon text-white'/>
                   <input type="search" onChange={(e) => handel(e)} placeholder='Where To?' id="location" className='input1' />
                 </div>
-                <div className="check d-flex md:ml-4 md:p-0 p-2">
+                <div className="check d-flex">
                   <BsCalendarWeek className='icon1 text-white' />
                   <span className='d-grid'>
-                    <span className='text-white h-5 mt-1 '>
+                    <span className='text-white'>
                       Check in 
                     </span>
                     <input type="date" onChange={(e) => handel(e)} id="datein" className="input2 text-white" size={16}/>
@@ -89,7 +89,7 @@ const index = () => {
               </form>
               
             </div>
-            <div className="text-white md:mt-44 mt-5 ml-12 xl:ml-48 md:flex">
+            <div className="text-white">
               <Stack spacing={1}>
                 <Stack direction='row' spacing={-1}>
                   <Avatar sx={{ bgcolor: 'primary.light' }}>FE</Avatar>
@@ -100,7 +100,7 @@ const index = () => {
                   <Avatar src=''>+</Avatar>
                 </Stack>
               </Stack>
-              <p className='ml-10'>2,500 people booked in last 24 hours</p>
+              <p className=''>2,500 people booked in last 24 hours</p>
             </div>
         </div>
       </div>

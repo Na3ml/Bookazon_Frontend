@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Form, Row} from "react-bootstrap";
 import { BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
@@ -8,17 +8,42 @@ import {useFormik } from "formik";
 import * as Yup from "yup"
 import {Link, useNavigate } from "react-router-dom";
 import "../../styles/Form.css";
+import axios from "axios";
+import { RotatingLines } from "react-loader-spinner";
+import { toast } from "react-hot-toast";
 
+let baseUrl="https://bookazon.tadafoq.com/Bookazon_Backend/public";
 
 const SignIn = () => {
-
+  const [loading, setLoading] = useState(false);
   const navigate=useNavigate();
 
 
 
 
-  const handleLogin=(values)=>{
-    navigate("/")
+  const handleLogin=async(values)=>{
+
+    try {
+      setLoading(true)
+      let {data}= await axios.post(`${baseUrl}/api/auth/login`,values)
+      console.log(data);
+      if(data.message){
+        toast.success(data.message,{duration:2000,className:"text-primary px-4 fw-bolder"});        
+       navigate("/")
+      }
+    } catch (error) {
+     
+      toast.error(error.response.data.message,{duration:2000,className:"text-danger px-4 fw-bolder"});
+    }
+    finally {
+      setLoading(false);
+    }
+
+
+
+
+
+
   }
 
 
@@ -132,8 +157,11 @@ const SignIn = () => {
            disabled={!(formik.isValid && formik.dirty)}
            variant="secondary" 
            type="submit"
-           className="bg-secondary text-white w-100 my-3">
-              Sign in
+           className="bg-secondary text-white w-100 my-3 d-flex justify-content-center">
+           {!loading ? "Sign in" :
+          <RotatingLines strokeColor="#fff" strokeWidth="5" animationDuration="0.75" width="20" 
+          />}  
+              
           </Button>
 
         </Form>
@@ -168,211 +196,3 @@ const SignIn = () => {
 };
 
 export default SignIn;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

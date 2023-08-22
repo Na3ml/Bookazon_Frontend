@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,200;0,700;1,600;1,700&family=Roboto+Mono:ital@1&display=swap');
+
 .home{
     background-image: url(/src/assets/imgs/home.png);
     background-repeat: no-repeat;
+
     background-position: center center;
     width: 100% !important;
     background-size: cover;
@@ -126,4 +128,6 @@
     .check {
         margin-top: 4%;
     }
+
+
 }

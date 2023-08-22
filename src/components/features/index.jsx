@@ -10,7 +10,7 @@ import "./style.css";
 function Features() {
   const images = [feature1, feature2, feature3, feature4];
   return (
-    <div className="bg-light py-5">
+    <div className="bg-light py-5" >
       <Container>
         <Row className="feature position-relative">
           <Col sx={12} md={6}>
@@ -26,20 +26,20 @@ function Features() {
           <Col
             sx={12}
             md={6}
-            className="d-md-flex justify-content-center   d-none"
+            className="d-flex justify-content-center background  "
           >
             <div className="image pt-3 ps-2">
               <img src={featureBg} alt="image" />
             </div>
             <p className="vertical fw-medium m-0">Our Amazing Services </p>
           </Col>
-          <div className="d-flex align-items-center justify-content-center flex-wrap  start-0 services ">
+          <div className="start-0 services ">
             {images.map((item) => {
               return (
                 <img
                   src={item}
                   alt={item}
-                  className="me-md-5 me-3 mb-md-0 mb-3"
+                  className="me-md-5 me-3  "
                 />
               );
             })}
@@ -49,5 +49,4 @@ function Features() {
     </div>
   );
 }
-
 export default Features;

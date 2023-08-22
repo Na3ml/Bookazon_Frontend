@@ -53,12 +53,12 @@ function HotelCard(prop) {
           </Link>
           <Link
             to="/"
-            className="fw-medium text-secondary text-decoration-none d-flex align-items-center  "
+            className=" fw-medium text-secondary text-decoration-none d-flex align-items-center  "
           >
             <span>
               See More
-              <MdOutlineKeyboardArrowRight className="fs-5" />
             </span>
+              <MdOutlineKeyboardArrowRight className="fs-5 mt-1" />
           </Link>
         </div>
       </div>
