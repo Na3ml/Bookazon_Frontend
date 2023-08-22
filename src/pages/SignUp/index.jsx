@@ -218,7 +218,7 @@ const SignUp = () => {
 
           <Button variant="secondary"
            disabled={!(formik.isValid && formik.dirty)}
-           className="btn-login bg-secondary w-100 text-white mt-3"
+           className="btn-login bg-secondary w-100 text-white mt-3 d-flex justify-content-center"
             type="submit">
             {!loading ? "Sign up" :
     <RotatingLines strokeColor="#fff" strokeWidth="5" animationDuration="0.75" width="20" 
