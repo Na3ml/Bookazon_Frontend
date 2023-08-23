@@ -31,12 +31,13 @@
     height: 5px;
     margin-top: 10px;
 }
-.Btn-Leave{
+/*.Btn-Leave{
     background-color: #7E57C2;
     width: 150px;
     height: 45px;
     color: aliceblue;
 }
+*/
 .star1{
     margin-left: 10%;
 }
@@ -45,7 +46,7 @@
     margin-top: 5%;
     gap: 5%;
 }
-.star-reting{
+.star-rating{
     margin-top: 3%;
     margin-left: 10%;
 }
@@ -53,8 +54,8 @@
     .review1 {
         display: block;
     }
-    .Btn-Leave{
-        margin-left: 20%;
+    .feedback-btn{
+        margin-left: 15%;
     }
     .star1{
         margin-left: 25%;

@@ -3,7 +3,7 @@
 .home{
     background-image: url(/src/assets/imgs/home.png);
     background-repeat: no-repeat;
-
+    
     background-position: center center;
     width: 100% !important;
     background-size: cover;
@@ -14,10 +14,13 @@
     width: 850px;
     margin-top: 15%;
     display: flex;
+    padding: 2px;
 }
 .form-search{
     display: flex;
+    align-items: center;
 }
+
 .home h1{
     font-size: 60px;
     margin-top: 10%;
@@ -32,23 +35,26 @@
 .home label {
     margin-left: 10px;
 }
+.location .input1::placeholder {
+    color: white !important;
+}
 .input1 {
     position: relative;
     margin-top: -4%;
-    width: 50%;
+    width: 55%;
+    padding: ;
     height: 40%;
     border: none !important ;
     background-color: #7E57C2;
 }
 .location {
     margin-left: 25px;
-    margin-top: 25px;
-    color: aliceblue;
+    color: white !important;
     width: 160px;
 }
 .icon {
     margin-right: 1px;
-    margin-top: -10px;
+    margin-top: -5px;
     width: 24px;
     height: 20px;
 }
@@ -58,17 +64,20 @@
     width: 24px;
     height: 20px;
 }
-.home button {
+.home .btn-find {
     background-color: #FF9200;
     width: 130px;
     height: 40px;
     border-radius: 5px;
     position: relative;
-    top: 8px;
     left: 60px;
+}
+.home .btn-find:hover {
+    background-color: #FF9200 !important;
 }
 .select {
     background-color: rgba(126, 87, 194, 0.038);
+    border: none;
 }
 @media only screen and (max-width: 540px) {
     .headerSearch {
@@ -84,7 +93,7 @@
     .icon1{
         margin-left: 0px;
     }
-    .home button{
+    .home .btn-find{
         margin-top: 16%;
         margin-left: -20px;
     }
@@ -109,7 +118,7 @@
     .location {
         margin-left: 5px;
     }
-    .home button{
+    .home .btn-find{
         left: 10%;
         top: -5px;
         width: 150px;
@@ -117,7 +126,7 @@
     .icon1{
         margin-left: 0px;
     }
-    .home button{
+    .home .btn-find{
         margin-top: 16%;
         margin-left: -20px;
     }

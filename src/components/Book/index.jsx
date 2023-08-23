@@ -50,11 +50,11 @@ const index = () => {
               <form onSubmit={(e) => submit(e)} className='form-search' >
                 <div className="d-flex location">
                   <HiOutlineLocationMarker className='icon text-white'/>
-                  <input type="search" onChange={(e) => handel(e)} placeholder='Where To?' id="location" className='input1' />
+                  <input type="search" onChange={(e) => handel(e)} placeholder='Where To?' id="location" className='input1 text-white' />
                 </div>
                 <div className="check d-flex">
                   <BsCalendarWeek className='icon1 text-white' />
-                  <span className='d-grid'>
+                  <span className='d-grid '>
                     <span className='text-white'>
                       Check in 
                     </span>
@@ -75,7 +75,7 @@ const index = () => {
                   <div className='d-grid'>
                     <label htmlFor="gaustes" className='text-white mt-1'>Geusts</label>
                       <select name="" onChange={(e) => handel(e)} id="geusts" className='select text-white'>
-                        <option value="1">1 Geusts</option>
+                        <option className='' value="1">1 Geusts</option>
                         <option value="2">2 Geusts</option>
                         <option value="3">3 Geusts</option>
                         <option value="4">4 Geusts</option>
@@ -83,13 +83,13 @@ const index = () => {
                       </select>
                   </div>
                 </div>
-                <button type='submit'  className="text-center text-white">
+                <button  type='submit'  className="btn-find btn text-center text-white">
                   Find Now
                 </button>
               </form>
               
             </div>
-            <div className="text-white">
+            <div className="text-white mt-3">
               <Stack spacing={1}>
                 <Stack direction='row' spacing={-1}>
                   <Avatar sx={{ bgcolor: 'primary.light' }}>FE</Avatar>
