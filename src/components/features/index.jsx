@@ -33,7 +33,7 @@ function Features() {
             </div>
             <p className="vertical fw-medium m-0">Our Amazing Services </p>
           </Col>
-          <div className="    start-0 services ">
+          <div className="start-0 services ">
             {images.map((item) => {
               return (
                 <img

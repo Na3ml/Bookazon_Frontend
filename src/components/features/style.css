@@ -31,21 +31,16 @@ font-size: 18px;
 .feature .services{
     position: absolute;
     bottom: 40px;
-    /* display: flex;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; */
+    flex-wrap: wrap;
 
 }
 @media(max-width: 830px) {
   .feature .services{
     position: static !important;
-    /* display: block ; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
     margin-top: 40px;
+    justify-content: center;
    } 
    .feature .services img{
     margin-bottom: 30px;
