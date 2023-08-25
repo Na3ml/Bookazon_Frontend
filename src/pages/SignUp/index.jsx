@@ -8,14 +8,12 @@ import {Link, useNavigate } from "react-router-dom";
 import {useFormik } from "formik";
 import * as Yup from "yup"
 import "../../styles/Form.css";
-import axios from "axios";
 import { toast } from "react-hot-toast";
 import { RotatingLines } from "react-loader-spinner";
+import baseInstance from "../../networking/baseInstance"
 
 
 
-
-let baseUrl="https://bookazon.tadafoq.com/Bookazon_Backend/public";
 
 
 
@@ -33,7 +31,7 @@ const SignUp = () => {
   const handleRegister=async(values)=>{
     try {
       setLoading(true)
-      let {data}= await axios.post(`${baseUrl}/api/auth/register`,values)
+      let {data}= await baseInstance.post(`register`,values)
       if(data.message){
         toast.success(data.message, {
           duration: 2000,

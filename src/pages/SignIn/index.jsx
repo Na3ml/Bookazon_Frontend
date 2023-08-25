@@ -8,13 +8,11 @@ import {useFormik } from "formik";
 import * as Yup from "yup"
 import {Link, useNavigate } from "react-router-dom";
 import "../../styles/Form.css";
-import axios from "axios";
 import { RotatingLines } from "react-loader-spinner";
 import { toast } from "react-hot-toast";
 import { AuthContext } from "../../Context/AuthContext";
+import baseInstance from "../../networking/baseInstance"
 
-
-let baseUrl="https://bookazon.tadafoq.com/Bookazon_Backend/public";
 
 const SignIn = () => {
   const {saveUserData} = useContext(AuthContext);
@@ -28,7 +26,7 @@ const SignIn = () => {
     
     try {
       setLoading(true)
-      let {data}= await axios.post(`${baseUrl}/api/auth/login`,values)
+      let {data}= await baseInstance.post(`login`,values)
      
       if(data.message){
         toast.success(data.message, {

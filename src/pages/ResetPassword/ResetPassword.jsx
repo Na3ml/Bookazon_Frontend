@@ -5,13 +5,12 @@ import bgImg from "../../assets/imgs/Frame 5.png";
 import {useFormik } from "formik";
 import * as Yup from "yup"
 import {useNavigate } from "react-router-dom";
-import axios from "axios";
 import { RotatingLines } from "react-loader-spinner";
 import { toast } from "react-hot-toast";
+import baseInstance from "../../networking/baseInstance"
 import "../../styles/Form.css";
 
 
-let baseUrl="https://bookazon.tadafoq.com/Bookazon_Backend/public";
 
 const ResetPassword = () => {
 
@@ -24,8 +23,7 @@ const ResetPassword = () => {
     const handleResetPassword = async(values)=>{
       try {
         setLoading(true)
-       let {data}= await axios.post(`${baseUrl}/api/auth/update-password`,values)
-        console.log(data);
+       let {data}= await baseInstance.post(`update-password`,values)
         if(data.status === 1){
          toast.success(data.message, {
            duration: 2000,
@@ -35,7 +33,7 @@ const ResetPassword = () => {
            }
     
        });
-       navigate("/login")
+       navigate("/signin")
        }
      } catch (error) {
        toast.error(error.response.data.message,{duration:2000,className:"text-danger px-4 fw-bolder"});

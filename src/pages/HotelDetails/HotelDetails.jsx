@@ -9,13 +9,13 @@ import Footer from "../../components/Footer/Footer";
 const HotelDetails = () => {
   return (
   <div>
-    {/* <HotelNavigate/> */}
+    <HotelNavigate/>
     <HotelDesc/>
-    {/* <Amenities/>
+     <Amenities/>
     <AllRooms/>
     <Location/>
-    <Reviews/> */}
-    {/* <Footer/> */}
+    <Reviews/> 
+    <Footer/>
   </div>
   );
 };

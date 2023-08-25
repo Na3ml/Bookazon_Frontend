@@ -5,13 +5,12 @@ import bgImg from "../../assets/imgs/Frame 5.png";
 import {useFormik } from "formik";
 import * as Yup from "yup"
 import {useNavigate } from "react-router-dom";
-import axios from "axios";
 import { RotatingLines } from "react-loader-spinner";
 import { toast } from "react-hot-toast";
+import baseInstance from "../../networking/baseInstance"
 import "../../styles/Form.css";
 
 
-let baseUrl="https://bookazon.tadafoq.com/Bookazon_Backend/public";
 
 const VerifyCode = () => {
 
@@ -24,7 +23,7 @@ const VerifyCode = () => {
     const handleResetPassword = async(values)=>{
         try {
           setLoading(true)
-         let {data}= await axios.post(`${baseUrl}/api/auth/check-token`,values)
+         let {data}= await baseInstance.post(`check-token`,values)
           if(data.message=== "success"){
            toast.success(data.message, {
              duration: 2000,
@@ -106,6 +105,7 @@ const VerifyCode = () => {
      <div className=" text-center">           
           <input 
           className="code"
+          style={{letterSpacing: '4px' }}
            type="text" 
            name="token"
             value={formik.values.token} 
