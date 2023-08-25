@@ -52,7 +52,7 @@ function HotelCard(prop) {
             Book Now
           </Link>
           <Link
-            to="/hotels"
+            to="/hotel-details"
             className=" fw-medium text-secondary text-decoration-none d-flex align-items-center  "
           >
             <span>

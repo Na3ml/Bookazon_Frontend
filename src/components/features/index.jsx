@@ -10,7 +10,7 @@ import "./style.css";
 function Features() {
   const images = [feature1, feature2, feature3, feature4];
   return (
-    <div className="bg-light py-5" >
+    <div className="bg-light py-5" id="features">
       <Container>
         <Row className="feature position-relative">
           <Col sx={12} lg={6}>

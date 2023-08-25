@@ -1,13 +1,13 @@
 import React from "react";
 import "./HotelNavigate.css";
 import { HashLink as Link } from "react-router-hash-link";
-import { Col, Container, Row } from "react-bootstrap";
+import {  Container } from "react-bootstrap";
 import { AiOutlineShareAlt } from "react-icons/ai";
 import { BsArrowLeft } from "react-icons/bs";
 const HotelNavigate = () => {
   return (
     <>
-      <div className="hotel-navigate">
+      <div className="hotel-navigate mb-5">
         <h1 className="hotel-navigate-title">SWITZERLAND HOTEL</h1>
         <div className="hotel-navigate-route ">
           <Container className="hotel-navigate-route-container d-flex justify-content-between ">

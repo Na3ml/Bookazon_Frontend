@@ -1,9 +1,12 @@
 import React from 'react';
 import './review.css'
+import { Container } from 'react-bootstrap';
+import ReviewCards from '../../Reviews/ReviewCards';
 const review = () => {
     return (
-        <div className='container'>
-            <h1 >Rating and reviews</h1>
+        <>
+        <div className='' id='rating-reviews'>
+            <h1 className='container' >Rating and reviews</h1>
             <div className='review1'>
                 <div className='star-rating'>
                     <span className='star1 d-flex align-items-center'>
@@ -63,6 +66,11 @@ const review = () => {
                 </div>
             </div>
         </div>
+        <Container>
+      
+        <ReviewCards/>
+        </Container>
+        </>
     );
 };
 
