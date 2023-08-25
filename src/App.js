@@ -10,11 +10,11 @@ import Navigation from "./components/Navigation/Navigation";
 import HotelDetails from "./pages/HotelDetails/HotelDetails";
 
 
-
 const App = () => {
+  
   return (
     <>
-    <Toaster />
+      <Toaster />
       <BrowserRouter>
         <Navigation />
         <Routes>
@@ -23,7 +23,6 @@ const App = () => {
           <Route path="/hotels" element={<HotelDetails />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
-   
       </BrowserRouter>
     </>
   );
