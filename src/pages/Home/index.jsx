@@ -17,7 +17,7 @@ function Home() {
       <AllHotels />
       <Packages />
       <Features />
-      {/* <Deals /> */}
+      <Deals />
       <Reviews />
       <Footer />
     </div>
