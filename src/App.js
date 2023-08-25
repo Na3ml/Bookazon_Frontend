@@ -11,12 +11,13 @@ import AuthContextProvider from "./Context/AuthContext";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import VerifyCode from "./pages/VerifyCode/VerifyCode";
 
-
 const App = () => {
+  
   return (
     <>
       <Toaster />
       <BrowserRouter>
+<<<<<<< HEAD
         <AuthContextProvider>
           <Navigation />
           <Routes>
@@ -29,6 +30,15 @@ const App = () => {
             <Route path="/verify-code" element={<VerifyCode />} />
           </Routes>
         </AuthContextProvider>
+=======
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/hotels" element={<HotelDetails />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+>>>>>>> c62a915e22d8a3ec08b3881ebe70e2714cfbb5b6
       </BrowserRouter>
     </>
   );
