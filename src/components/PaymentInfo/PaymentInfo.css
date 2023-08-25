@@ -1,0 +1,28 @@
+.payment-info {
+    padding: 40px;
+}
+
+.payment-info h5 {
+    color: #000;
+    font-family: Roboto;
+    font-size: 28px;
+    font-weight: 400;
+    padding: 40px;
+}
+
+.payment-info .card-number {
+    position: relative;
+}
+
+.payment-info .card-number .payment-img {
+    position: absolute;
+    display: flex;
+    right: 260px;
+    top: 40px;
+}
+
+@media screen and (max-width: 576px) {
+    .payment-info .card-number .payment-img {
+        right: 4px;
+    }
+}

@@ -13,7 +13,7 @@ function Features() {
     <div className="bg-light py-5" id="features">
       <Container>
         <Row className="feature position-relative">
-          <Col sx={12} md={6}>
+          <Col sx={12} lg={6}>
             <p className=" text-primary m-0 mt-3 fw-medium">FEATURES</p>
             <h2 className=" mb-3">Why Choose Us?</h2>
             <p className="describtion mb-5 mb-md-0 ">

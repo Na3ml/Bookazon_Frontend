@@ -1,0 +1,22 @@
+.steps{
+
+}
+.steps .first{
+    width: 250px;
+    height: 3px;
+}
+.steps  .circle {
+width: 25px;
+height: 25px;
+}
+
+.steps .detail ,.steps .payment ,.confirmation{
+  bottom: -10px;
+  z-index: 20999;
+}
+.steps  .confirmation ,.steps .payment{
+  right: -40px;
+}
+.steps .detail {
+  left: -16px;
+}

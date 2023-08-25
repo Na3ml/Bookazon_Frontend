@@ -20,7 +20,7 @@ const Navigation = () => {
           <img src={Logo} alt="" />
         </div>
         <div className={click ? "right" : "right-click"}>
-          <ul>
+          <ul className="fs-26 fw-bold">
             <li><Link to={"/"}>Home</Link></li>
             <li><Link to={"/"}>EN</Link></li>     
             <li><HashLink to="/#hotel">Hotels</HashLink></li>

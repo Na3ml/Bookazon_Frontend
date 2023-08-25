@@ -19,7 +19,7 @@
     font-weight: bold;	
 }
 .all-rooms  .owl-theme .owl-nav .disabled,
-button.disabled {
+.all-rooms .disabled {
     border: 2px solid #7E57C2 !important;
     background-color: transparent !important;
     color: #7E57C2 !important;

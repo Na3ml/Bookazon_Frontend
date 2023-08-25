@@ -8,7 +8,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import { hotelData } from "./hoteldata";
-
+import { Col, Container, Row } from "react-bootstrap";
 function Hotel() {
   const options = {
     margin: 50,
@@ -38,10 +38,10 @@ function Hotel() {
      <OwlCarousel {...options} className="owl-theme">
       {hotelData.map((item, index) => {
         return (
-          <div className="about">
-            <div className="container">
-              <div className="info">
-                <h1>{item.title}</h1>
+          <Container className="about">
+            <Row className="wrapper">
+              <Col sx={12} lg={7} className="info pe-lg-5 pe-0">
+                <h1 className="mb-4">{item.title}</h1>
                 <p>
                   {item.desc}
                   <p>{item.info}</p>
@@ -53,8 +53,8 @@ function Hotel() {
                     <p>{item.manager}</p>
                   </div>
                 </div>
-              </div>
-              <div className="imgs">
+              </Col>
+              <Col sx={12} lg={5} className="imgs d-lg-block d-none">
                 <div className="circle"></div>
                 <div className="line-img"></div>
                 <img src={item.img1} alt="" className="hotel1" />
@@ -87,9 +87,9 @@ function Hotel() {
                 
                   <span className="reviews-count">2000, Reviews</span>
                 </div>
-              </div>
-            </div>
-          </div>
+              </Col>
+            </Row>
+          </Container>
         );
       })}
     </OwlCarousel>
