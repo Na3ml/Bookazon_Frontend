@@ -1,0 +1,13 @@
+.date-picker {
+  width: 220px;
+}
+.date-picker .date {
+  top: -2px;
+  left: 0;
+}
+::-webkit-calendar-picker-indicator {
+  background-image: url("../../assets/imgs/arrow-right.png");
+}
+.date-picker .input {
+  text-indent: -99em;
+}

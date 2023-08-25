@@ -14,6 +14,7 @@ import Details from "../Details";
 import Payment from "../Payment";
 import Confirmation from "../Confirmation";
 import ReservationDetail from "../../components/reservation-detail";
+import DatePicker from "../../components/customeDatePicker";
 const HotelDetails = () => {
   var msDiff = new Date("November 30, 2023").getTime() - new Date("November 17, 2023").getTime();    //Future date - current date
 var daysTill30June2035 = Math.floor(msDiff / (1000 * 60 * 60 * 24));
@@ -36,6 +37,7 @@ console.log(daysTill30June2035);
     {/* <Payment/> */}
     {/* <Confirmation/> */}
     <ReservationDetail/>
+    {/* <DatePicker/> */}
   </div>
   );
 };
