@@ -94,9 +94,9 @@ function Footer() {
             <FacebookIcon fontSize="medium" style={{ color: "white" }} />{" "}
           </Link>
         </div>
-        <div className="footer-left-under">
-          <p>Copyright © 2023 Bookazon. All Rights Reserved </p>
-        </div>
+        {/* <div className="footer-left-under"> */}
+          <p className="text-white">Copyright © 2023 Bookazon. All Rights Reserved </p>
+        {/* </div> */}
       </div>
     </div>
   );

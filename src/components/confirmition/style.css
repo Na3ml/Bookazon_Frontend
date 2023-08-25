@@ -1,0 +1,16 @@
+.search{
+    background:rgba(126, 87, 194, 0.44)
+}
+.search .icon{
+    font-weight: 500;
+    font-size: 20px;
+} 
+.search input{
+    margin-top: 4px;
+}
+
+.search input::placeholder{
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}

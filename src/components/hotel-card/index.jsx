@@ -46,13 +46,13 @@ function HotelCard(prop) {
         </p>
         <div className=" mt-5 d-flex align-items-center">
           <Link
-            to="/"
+            to="/hotels"
             className="bg-info text-white text-decoration-none rounded px-4 py-2 me-3 d-block"
           >
             Book Now
           </Link>
           <Link
-            to="/"
+            to="/hotels"
             className=" fw-medium text-secondary text-decoration-none d-flex align-items-center  "
           >
             <span>
