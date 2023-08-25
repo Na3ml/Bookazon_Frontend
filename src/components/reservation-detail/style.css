@@ -1,0 +1,10 @@
+.guests {
+  background: url("../../assets/imgs/arrow-right.png");
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 1.1rem auto;
+  outline: none;
+}

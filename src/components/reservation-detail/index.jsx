@@ -3,6 +3,8 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import room from "../../assets/imgs/room1.png";
 import { Link } from "react-router-dom";
 import GenericButton from "../generic-button";
+import DatePicker from "../customeDatePicker";
+import "./style.css"
 function ReservationDetail() {
   return (
     <div className="w-50 pt-5 mt-5">
@@ -33,15 +35,15 @@ function ReservationDetail() {
       <div className="my-4">
         <div className="d-flex align-items-center justify-content-between">
           <p className="text-gray-500 fs-20 fw-medium">Check in</p>
-          <p className=" fw-medium fs-20">November 12, 2023</p>
+          <DatePicker/>
         </div>
         <div className="d-flex align-items-center justify-content-between">
           <p className="text-gray-500  fs-20 fw-medium">Check out</p>
-          <p className="fw-medium fs-20">November 17, 2023</p>
+           <DatePicker/>
         </div>
         <div className="d-flex align-items-center justify-content-between">
           <p className="text-gray-500  fs-20 fw-medium">Guests</p>
-          <select name="guests" className="">
+          <select name="guests"  style={{width:"220px"}} className="d-flex align-items-center guests fw-medium fs-20 px-2 py-1">
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -59,5 +61,4 @@ function ReservationDetail() {
     </div>
   );
 }
-
 export default ReservationDetail;
