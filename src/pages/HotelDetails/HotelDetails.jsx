@@ -1,22 +1,20 @@
 import React from "react";
 import HotelNavigate from "../../components/HotelDetailsComp/HotelNavigate/HotelNavigate";
 import Location from "../../components/HotelDetailsComp/Location/Location";
-import HotelDesc from "../../components/HotelDesc/HotelDesc";
-import Amenities from "../../components/amenities";
-import AllRooms from "../../components/all-rooms";
-import Reviews from "../../components/Reviews/Reviews";
-import Footer from "../../components/Footer/Footer";
+import HotelDesc from "../../components/HotelDetailsComp/HotelDesc/HotelDesc";
+import Amenities from "../../components/HotelDetailsComp/amenities";
+import AllRooms from "../../components/HotelDetailsComp/all-rooms";
+import Review from "../../components/HotelDetailsComp/Review/review";
 const HotelDetails = () => {
   return (
-  <div>
-    {/* <HotelNavigate/> */}
-    <HotelDesc/>
-    {/* <Amenities/>
-    <AllRooms/>
-    <Location/>
-    <Reviews/> */}
-    {/* <Footer/> */}
-  </div>
+    <div>
+      <HotelNavigate />
+      <HotelDesc />
+      <Amenities />
+      <AllRooms />
+      <Location />
+      <Review />
+    </div>
   );
 };
 

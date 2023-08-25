@@ -1,14 +1,13 @@
 import React from 'react'
-import gym from "../../assets/imgs/gg_gym.jpg"
-import people from "../../assets/imgs/people.jpg"
-import boat from "../../assets/imgs/ph_boat-light.jpg"
-import sun from "../../assets/imgs/sun-fog.jpg"
-import spa from "../../assets/imgs/cil_spa.jpg"
-import drink from "../../assets/imgs/fluent_drink-wine-20-regular.jpg"
-import receive from "../../assets/imgs/receive-square-2.jpg"
-import wind from "../../assets/imgs/wind-2.jpg"
+import gym from "../../../assets/imgs/gg_gym.jpg"
+import people from "../../../assets/imgs/people.jpg"
+import boat from "../../../assets/imgs/ph_boat-light.jpg"
+import sun from "../../../assets/imgs/sun-fog.jpg"
+import spa from "../../../assets/imgs/cil_spa.jpg"
+import drink from "../../../assets/imgs/fluent_drink-wine-20-regular.jpg"
+import receive from "../../../assets/imgs/receive-square-2.jpg"
+import wind from "../../../assets/imgs/wind-2.jpg"
 import "./style.css";
-
 
 
 const Amenities = () => {
@@ -31,7 +30,7 @@ const Amenities = () => {
 
 
   return (
-    <div className='banner-amenities position-relative'>
+    <div className='banner-amenities position-relative mb-5' id='amenities'>
       <div className=' position-absolute card-amenities '>
         <div className='mx-3 mt-5 mx-sm-5'>
           <h3 className=' text-secondary'>Our Amenities</h3>

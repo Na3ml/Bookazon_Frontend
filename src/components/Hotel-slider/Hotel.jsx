@@ -34,7 +34,7 @@ function Hotel() {
     },
   };
   return (
-   <div className="bestHotel position-relative">
+   <div className="bestHotel position-relative" id="hotel">
      <OwlCarousel {...options} className="owl-theme">
       {hotelData.map((item, index) => {
         return (

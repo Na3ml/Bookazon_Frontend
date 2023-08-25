@@ -8,6 +8,9 @@ import SignUp from "./pages/SignUp";
 import { Toaster } from "react-hot-toast";
 import Navigation from "./components/Navigation/Navigation";
 import HotelDetails from "./pages/HotelDetails/HotelDetails";
+import PaymentDetails from "./components/paymentCopm/paymentDetails/PaymentDetails";
+import Profile from "./components/profile/Profile";
+import Footer from "./components/Footer/Footer";
 
 
 
@@ -20,9 +23,12 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn />} />
-          <Route path="/hotels" element={<HotelDetails />} />
+          <Route path="/hotel-details" element={<HotelDetails />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/payment" element={<PaymentDetails  />} />
+          <Route path="/profile" element={<Profile  />} />
         </Routes>
+       <Footer/> 
    
       </BrowserRouter>
     </>

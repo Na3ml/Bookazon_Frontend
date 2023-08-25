@@ -1,26 +1,25 @@
-@import '~bootstrap/scss/functions';
-
+@import "~bootstrap/scss/functions";
 
 $theme-colors: (
-  'primary': #FFBA0A,
-  'secondary': #7E57C2,
-  'success': #ffe1ba,
-  'info': #757095,
-  'light': #F6F6F6,
-  'lighter': #d0e5e0,
-  'lightest': #eff5f4,
-  'dark': #2F2F2F,
-  'danger': #FF0000,
-  'reject': #7D7D7D,
-  'gray-100': #f7f7f7,
-  'gray-200': #f4f4f4,
-  'gray-300': #e3e3e3,
-  'gray-400': #d0d0d0,
-  'gray-500': #b5b5b5,
-  'gray-600': #a8a8a8,
-  'gray-700': #9f9f9f,
-  'gray-800': #656464,
-  'gray-900': #333333,
+  "primary": #ffba0a,
+  "secondary": #7e57c2,
+  "success": #ffe1ba,
+  "info": #757095,
+  "light": #f6f6f6,
+  "lighter": #fcfafa,
+  "lightest": #eff5f4,
+  "dark": #2f2f2f,
+  "danger": #ff0000,
+  "reject": #7d7d7d,
+  "gray-100": #f7f7f7,
+  "gray-200": #f4f4f4,
+  "gray-300": #e3e3e3,
+  "gray-400": #d0d0d0,
+  "gray-500": #b5b5b5,
+  "gray-600": #a8a8a8,
+  "gray-700": #9f9f9f,
+  "gray-800": #656464,
+  "gray-900": #333333,
 ) !default;
 
-@import '~bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/bootstrap.scss";

@@ -43,7 +43,14 @@
   transition: 0.3s;
   padding: 10px 15px;
   border-radius: 5px;
-  background: #cccbcb;
+  background: hsl(0, 1%, 80%);
+}
+.nav-profile-img{
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+border: #7e57c2 solid 4px;
 }
 .nav-btn {
   border: none;
@@ -133,8 +140,7 @@
     margin-right: -12px;
     height: 850px;
   }
-  .right ul {
-  }
+
 }
 @media screen and (max-width: 1200px) {
   .right ul {
