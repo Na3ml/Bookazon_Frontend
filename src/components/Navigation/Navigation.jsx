@@ -5,25 +5,15 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import GenericButton from "../generic-button";
 import { AuthContext } from "../../Context/AuthContext";
-import { toast } from "react-hot-toast";
 
 
 
 const Navigation = () => {
-  const {userData,handleLogout} = useContext(AuthContext);
+  const {userData} = useContext(AuthContext);
   const [click, setClick] = useState(true);
   
 
-  const Logout=()=>{
-    handleLogout();
-    toast.success("Logged out successfully!", {
-      duration: 2000,
-      className: "text-secondary px-4 fw-bolder",
-      iconTheme: {
-        primary: '#ff9900',
-      }
-  });
-}
+
 
 
   const handleChange = () => {
@@ -56,12 +46,14 @@ const Navigation = () => {
 
 
           {userData ? 
-          <>
-            <li onClick={Logout} className="text-white bg-secondary border-secondary border-1 border rounded">
-              Logout
+          <> 
+            <li>
+                 <GenericButton  
+                 to="/profile"
+                  text="Profile"
+                   className="text-white bg-secondary border-secondary border-1 border">
+                   </GenericButton>
             </li>
-            
-             
              </>
                   
       

@@ -20,32 +20,23 @@ var daysTill30June2035 = Math.floor(msDiff / (1000 * 60 * 60 * 24));
 console.log(daysTill30June2035);
   return (
   <div>
-<<<<<<< HEAD
-    <HotelNavigate/>
-    <HotelDesc/>
-     <Amenities/>
-    <AllRooms/>
-    <Location/>
-    <Reviews/> 
-    <Footer/>
-=======
-    {/* <HotelNavigate/>
+
+     <HotelNavigate/>
     <HotelDesc/>
     <Amenities/>
     <AllRooms/>
     <Location/>
-    <Reviews/> */}
-    {/* <Footer/> */}
-    {/* <ReservationSummary/>
-     */}
-    {/* <Profile/> */}
-    {/* <Confirmition/> */}
-     {/* <Stpes/> */}
-  {/* <Details/> */}
-    {/* <Payment/> */}
-    {/* <Confirmation/> */}
-    <ReservationDetail/>
->>>>>>> c62a915e22d8a3ec08b3881ebe70e2714cfbb5b6
+    <Reviews/> 
+     <Footer/> 
+     <ReservationSummary/>
+    <Profile/>
+    {/* <Confirmition/>
+     <Stpes/>
+  <Details/>
+    <Payment/>
+    <Confirmation/>
+    <ReservationDetail/> */}
+
   </div>
   );
 };
