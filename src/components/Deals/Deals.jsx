@@ -9,7 +9,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 function Deals() {
   return (
-    <Container>
+    <Container id="deals">
       <Row className="main-deals d-flex justify-content-center align-items-center mx-auto" >
         <Col className="deals-left" sx={12} md={12} lg={6}>
           <h1 className="main-deals-title">

@@ -1,14 +1,7 @@
 .reviews {
-  /* display: flex; */
-  /* justify-content: space-around; */
-  margin-top: 150px;
-  margin-bottom: 150px;
-  /* width: 90%; */
-  /* margin: 0 5% 80px 5%; */
+  padding-top: 50px;
+  margin-bottom: 50px;
 }
-/* .reviews-card .img-order{
-    border: rgb(8, 8, 8) solid 1px;
-} */
 .reviews-title {
   position: relative;
   margin-top: 50px;
@@ -33,8 +26,8 @@
 .all-reviews {
   display: flex;
   justify-content: end;
-  margin-right: 10%;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 .reviews-card {
   display: flex;
@@ -49,14 +42,14 @@
   position: relative;
 }
 .reviews-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
   cursor: pointer;
 }
 
 .reviews-card .card-img {
-  width: 100px;
-  height: 100px;
+  width: 97px;
+  height: 97px;
   border-radius: 50%;
   border: solid 5px #fff;
   box-shadow: #c1bfbf 5px 5px 15px;

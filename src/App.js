@@ -6,18 +6,25 @@ import SignUp from "./pages/SignUp";
 import { Toaster } from "react-hot-toast";
 import Navigation from "./components/Navigation/Navigation";
 import HotelDetails from "./pages/HotelDetails/HotelDetails";
+
 import ForgetPassword from "./pages/ForgetPassword";
 import AuthContextProvider from "./Context/AuthContext";
 import ResetPassword from "./pages/ResetPassword";
 import VerifyCode from "./pages/VerifyCode";
-import Profile from "./components/profile/Profile";
+
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute"   
+
+import PaymentDetails from "./components/paymentCopm/paymentDetails/PaymentDetails";
+import Profile from "./components/profile/Profile";
+import Footer from "./components/Footer/Footer";
+
 
 const App = () => {
   return (
     <>
       <Toaster />
       <BrowserRouter>
+
         <AuthContextProvider>
           <Navigation />
           <Routes>
@@ -29,8 +36,13 @@ const App = () => {
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/verify-code" element={<VerifyCode />} />
             <Route path="/profile" element={<ProtectedRoute><Profile/></ProtectedRoute>} />
+          <Route path="/payment" element={<ProtectedRoute><PaymentDetails  /></ProtectedRoute>} />
           </Routes>
+            <Footer/>
         </AuthContextProvider>
+
+   
+
       </BrowserRouter>
       
     </>
