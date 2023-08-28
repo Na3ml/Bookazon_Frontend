@@ -32,7 +32,7 @@ function ModalComponent(props) {
           </p>
           <div onClick={handleClose}>
             <GenericButton
-              to="/"
+              to="/confirmation"
               className="bg-secondary  text-white "
               text="Thanks"
             />
