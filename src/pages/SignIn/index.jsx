@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useContext, useState } from "react";
 import { Button, Col, Form, Row} from "react-bootstrap";
 import { BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
@@ -8,47 +8,49 @@ import {useFormik } from "formik";
 import * as Yup from "yup"
 import {Link, useNavigate } from "react-router-dom";
 import "../../styles/Form.css";
-import axios from "axios";
 import { RotatingLines } from "react-loader-spinner";
 import { toast } from "react-hot-toast";
+import { AuthContext } from "../../Context/AuthContext";
+import baseInstance from "../../networking/baseInstance"
 
-let baseUrl="https://bookazon.tadafoq.com/Bookazon_Backend/public";
 
 const SignIn = () => {
+  const {saveUserData} = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
   const navigate=useNavigate();
 
 
 
-
   const handleLogin=async(values)=>{
 
+    
     try {
       setLoading(true)
-      let {data}= await axios.post(`${baseUrl}/api/auth/login`,values)
-      console.log(data);
+      let {data}= await baseInstance.post(`login`,values)
+     
       if(data.message){
-        toast.success(data.message,{duration:2000,className:"text-primary px-4 fw-bolder"});        
-       navigate("/")
+        toast.success(data.message, {
+          duration: 2000,
+          className: "text-secondary px-4 fw-bolder",
+          iconTheme: {
+            primary: '#ff9900',
+          }
+      });
+      localStorage.setItem("userToken", data.data.token)
+      saveUserData();
+       navigate("/");
       }
     } catch (error) {
-     
       toast.error(error.response.data.message,{duration:2000,className:"text-danger px-4 fw-bolder"});
     }
     finally {
       setLoading(false);
     }
 
-
-
-
-
-
-  }
+  };
 
 
 // validate with Yup
-
   const validationSchema = Yup.object({
     email:Yup.string().required("Email is  Required")
   .matches(/^[A-Za-z0-9._%+-]+@(gmail|yahoo)\.com$/, "Email is must end @ with gmail or yahoo '.com'"),
@@ -87,7 +89,7 @@ const SignIn = () => {
   return (
     <div className="  my-5 login">
      
-      <Row>
+      <Row className="my-5">
         
         <Col md={6} className="bg-login">
           <div className=" d-flex justify-content-center align-items-center bg-gradient-100">

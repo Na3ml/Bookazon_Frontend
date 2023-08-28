@@ -8,14 +8,12 @@ import {Link, useNavigate } from "react-router-dom";
 import {useFormik } from "formik";
 import * as Yup from "yup"
 import "../../styles/Form.css";
-import axios from "axios";
 import { toast } from "react-hot-toast";
 import { RotatingLines } from "react-loader-spinner";
+import baseInstance from "../../networking/baseInstance"
 
 
 
-
-let baseUrl="https://bookazon.tadafoq.com/Bookazon_Backend/public";
 
 
 
@@ -33,15 +31,20 @@ const SignUp = () => {
   const handleRegister=async(values)=>{
     try {
       setLoading(true)
-      let {data}= await axios.post(`${baseUrl}/api/auth/register`,values)
-    console.log(data);
+      let {data}= await baseInstance.post(`register`,values)
       if(data.message){
-        toast.success(data.message,{duration:2000,className:"text-primary px-4 fw-bolder"});       
+        toast.success(data.message, {
+          duration: 2000,
+          className: "text-secondary px-4 fw-bolder success-toast-icon",
+          iconTheme: {
+            primary: '#ff9900',
+          }
+      });         
       navigate("/signin")
       }
     } catch (error) {
      
-      toast.error(error.response.data.message,{duration:2000,className:"text-danger px-4 fw-bolder"});
+      toast.error(error.response.data.data.email,{duration:2000,className:"text-danger px-4 fw-bolder"});
     }
     finally {
       setLoading(false);
@@ -93,7 +96,7 @@ const SignUp = () => {
   return (
     <div className="my-5 login">
      
-     <Row>
+     <Row className="my-5">
 
      <Col md={6} className="bg-login">
 

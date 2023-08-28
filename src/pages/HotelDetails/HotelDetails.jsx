@@ -8,9 +8,7 @@ import AllRooms from "../../components/HotelDetailsComp/all-rooms";
 import Review from "../../components/HotelDetailsComp/Review/review";
 
 const HotelDetails = () => {
-
   return (
-
     <div>
       <HotelNavigate />
       <HotelDesc />
@@ -19,7 +17,6 @@ const HotelDetails = () => {
       <Location />
       <Review />
     </div>
-
   );
 };
 

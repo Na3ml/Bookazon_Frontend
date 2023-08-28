@@ -10,6 +10,7 @@ import wind from "../../../assets/imgs/wind-2.jpg"
 import "./style.css";
 
 
+
 const Amenities = () => {
 
 
@@ -30,7 +31,7 @@ const Amenities = () => {
 
 
   return (
-    <div className='banner-amenities position-relative mb-5' id='amenities'>
+    <div className='banner-amenities position-relative'>
       <div className=' position-absolute card-amenities '>
         <div className='mx-3 mt-5 mx-sm-5'>
           <h3 className=' text-secondary'>Our Amenities</h3>

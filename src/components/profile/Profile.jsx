@@ -9,7 +9,10 @@ import { TbTicket } from "react-icons/tb";
 import ProfileImage from "../../assets/imgs/profile.jpeg";
 import Brush from "../../assets/imgs/brush-icon.png";
 import "./profile.css";
-import { useState } from "react";
+import { useState ,useContext} from "react";
+import { AuthContext } from "../../Context/AuthContext";
+import { toast } from "react-hot-toast";
+
 export default function Profile() {
   return (
     <div className="profile">
@@ -19,6 +22,21 @@ export default function Profile() {
   );
 }
 function SideBar() {
+
+  const {userData,handleLogout} = useContext(AuthContext);
+
+
+  const Logout=()=>{
+    handleLogout();
+    toast.success("Logged out successfully!", {
+      duration: 2000,
+      className: "text-secondary px-4 fw-bolder",
+      iconTheme: {
+        primary: '#ff9900',
+      }
+  }
+  );
+}
   return (
     <div className="sidebar">
       <h4>My Profile</h4>
@@ -70,9 +88,11 @@ function SideBar() {
           Delete Account
         </p>
       </a>
-      <a href="./">
-        <TbLogout className="icon" /> Logout
-      </a>
+      {userData ? (
+        <a onClick={Logout}>
+          <TbLogout className="icon" /> Logout
+        </a>
+      ) : null}
     </div>
   );
 }
