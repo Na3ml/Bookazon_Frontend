@@ -1,4 +1,8 @@
-.guests {
+
+.reservation-detail{
+  padding: 200px 0 100px;
+}
+.reservation-detail .guests {
   background: url("../../assets/imgs/arrow-right.png");
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -7,4 +11,17 @@
   background-position: right 0.7rem top 50%;
   background-size: 1.1rem auto;
   outline: none;
+}
+.reservation-detail .date-picker {
+  width: 220px;
+}
+.reservation-detail .date-picker .date {
+  top: -2px;
+  left: 0;
+}
+::-webkit-calendar-picker-indicator {
+  background-image: url("../../assets/imgs/arrow-right.png");
+}
+.reservation-detail .date-picker .input {
+  text-indent: -99em;
 }

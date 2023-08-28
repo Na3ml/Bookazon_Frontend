@@ -63,9 +63,7 @@ const PaymentDetails = () => {
   });
 
   return (
-    <Container className="payment-details">
-      <Row>
-        <Col className="my-5 login bg-lighter p-5" sx={12} lg={8}>
+        <div className="my-5 login bg-lighter py-5 payment-details" >
           <h1>Details</h1>
           <Formik
             initialValues={{
@@ -211,26 +209,7 @@ const PaymentDetails = () => {
              
             </Form>
           </Formik>
-        </Col>
-      </Row>
-    </Container>
+        </div>
   );
 };
-
 export default PaymentDetails;
-
-
-
-
-
-
-
-
-<Row>
-
-<Col md={6}> </Col>
-
-
-<Col md={6}></Col>
-
-</Row>

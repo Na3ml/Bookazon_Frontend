@@ -5,24 +5,25 @@ import { MdDone } from "react-icons/md";
 import { BsDot } from "react-icons/bs";
 import ReservationSummary from "../../components/reservation-summary";
 import { RiLockLine } from "react-icons/ri";
-import GenericButton from "../../components/generic-button";
 import ModalComponent from "../../components/popup";
+import PaymentInfo from "../../components/PaymentInfo/PaymentInfo";
 function Payment() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <Container>
+    <Container  className="py-5 mt-5">
       <Row>
-        <Col sx={12} md={7}>
+        <Col sx={12} lg={8}>
           <Stpes
             circle2="border-secondary"
             icon1={<MdDone />}
             icon2={<BsDot />}
             secondLine="bg-secondary"
           ></Stpes>
+       <PaymentInfo/>
         </Col>
-        <Col sx={12} md={5}>
+        <Col sx={12} lg={4}>
           <ReservationSummary />
         </Col>
       </Row>

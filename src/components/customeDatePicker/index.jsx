@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./style.css";
 import moment from "moment";
+import { Container,Row ,Col } from "react-bootstrap";
 function DatePicker() {
-  const [value, setValue] = useState("November 12, 2023");
+  const [value, setValue] = useState("8/8/2023");
   const handelDate = (e) => {
-    setValue(moment(e.target.value).format("LL"));
+    setValue(e.target.value);
     console.log(moment(e.target.value).format("LL"));
   };
 
@@ -23,6 +24,7 @@ function DatePicker() {
         </p>
       </div>
     </div>
+  
   );
 }
 export default DatePicker;

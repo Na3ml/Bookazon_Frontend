@@ -9,7 +9,10 @@ import HotelDetails from "./pages/HotelDetails/HotelDetails";
 import PaymentDetails from "./components/paymentCopm/paymentDetails/PaymentDetails";
 import Profile from "./components/profile/Profile";
 import Footer from "./components/Footer/Footer";
-
+import RoomDetails from "./pages/RoomDetails";
+import Details from "./pages/Details"
+import Payment from "./pages/Payment";
+import Confirmation from "./pages/Confirmation";
 
 const App = () => {
   
@@ -23,12 +26,14 @@ const App = () => {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/hotel-details" element={<HotelDetails />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/payment" element={<PaymentDetails  />} />
+          {/* <Route path="/payment" element={<PaymentDetails  />} /> */}
           <Route path="/profile" element={<Profile  />} />
-          <Footer/> 
-
-        </Routes>
-   
+          <Route path="/hotel-details/room-details" element={<RoomDetails/>} />
+          <Route path="/details" element={<Details/>} />
+          <Route path="/payment" element={<Payment/>} />
+          <Route path="/confirmation" element={<Confirmation/>} />
+         </Routes>
+         <Footer/> 
       </BrowserRouter>
     </>
   );
