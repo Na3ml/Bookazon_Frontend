@@ -51,7 +51,7 @@ function DropdownCheckboxes() {
             >
               {list.map((item) => {
                 return (
-                  <label className="check-box d-flex align-items-center position-relative mb-2 ps-5">
+                  <label key={item} className="check-box d-flex align-items-center position-relative mb-2 ps-5">
                     {item}
                     <input
                       type="checkbox"

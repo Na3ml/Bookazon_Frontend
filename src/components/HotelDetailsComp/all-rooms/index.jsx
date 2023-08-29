@@ -49,7 +49,7 @@ function AllRooms() {
     },
   };
   return (
-    <Container className="all-rooms position-relative mb-5" id="room">
+    <Container className="all-rooms position-relative py-5" id="room">
       <div className="px-5">
         <div className="d-flex align-items-center justify-content-between flex-column flex-md-row my-5">
           <h2 className="mb-4 mb-md-0">Rooms & Suites</h2>

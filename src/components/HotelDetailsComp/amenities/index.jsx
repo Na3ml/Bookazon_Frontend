@@ -11,10 +11,8 @@ import "./style.css";
 
 
 
-const Amenities = () => {
-
-
-  const amenitiesData = [
+const Amenities = (props) => {
+ const amenitiesData = [
     { title: "Swimming Pool", images: wind },
     { title: "Conference Room", images: people },
     { title: "Diving", images: receive },
@@ -24,17 +22,11 @@ const Amenities = () => {
     { title: "Spa & Massage", images: spa },
     { title: "Gym & Yoga", images: gym }
   ];
-
-
-
-
-
-
-  return (
-    <div className='banner-amenities position-relative'>
-      <div className=' position-absolute card-amenities '>
+ return (
+    <div className='banner-amenities position-relative' style={{backgroundImage:`url(${props.image})`}}>
+      <div className={`${props.className} card-amenities border`}>
         <div className='mx-3 mt-5 mx-sm-5'>
-          <h3 className=' text-secondary'>Our Amenities</h3>
+          <h3 className=' text-secondary'>{props.title}</h3>
           <p className='mt-3 mb-5'>Discover an oasis of luxury at our exquisite hotel, nestled in the heart of Egypt. Experience unrivaled comfort in our elegantly designed rooms 
           </p>
 
