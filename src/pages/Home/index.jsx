@@ -16,7 +16,6 @@ function Home() {
       <Deals /> 
       <Packages />
       <Features />
-      <Deals />
       <Reviews /> 
     </div>
   );

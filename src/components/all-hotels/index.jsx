@@ -51,7 +51,7 @@ function AllHotels() {
     },
   };
   return (
-    <Container className="all-hotels mb-5" id="hote-list">
+    <Container className="all-hotels my-5" id="hote-list">
     <div className="text-center my-5">
     <h2 className="mb-3">Find Your Best Destenation</h2>
       <p className="lh-sm">Experience unparalleled luxury  and impeccable service at our upcoming hotel destination, where indulgence <pre></pre> and relaxation seamlessly blend to create a truly memorable stay.</p>
@@ -60,9 +60,9 @@ function AllHotels() {
       <OwlCarousel {...options} className="owl-theme">
         { data.map((item ,index) => {
           return (
-            // <div key={index}>
+            <div key={index}>
                 <HotelCard item={item} />
-            // </div>
+            </div>
           );
         })}
       </OwlCarousel>

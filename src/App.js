@@ -34,18 +34,17 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/signin" element={<SignIn />} />
-            <Route path="/hotels" element={<ProtectedRoute><HotelDetails /></ProtectedRoute>} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/forget-password" element={<ForgetPassword />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/verify-code" element={<VerifyCode />} />
             <Route path="/profile" element={<ProtectedRoute><Profile/></ProtectedRoute>} />
-          <Route path="/payment" element={<ProtectedRoute><PaymentDetails  /></ProtectedRoute>} />
-               <Route path="/hotel-details" element={<HotelDetails />} />
-                <Route path="/hotel-details/room-details" element={<RoomDetails/>} />
-          <Route path="/details" element={<Details/>} />
-          <Route path="/payment" element={<Payment/>} />
-          <Route path="/confirmation" element={<Confirmation/>} />
+            {/* <Route path="/payment" element={<ProtectedRoute><PaymentDetails  /></ProtectedRoute>} /> */}
+            <Route path="/hotel-details" element={<ProtectedRoute><HotelDetails /></ProtectedRoute>} />
+            <Route path="/hotel-details/room-details" element={<ProtectedRoute><RoomDetails/></ProtectedRoute>} />
+            <Route path="/details" element={<Details/>} />
+            <Route path="/payment" element={<Payment/>} />
+            <Route path="/confirmation" element={<Confirmation/>} />
           </Routes>
             <Footer/>
         </AuthContextProvider>

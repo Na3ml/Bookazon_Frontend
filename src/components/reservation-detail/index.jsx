@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import GenericButton from "../generic-button";
 
 import "./style.css";
+import { Button } from "react-bootstrap";
 function ReservationDetail() {
   console.log(new Date().toJSON().slice(0, 10) )
   
@@ -13,18 +14,25 @@ function ReservationDetail() {
   const day=new Date(new Date().getTime() + (24 * 60 * 60 * 1000));
   const checkoutStartDay=day.toJSON().slice(0, 10)
   console.log(checkoutStartDay);
+  const [value1, setValue1] = useState("");
+  const [value2, setValue2] = useState("");
+  const [value3, setValue3] = useState("");
+  console.log(value2);
   const [checkin, setCheckin] = useState("November 12, 2023");
   const [checkout, setCheckout] = useState("November 12, 2023");
   const [guests, setGuests] = useState(2);
   const handelCheckin = (e) => {
+    setValue1(e.target.value)
     setCheckin(moment(e.target.value).format("LL"));
     console.log(moment(e.target.value).format("LL"));
   };
   const handelCheckout = (e) => {
+    setValue2(e.target.value)
     setCheckout(moment(e.target.value).format("LL"));
     console.log(moment(e.target.value).format("LL"));
   };
   const handelGuests = (e) => {
+    setValue3(e.target.value)
         setGuests(e.target.value)
   };
 
@@ -66,6 +74,7 @@ function ReservationDetail() {
           <div className="date-picker">
             <div className="position-relative  d-flex align-items-center ">
               <input
+               value={value1}
                 type="date"
                 min={minDate}
                 className=" input h-100 w-100 pe-2 py-1"
@@ -84,6 +93,7 @@ function ReservationDetail() {
           <div className="date-picker">
             <div className="position-relative  d-flex align-items-center ">
               <input
+                value={value2}
                 type="date"
                 min={checkoutStartDay}
                 className=" input h-100 w-100 pe-2 py-1"
@@ -101,6 +111,7 @@ function ReservationDetail() {
         <div className="d-flex align-items-center justify-content-between">
           <p className="text-gray-500  fs-20 fw-medium">Guests</p>
           <select
+          value={value3}
             name="guests"
             onChange={(e)=>{handelGuests(e)}}
             style={{ width: "220px" }}
@@ -114,11 +125,14 @@ function ReservationDetail() {
         </div>
       </div>
       <div className="d-flex align-items-center justify-content-center">
-        <GenericButton
+       
+      <Button className="p-0 border-0" disabled={!(value1.length > 0 ) || !(value2.length > 0 ) || !(value3.length > 0 )}>
+      <GenericButton
           to="/details"
           className="bg-secondary  text-white "
           text="Apply"
         />
+      </Button>
       </div>
     </div>
   );

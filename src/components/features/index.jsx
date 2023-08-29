@@ -14,7 +14,7 @@ function Features() {
       <Container>
         <Row className="feature position-relative">
           <Col sx={12} lg={6}>
-            <p className=" text-primary m-0 mt-3 fw-medium">FEATURES</p>
+            <p className=" text-primary m-0 mt-3 fs-20 fw-medium">FEATURES</p>
             <h2 className=" mb-3">Why Choose Us?</h2>
             <p className="describtion mb-5 mb-md-0 ">
               Et labore harum non nobis ipsum eum molestias mollitia et corporis
@@ -34,9 +34,10 @@ function Features() {
             <p className="vertical fw-medium m-0">Our Amazing Services </p>
           </Col>
           <div className="start-0 services ">
-            {images.map((item) => {
+            {images.map((item ,i) => {
               return (
                 <img
+                  key={i}
                   src={item}
                   alt={item}
                   className="me-md-5 me-3  "
