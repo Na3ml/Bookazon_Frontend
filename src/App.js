@@ -17,7 +17,10 @@ import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute"
 import PaymentDetails from "./components/paymentCopm/paymentDetails/PaymentDetails";
 import Profile from "./components/profile/Profile";
 import Footer from "./components/Footer/Footer";
-
+import RoomDetails from "./pages/RoomDetails";
+import Details from "./pages/Details"
+import Payment from "./pages/Payment";
+import Confirmation from "./pages/Confirmation";
 
 const App = () => {
   return (
@@ -25,25 +28,29 @@ const App = () => {
       <Toaster />
       <HashRouter>
 
+
         <AuthContextProvider>
           <Navigation />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/signin" element={<SignIn />} />
-            <Route path="/hotel-details" element={<ProtectedRoute><HotelDetails /></ProtectedRoute>} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/forget-password" element={<ForgetPassword />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/verify-code" element={<VerifyCode />} />
             <Route path="/profile" element={<ProtectedRoute><Profile/></ProtectedRoute>} />
-          <Route path="/payment" element={<ProtectedRoute><PaymentDetails  /></ProtectedRoute>} />
+            {/* <Route path="/payment" element={<ProtectedRoute><PaymentDetails  /></ProtectedRoute>} /> */}
+            <Route path="/hotel-details" element={<ProtectedRoute><HotelDetails /></ProtectedRoute>} />
+            <Route path="/hotel-details/room-details" element={<ProtectedRoute><RoomDetails/></ProtectedRoute>} />
+            <Route path="/details" element={<Details/>} />
+            <Route path="/payment" element={<Payment/>} />
+            <Route path="/confirmation" element={<Confirmation/>} />
           </Routes>
             <Footer/>
         </AuthContextProvider>
 
-   
-
       </HashRouter>
+
       
     </>
   );

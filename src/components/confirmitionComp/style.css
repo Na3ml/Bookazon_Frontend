@@ -1,0 +1,7 @@
+.confirmition-comp{
+   background: rgba(72, 255, 0, 0.22); 
+}
+.confirmition-comp .done {
+border-radius: 50%;
+color: #43C311 ;width:50px ;height:40px 
+}

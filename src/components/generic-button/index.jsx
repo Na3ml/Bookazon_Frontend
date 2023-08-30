@@ -5,6 +5,7 @@ function GenericButton(props) {
   return (
     <Link
       to={props.to}
+      state={props.state}
       className={` rounded text-decoration-none  px-5 py-2  d-block ${props.className}`}
     >
       {props.text}

@@ -33,7 +33,7 @@ function RoomCard(props) {
       <p className="fs-26 text-primary me-1 m-0"> 45$</p>
       <span className="text-white">per/night</span>
      </div>
-     <GenericButton to="/" text="Book Now" className="text-white border-white border-1 border"></GenericButton>
+     <GenericButton to="room-details" text="Book Now" className="text-white border-white border-1 border"></GenericButton>
     </div>
 
 

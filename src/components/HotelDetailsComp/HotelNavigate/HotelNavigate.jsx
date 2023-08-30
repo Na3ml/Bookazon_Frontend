@@ -13,7 +13,7 @@ const HotelNavigate = () => {
           <Container className="hotel-navigate-route-container d-flex justify-content-between ">
             <Link
               to="/#hote-list"
-              className="back-link d-flex "
+              className="back-link d-flex fw-medium"
               smooth={true}
               duration={6000}
               offset={-80}
@@ -21,7 +21,7 @@ const HotelNavigate = () => {
               <BsArrowLeft size={20} style={{ "margin-right": "5px" }} />
               Hote List
             </Link>
-            <ul xs={12} className="hotel-navigate-list ">
+            <ul xs={12} className="hotel-navigate-list fw-medium">
               <li>
                 <Link
                   to="#description"

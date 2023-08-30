@@ -21,12 +21,13 @@ function PaymentInfo() {
   return (
     <div
       style={{
-        width: "802px",
+        // width: "802px",
         height: "600px",
-        backgroundColor: "#F4F4F4",
-        marginTop: "150px",
+        // backgroundColor: "#F4F4F4",
+        background:"payment-details",
+        marginTop: "30px",
         borderRadius: "4px",
-        marginLeft: "80px",
+        marginRight: "80px",
       }}
     >
       <div className="payment-info">
