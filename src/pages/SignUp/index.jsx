@@ -218,6 +218,13 @@ const SignUp = () => {
             ) : null}
           </Form.Group>
 
+          <div className="d-flex align-items-start mt-2">
+            <Form.Check className="me-1" type="checkbox" required />
+            <p className="m-0 agree">
+            I have read  and accepted the <span className="text-primary">Terms of Use </span> 
+              and {" "}  <span className="text-primary"> {" "} Privacy Policy </span> 
+            </p>
+        </div>
 
           <Button variant="secondary"
            disabled={!(formik.isValid && formik.dirty)}
@@ -233,13 +240,7 @@ const SignUp = () => {
      
 
           
-        <div className="d-flex align-items-start mt-2">
-            <Form.Check className="me-1" type="checkbox" />
-            <p className="m-0 agree">
-            I have read  and accepted the <span className="text-primary">Terms of Use </span> 
-              and {" "}  <span className="text-primary"> {" "} Privacy Policy </span> 
-            </p>
-        </div>
+       
         </Form>
         
           <div className="line"></div>
