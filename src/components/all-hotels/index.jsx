@@ -13,10 +13,10 @@ function AllHotels() {
   useEffect(() => {
     // fetch data
     axios
-      .get("https://ayarabia.github.io/jsonData/courses.json")
+      .get("https://bookazon.tadafoq.com/api/properties")
       .then(function (response) {
         // handle success
-        setData(response.data);
+        setData(response.data.data);
         //console.log(response.data);
       })
       .catch(function (error) {
@@ -27,6 +27,7 @@ function AllHotels() {
         // always executed
       });
   }, []);
+  console.log(data);
   const options = {
     margin: 50,
     responsiveClass: true,

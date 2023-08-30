@@ -50,7 +50,7 @@ const Navigation = () => {
 
             {userData ? 
               <> 
-          <li>
+          <li style={{padding: "0"}}>
               <Link to="/profile">
                 <img className="nav-profile-img" src={Profile} alt="" />
               </Link>
