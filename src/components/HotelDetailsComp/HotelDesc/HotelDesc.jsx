@@ -29,15 +29,15 @@ function HotelDesc() {
         <Col
           sx={12}
           lg={6}
-          className="hotel-imgs d-flex flex-lg-row flex-column"
+          className="hotel-imgs d-flex flex-lg-row flex-column "
         >
-          <div className="img-1 ">
-            <img src={hotelimg1} alt="hotelimg1" className="me-4" />
-            <img src={hotelimg2} alt="hotelimg2" />
+          <div className="img-1 m-auto">
+            <img src={hotelimg1} alt="hotelimg1" className="me-4 w-100" />
+            <img src={hotelimg2} alt="hotelimg2"  className=" w-100"/>
           </div>
-          <div className="img-1">
-            <img src={hotelimg3} alt="hotelimg3" className="me-md-4" />
-            <img src={hotelimg4} alt="hotelimg4" />
+          <div className="img-1 m-auto">
+            <img src={hotelimg3} alt="hotelimg3" className="me-4 w-100" />
+            <img src={hotelimg4} alt="hotelimg4" className=" w-100" />
           </div>
         </Col>
       </Row>

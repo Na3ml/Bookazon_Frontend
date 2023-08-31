@@ -8,8 +8,6 @@ import GenericButton from "../generic-button";
 import "./style.css";
 import { Button } from "react-bootstrap";
 function ReservationDetail() {
-  console.log(new Date().toJSON().slice(0, 10) )
-  
   const minDate=new Date().toJSON().slice(0, 10);
   const day=new Date(new Date().getTime() + (24 * 60 * 60 * 1000));
   const checkoutStartDay=day.toJSON().slice(0, 10)
@@ -46,8 +44,8 @@ function ReservationDetail() {
   }
   return (
     <div className=" reservation-detail">
-      <div className="d-flex mb-5  " style={{ height: "200px" }}>
-        <img src={room} className="rounded" alt="room-img" />
+      <div className="d-flex mb-5 flex-wrap  flex-md-nowrap">
+        <img src={room} className="rounded m-auto m-md-0" alt="room-img"  style={{height:"200px"}} />
         <div className="p-4 w-100">
           <p className=" me-5 fw-medium fs-20">Deluxe Room</p>
           <p className="d-flex align-items-center ">
@@ -67,12 +65,12 @@ function ReservationDetail() {
           </div>
         </div>
       </div>
-      <p className=" fs-20 fw-bold ">Please, Fill these information</p>
-      <div className="my-4">
-        <div className="d-flex align-items-center justify-content-between">
+      <p className=" fs-20 fw-bold px-4 ">Please, Fill these information</p>
+      <div className="my-4 px-4">
+        <div className="d-flex align-items-center justify-content-between mb-3">
           <p className="text-gray-500 fs-20 fw-medium">Check in</p>
           <div className="date-picker">
-            <div className="position-relative  d-flex align-items-center ">
+            <div className="position-relative  d-flex align-items-cente ">
               <input
                value={value1}
                 type="date"
@@ -88,7 +86,7 @@ function ReservationDetail() {
             </div>
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-between">
+        <div className="d-flex align-items-center justify-content-between mb-3">
           <p className="text-gray-500  fs-20 fw-medium">Check out</p>
           <div className="date-picker">
             <div className="position-relative  d-flex align-items-center ">
@@ -108,14 +106,14 @@ function ReservationDetail() {
             </div>
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-between">
+        <div className="d-flex align-items-center justify-content-between mb-3">
           <p className="text-gray-500  fs-20 fw-medium">Guests</p>
           <select
           value={value3}
             name="guests"
             onChange={(e)=>{handelGuests(e)}}
             style={{ width: "220px" }}
-            className="d-flex align-items-center guests fw-medium fs-20 px-2 py-1"
+            className="d-flex align-items-center guests fw-medium fs-20 px-2 py-1 border-black border"
           >
             <option value="2">2</option>
             <option value="3">3</option>

@@ -1,6 +1,8 @@
-import React from "react";
-import { Container } from "react-bootstrap";
+import React, { useState } from "react";
+import moment from "moment";
+import { Container ,Row ,Col } from "react-bootstrap";
 // import Form from "react-bootstrap/Form";
+import img from "../../../assets/imgs/arrow-right.png";
 import RoomCard from "../../room-card";
 import room1 from "../../../assets/imgs/room1.png";
 import room2 from "../../../assets/imgs/room2.png";
@@ -10,6 +12,7 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./style.css";
 import DropdownCheckboxes from "../../dropdown-checkbox";
+import DatePicker from "../../customeDatePicker";
 function AllRooms() {
   const data = [
     room1,
@@ -48,6 +51,43 @@ function AllRooms() {
       },
     },
   };
+  const minDate = new Date().toJSON().slice(0, 10);
+  const day = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+  const checkoutStartDay = day.toJSON().slice(0, 10);
+  console.log(checkoutStartDay);
+  console.log(day);
+  const [value1, setValue1] = useState("");
+  const [value2, setValue2] = useState("");
+  const [value3, setValue3] = useState("");
+  console.log(value2);
+  const [checkin, setCheckin] = useState(moment(minDate).format("LL"));
+  const [checkout, setCheckout] = useState(moment(checkoutStartDay).format("LL"));
+  const [guests, setGuests] = useState(2);
+  const handelCheckin = (e) => {
+    setValue1(e.target.value);
+    setCheckin(moment(e.target.value).format("LL"));
+    console.log(moment(e.target.value).format("LL"));
+  };
+  const handelCheckout = (e) => {
+    setValue2(e.target.value);
+    setCheckout(moment(e.target.value).format("LL"));
+    console.log(moment(e.target.value).format("LL"));
+  };
+  const handelGuests = (e) => {
+    setValue3(e.target.value);
+    setGuests(e.target.value);
+  };
+
+  console.log({
+    checkin,
+    checkout,
+    guests,
+  });
+  window.info = {
+    checkin,
+    checkout,
+    guests,
+  };
   return (
     <Container className="all-rooms position-relative py-5" id="room">
       <div className="px-5">
@@ -55,6 +95,68 @@ function AllRooms() {
           <h2 className="mb-4 mb-md-0">Rooms & Suites</h2>
           <DropdownCheckboxes />
         </div>
+        <Row className="my-4 ">
+        <Col sx={12} lg={4}  className="mb-4">
+        <p className="text-gray-500 fs-20 fw-medium">Check in</p>
+        <div className="input-container d-flex align-items-center position-relative">
+            <img
+              src={img}
+              alt="image"
+              className="position-absolute  clander-img"
+            />
+            <input
+              type="date"
+              value={value1}
+              min={minDate}
+              onChange={(e) => {
+                handelCheckin(e);
+              }}
+            ></input>
+            <p className="date position-absolute fw-medium fs-20 ps-2 py-1">
+              {checkin}
+            </p>
+          </div>
+        </Col>
+        <Col sx={12} lg={4} className="mb-4">
+        <p className="text-gray-500 fs-20 fw-medium">Check Out</p>
+        <div className="input-container d-flex align-items-center position-relative">
+            <img
+              src={img}
+              alt="image"
+              className="position-absolute  clander-img"
+            />
+            <input
+             value={value2}
+             type="date"
+             min={checkoutStartDay}
+             onChange={(e) => {
+               handelCheckout(e);
+             }}
+             
+            ></input>
+            <p className="date position-absolute fw-medium fs-20 ps-2 py-1">
+              {checkout}
+            </p>
+          </div>
+        </Col>
+        <Col sx={12} lg={4}  className="mb-4">
+        <div className=" mb-3">
+          <p className="text-gray-500  fs-20 fw-medium">Guests</p>
+          <select
+          value={value3}
+            name="guests"
+            onChange={(e)=>{handelGuests(e)}}
+            className="d-flex align-items-center w-100 guests fw-medium fs-20 px-2 py-1 border-black border"
+          >
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        </Col>
+        </Row>
+
         {data.length && (
           <OwlCarousel {...options} className="owl-theme">
             {data.map((item, index) => {
