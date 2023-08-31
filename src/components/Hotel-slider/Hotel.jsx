@@ -39,7 +39,7 @@ function Hotel() {
       {hotelData.map((item, index) => {
         return (
           <Container className="about mb-5" key={index}>
-            <Row className="wrapper">
+            <Row className="wrapper px-4 pt-5">
               <Col sx={12} lg={7} className="info pe-lg-5 pe-0">
                 <h1 className="mb-4">{item.title}</h1>
                 <p>

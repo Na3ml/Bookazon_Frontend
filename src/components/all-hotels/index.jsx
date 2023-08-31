@@ -41,10 +41,10 @@ function AllHotels() {
         items: 1,
       },
       600: {
-        items: 2,
+        items: 1,
       },
       700: {
-        items: 2,
+        items: 1,
       },
       1000: {
         items: 3,
@@ -55,13 +55,13 @@ function AllHotels() {
     <Container className="all-hotels my-5" id="hote-list">
     <div className="text-center my-5">
     <h2 className="mb-3">Find Your Best Destenation</h2>
-      <p className="lh-sm">Experience unparalleled luxury  and impeccable service at our upcoming hotel destination, where indulgence <pre></pre> and relaxation seamlessly blend to create a truly memorable stay.</p>
+      <p className=" des">Experience unparalleled luxury  and impeccable service at our upcoming hotel destination, where <pre></pre> indulgence  and relaxation seamlessly blend to create a truly memorable stay.</p>
     </div>
       {data.length &&(
       <OwlCarousel {...options} className="owl-theme">
         { data.map((item ,index) => {
           return (
-            <div key={index}>
+            <div key={index} className="px-4">
                 <HotelCard item={item} />
             </div>
           );

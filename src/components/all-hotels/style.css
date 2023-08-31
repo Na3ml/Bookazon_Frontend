@@ -22,3 +22,11 @@
     color: #FF9200 !important;
 	/* opacity: 0.1; */
 }
+@media(max-width: 830px) {
+.all-hotels .des{
+	font-size: 15px;
+	padding: 0 14px;
+	line-height: 1.7;
+}
+
+}

@@ -9,7 +9,7 @@ export const  ReviewsData =[
     },
     {
         id:2,
-        name:"Aya Mohamed",
+        name:" Mohamed Ali",
         job:"Software Engineer",
         img:"https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?size=626&ext=jpg",
         desc:" Vel officiis dolor ea illo aut eligendi ullam non laudantium magnam et recusandae molestiae sit iure unde aut voluptate quaerat. Id sunt provident quo possimus impedit vel doloremque obcaecati qui ullam consectetur et ipsum omnis."

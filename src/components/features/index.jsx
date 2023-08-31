@@ -10,12 +10,12 @@ import "./style.css";
 function Features() {
   const images = [feature1, feature2, feature3, feature4];
   return (
-    <div className="bg-light py-5" id="features">
+    <div className="bg-light  px-4 px-md-0" id="features">
       <Container>
         <Row className="feature position-relative">
           <Col sx={12} lg={6}>
             <p className=" text-primary m-0 mt-3 fs-20 fw-medium">FEATURES</p>
-            <h2 className=" mb-3">Why Choose Us?</h2>
+            <h2 className=" mb-4">Why Choose Us?</h2>
             <p className="describtion mb-5 mb-md-0 ">
               Et labore harum non nobis ipsum eum molestias mollitia et corporis
               praesentium a laudantium internos. Non quis eius quo eligendi

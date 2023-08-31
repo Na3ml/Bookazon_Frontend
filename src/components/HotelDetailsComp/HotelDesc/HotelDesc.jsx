@@ -8,10 +8,10 @@ import "./HotelDesc.css";
 import { Container, Col, Row } from "react-bootstrap";
 function HotelDesc() {
   return (
-    <Container className="hotel-desc mb-5" id="description">
+    <Container className="hotel-desc mb-5 px-4 px-md-0" id="description">
       <Row className="wrapper">
         <Col sx={12} lg={6} className="desc flex-column d-flex">
-          <h1 className="mb-4">Hotel Description</h1>
+          <h2 className="mb-4">Hotel Description</h2>
           <p> Discover an oasis of luxury at our exquisite hotel, nestled in theheart of Egypt. Experience unrivaled comfort in our elegantlydesigned rooms and suites. Explore the vibrant city with ease fromour convenient central location.
           </p>
           <p className="my-4">

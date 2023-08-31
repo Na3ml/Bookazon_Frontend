@@ -5,7 +5,7 @@
 .reviews-title {
   position: relative;
   margin-top: 50px;
-  margin-bottom: 50px;
+  /* margin-bottom: 10px; */
 }
 .hand-img {
   position: absolute;
@@ -71,5 +71,9 @@
 @media (max-width:830px) {
   .reviews-title-text {
     width: fit-content;
+    line-height: 1.8;
+  }
+  .hand-img {
+    display: none;
   }
 }

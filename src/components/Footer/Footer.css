@@ -11,7 +11,7 @@
 .main .footer {
   display: flex;
   justify-content: space-between;
-  padding: 50px;
+  /* padding: 50px; */
 }
 
 /* .main .footer-right .mail-img {
@@ -118,7 +118,7 @@
 .main .under {
   display: flex;
   justify-content: space-between;
-  padding: 40px 70px;
+  /* padding: 40px 70px; */
   border-top: solid 1px #b8b6b6;
   margin: 0 50px;
 }
@@ -132,3 +132,9 @@
   justify-content: space-between;
   gap: 20px;
 }
+@media(max-width: 830px) {
+
+  .footer-right .mail-input {
+    height: 40px  !important;
+  }
+  }

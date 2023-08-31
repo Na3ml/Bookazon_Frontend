@@ -7,10 +7,10 @@ margin-top: 100px;
     /* display: flex;
     flex-direction: column; */
     /* gap: 25px; */
-    padding-bottom: 130px;
+    padding-bottom: 80px;
 }
 
-.hotel-desc .wrapper h1 {
+.hotel-desc .wrapper h2 {
     font-size: 55px;
     letter-spacing: 1.8px;
     font-weight: 500;
@@ -63,3 +63,21 @@ margin-top: 100px;
     margin-bottom: 20px;
     border-radius: 4px;
 }
+@media(max-width: 830px) {
+    .hotel-desc .wrapper h2 {
+        font-size: 44px;
+    }
+    .hotel-desc .desc>p {
+        font-size: 18px;
+        color: #000;
+    }
+}
+@media(max-width: 738px) {
+    .hotel-desc .wrapper h2 {
+        font-size: 35px;
+    }
+    .hotel-desc .desc>p {
+        font-size: 16px;
+        color: #000;
+    }
+  }
