@@ -9,9 +9,12 @@ import { TbTicket } from "react-icons/tb";
 import ProfileImage from "../../assets/imgs/profile.jpeg";
 import Brush from "../../assets/imgs/brush-icon.png";
 import "./profile.css";
-import { useState ,useContext} from "react";
+import { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../../Context/AuthContext";
 import { toast } from "react-hot-toast";
+import axios from "axios";
+import jwt_decode from "jwt-decode";
+import Cookies from "js-cookie";
 
 export default function Profile() {
   return (
@@ -22,21 +25,18 @@ export default function Profile() {
   );
 }
 function SideBar() {
+  const { userData, handleLogout } = useContext(AuthContext);
 
-  const {userData,handleLogout} = useContext(AuthContext);
-
-
-  const Logout=()=>{
+  const Logout = () => {
     handleLogout();
     toast.success("Logged out successfully!", {
       duration: 2000,
       className: "text-secondary px-4 fw-bolder",
       iconTheme: {
-        primary: '#ff9900',
-      }
-  }
-  );
-}
+        primary: "#ff9900",
+      },
+    });
+  };
   return (
     <div className="sidebar">
       <h4>My Profile</h4>
@@ -97,11 +97,99 @@ function SideBar() {
   );
 }
 function Section() {
-  const [edit, setEdit] = useState(false);
-  function handleSubmit(e) {
+  const [edit, setEdit] = useState(true);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [address, setAdress] = useState("");
+  const [picture, setPicture] = useState("");
+  // const {userData,handleLogout,token} = useContext(AuthContext);
+
+  // console.log(token);
+
+  const jwt_token = Cookies.get("jwt_token");
+
+  console.log(jwt_token);
+
+  const fetchProfileData = async () => {
+    try {
+      const response = await axios.get(
+        "https://bookazon.tadafoq.com/api/auth/user-profile",
+        {
+          headers: {
+            Authorization: `Bearer ${jwt_token}`, // إرسال التوكن في عنوان التوجيه (Authorization header)
+          },
+        }
+      );
+      setFirstName(response.data.first_name);
+      setLastName(response.data.last_name);
+      setEmail(response.data.email);
+      setPhoneNumber(response.data.phone_number || "");
+      setAdress(response.data.address);
+      setPicture(response.data.profile_picture);
+      console.log(response.data);
+    } catch (error) {
+      console.error("حدث خطأ أثناء جلب بيانات البروفايل:", error);
+    }
+  };
+  useEffect(() => {
+    if (jwt_token) {
+      // إذا تم تعيين التوكن، قم بجلب بيانات البروفايل باستخدام التوكن
+      fetchProfileData();
+    }
+  }, [jwt_token]);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setEdit((e) => !e);
-  }
+    setEdit((e) => false);
+    let payload = new FormData()
+    payload.append("first_name", firstName)
+    payload.append('last_name', lastName)
+    payload.append('email', email)
+    payload.append('phone_number', phoneNumber)
+    payload.append('address', address)    
+    // payload.append('profile_picture',"")
+
+    try {
+
+      const response = await axios({
+        method: "post",
+        url: "https://bookazon.tadafoq.com/api/auth/update",
+        data: payload,
+        headers: { "Content-Type": "multipart/form-data", Authorization: `Bearer ${jwt_token}` },
+      })
+
+      if (response.status === 200) {
+        // Profile update successful
+        console.log("Profile updated successfully");
+        toast.success(response.data.message, {
+          duration: 2000,
+          className: "text-secondary px-4 fw-bolder",
+          iconTheme: {
+            primary: "#ff9900",
+          },
+        });
+      } else {
+        // Handle error response
+        
+        console.error("Profile update failed");
+      }
+    } catch (error) {
+      // Handle network or other errors
+      toast.error("Failed to update profile", {
+        duration: 2000,
+        className: "text-danger px-4 fw-bolder",
+      });
+      console.error("An error occurred", error);
+    }
+  };
+
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+  //   setEdit((e) => !e);
+  // }
 
   return (
     <div className="section ">
@@ -113,77 +201,95 @@ function Section() {
         </a>
       </div>
       <form className=" mt-5 ">
-        <div class="form-group name-form">
+        <div className="form-group name-form">
           <div className="w-50">
-            <label for="firstName">First Name</label>
+            <label htmlFor="firstName">First Name</label>
             <input
               id="firstName"
               type="text"
               className="form-control"
               placeholder="FirstName"
-              disabled={edit}
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              disabled={!edit}
             />
           </div>
           <div className="w-50">
-            <label for="secondName">Second Name</label>
+            <label htmlFor="secondName">Second Name</label>
             <input
               id="secondName"
               type="text"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
               className="form-control"
-              placeholder="SecondName"
-              disabled={edit}
+              disabled={!edit}
             />
           </div>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             id="email"
             aria-describedby="emailHelp"
-            placeholder="Enter email"
-            disabled={edit}
+            disabled={!edit}
           />
         </div>
-        <div class="form-group">
-          <label for="password">password</label>
+        <div className="form-group">
+          <label htmlFor="password">password</label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="password"
-            placeholder="12345678"
-            disabled={edit}
+            onChange={(e) => setPassword(e.target.value)}
+            disabled={!edit}
+            value={password}
           />
         </div>
-        <div class="form-group">
-          <label for="number">Contact Number</label>
+        <div className="form-group">
+          <label htmlFor="number">Contact Number</label>
           <input
             type="number"
-            class="form-control"
+            className="form-control"
             id="number"
-            placeholder="0102345678"
-            disabled={edit}
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            disabled={!edit}
           />
         </div>
-        <div class="form-group">
-          <label for="address">Address</label>
+        <div className="form-group">
+          <label htmlFor="address">Address</label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="address"
-            placeholder="Cairo"
-            disabled={edit}
+            value={address}
+            onChange={(e) => setAdress(e.target.value)}
+            disabled={!edit}
           />
         </div>
-        <div class="form-group">
-          <button
+        <div className="form-group">
+          {edit ? (
+            <button
             type="submit"
-            class="btn btn-primary btn-sumbit"
+            className="btn btn-primary btn-sumbit"
             onClick={(e) => handleSubmit(e)}
           >
-            {edit ? "Edit" : "Save"}
+            save
           </button>
+          ):<button
+          type="submit"
+          className="btn btn-primary btn-sumbit"
+          onClick={(e)=>{
+            e.preventDefault()
+            setEdit((e) => !e)
+          }}
+        >
+          edit
+        </button>}
         </div>
       </form>
     </div>

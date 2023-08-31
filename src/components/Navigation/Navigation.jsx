@@ -43,7 +43,9 @@ const Navigation = () => {
 
             {userData ? 
               <> 
-          <li  onClick={handleChange}style={{padding: "0"}}>
+
+          <li  onClick={handleChange} style={{padding: "0"}}>
+
               <Link to="/profile">
                 <img className="nav-profile-img" src={Profile} alt="" />
               </Link>
