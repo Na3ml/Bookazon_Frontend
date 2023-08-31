@@ -6,7 +6,7 @@ import Hotel from "../../components/Hotel-slider/Hotel";
 import Deals from "../../components/Deals/Deals";
 import Reviews from "../../components/Reviews/Reviews";
 import AllHotels from "../../components/all-hotels";
-
+import DatePicker from "../../components/customeDatePicker";
 function Home() {
   return (
     <div>
@@ -17,6 +17,7 @@ function Home() {
       <Packages />
       <Features />
       <Reviews /> 
+      {/* <DatePicker/> */}
     </div>
   );
 }

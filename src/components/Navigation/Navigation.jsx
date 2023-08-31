@@ -22,13 +22,6 @@ const Navigation = () => {
     setClick(!click);
 
 
-
-
-
-
-
-
-
   }
   return (
     <div className="main-div">
@@ -36,28 +29,28 @@ const Navigation = () => {
         <div className={click ? "left-click" : "left"}>
           <img src={Logo} alt="" />
         </div>
-        <div className={click ? "right" : "right-click"}>
+        <div className={click ? "right-click":"right" }>
           <ul className="fs-26 fw-bold">
-            <li><Link to={"/"}>Home</Link></li>
-            <li><Link to={"/"}>EN</Link></li> 
+            <li onClick={handleChange}><Link to={"/"}>Home</Link></li>
+            <li onClick={handleChange}><Link to={"/"}>EN</Link></li> 
 
 
          
-            <li><HashLink to="/#hotel">Hotels</HashLink></li>
-            <li><HashLink to="/#deals">Deals</HashLink></li>
-            <li><HashLink to={"#features"}>Features</HashLink></li>
-            <li><HashLink to={"/#contact-us"}>Contact Us</HashLink></li>
+            <li onClick={handleChange}><HashLink to="/#hotel">Hotels</HashLink></li>
+            <li onClick={handleChange} ><HashLink to="/#deals">Deals</HashLink></li>
+            <li onClick={handleChange}><HashLink to={"#features"}>Features</HashLink></li>
+            <li onClick={handleChange}><HashLink to={"/#contact-us"}>Contact Us</HashLink></li>
 
             {userData ? 
               <> 
-          <li>
+          <li  onClick={handleChange}style={{padding: "0"}}>
               <Link to="/profile">
                 <img className="nav-profile-img" src={Profile} alt="" />
               </Link>
             </li>
              </>
           : <>
-             <li>
+             <li onClick={handleChange}>
                  <GenericButton 
                  to="/signin"
                   text="Login"

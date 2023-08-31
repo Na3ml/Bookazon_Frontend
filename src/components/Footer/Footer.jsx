@@ -14,7 +14,7 @@ function Footer() {
     <div className="main" id="contact-us">
       <Container>
         <Row
-          className="footer"
+          className="footer py-5 px-4"
         >
           <Col className="footer-left sx={12} lg={4}">
             <img src={logo} alt="logo" />
@@ -65,7 +65,7 @@ function Footer() {
           <Col sx={12}  lg={4} className="d-lg-flex justify-content-end d-block">
             <div>
               <h5>Subscribe to our newsletter</h5>
-            <div className="bg-white px-3  py-3 d-flex align-content-center justify-content-center">
+            <div className="bg-white px-3  py-md-3 py-2 d-flex align-content-center justify-content-center">
             <input
                 type="email"
                 placeholder="Your Email"
@@ -77,7 +77,7 @@ function Footer() {
           </Col>
         </Row>
       </Container>
-      <div className="under d-flex align-items-center justify-content-between flex-wrap">
+      <div className="under d-flex align-items-center  py-3 justify-content-between  flex-wrap">
         <div className="footer-right-under mb-4 mb-0">
           <Link href="/">
             <LinkedInIcon fontSize="medium" style={{ color: "white" }} />

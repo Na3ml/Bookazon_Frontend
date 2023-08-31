@@ -10,11 +10,11 @@ import Review from "../../components/HotelDetailsComp/Review/review";
 const HotelDetails = () => {
   return (
     <div> 
-      <HotelNavigate />
+      {/* <HotelNavigate /> */}
       <HotelDesc />
       <Amenities image="../../assets/imgs/Rectangle 19406.png" title="Our Amenities" className="border-secondary position-absolute"/>
       <AllRooms />
-      <Location />
+      {/* <Location /> */}
       <Review />
     </div>
   );

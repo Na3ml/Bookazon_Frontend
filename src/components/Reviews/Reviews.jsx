@@ -8,11 +8,11 @@ const Reviews = () => {
   return (
     <Container id="reviews">
       <div className="reviews-title">
-        <h1 className="reviews-title-text text-primary">
+        <h2 className="reviews-title-text text-primary">
           See What Our Clients Say
-          <br /> About Us
-        </h1>
-        <img className="hand-img" src={HandImg} alt="" />
+          <br/> About Us
+        </h2>
+        <img className="hand-img " src={HandImg} alt="image"  />
       
       </div>
      <ReviewCards />

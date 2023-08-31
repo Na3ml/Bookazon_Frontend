@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 25px; */
- padding:  200px 0 50px;
+   /* padding:  200px 0 50px; */
     
 }
 
@@ -141,6 +141,15 @@ background-color: rgba(255, 146, 0, 0.35)
     background: transparent;
 }
 @media (max-width:820px) {
+    .about .info>p {
+        font-size: 15px;
+    }
+    .about .wrapper h1 {
+        font-size: 30px;
+        letter-spacing: 1.8px;
+        font-weight: 500;
+        margin: 0;
+    }
     .bestHotel .owl-carousel .owl-nav button.owl-prev{
         left:30%;
         transform: translateY(30%);

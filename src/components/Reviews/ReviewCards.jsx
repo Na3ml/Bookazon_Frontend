@@ -10,12 +10,12 @@ import doubleQuotes from "../../assets/imgs/ri_double-quotes-l.png";
 const ReviewCards = () => {
   return (
     <Row className="reviews">
-    <a className="all-reviews text-secondary" href="/">
+    <a className="all-reviews text-secondary me-3 me-md-0" href="/">
     View All Reviews
   </a>
         {ReviewsData.map((item) => {
           return (
-            <Col xs={12} md={6} lg={4} className="mb-5" key={item.id}>
+            <Col xs={12} md={6} lg={4} className="mb-5 px-3" key={item.id}>
               <div className="reviews-card">
                 <img className="card-img" src={item.img} alt="" />
                 <p className="card-text">{item.desc}</p>

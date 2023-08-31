@@ -14,7 +14,7 @@ function RoomCard(props) {
         style={{ background: "rgba(0, 0, 0, 0.64)" }}
         className=" position-absolute bottom-0 start-0 w-100 px-3 py-3"
       >
-        <div className="d-flex align-items-center justify-content-between mb-1">
+        <div className="d-flex align-items-center justify-content-between flex-md-row flex-column mb-1">
           <p className="fw-normal text-white fs-20 mb-0">Deluxe Room</p>
           <StarsRating
         value={value}
@@ -24,16 +24,16 @@ function RoomCard(props) {
         classNamePrefix="rating"
       />
         </div>
-        <p className="d-flex align-items-center mb-3">
+        <p className="d-flex align-items-center mb-3 justify-content-md-start justify-content-center mt-md-0 mt-3">
          <span className="text-primary me-1"> <HiOutlineUsers/></span>
          <span className="text-white ">2 Persons</span>
         </p>
-    <div className="mt-1 d-flex align-items-center justify-content-between">
+    <div className="mt-1 d-flex align-items-center justify-content-between flex-md-row flex-column ">
     <div className="d-flex align-items-center ">
       <p className="fs-26 text-primary me-1 m-0"> 45$</p>
       <span className="text-white">per/night</span>
      </div>
-     <GenericButton to="room-details" text="Book Now" className="text-white border-white border-1 border"></GenericButton>
+     <GenericButton to="room-details" text="Book Now" className="text-white border-white border-1 border my-3 my-md-0"></GenericButton>
     </div>
 
 

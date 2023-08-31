@@ -54,6 +54,9 @@
     .review1 {
         display: block;
     }
+    .star-rating{
+        margin-left: -7%;
+    }
     .feedback-btn{
         margin-left: 15%;
     }

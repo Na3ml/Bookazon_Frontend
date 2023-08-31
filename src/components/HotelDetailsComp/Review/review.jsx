@@ -5,8 +5,8 @@ import ReviewCards from '../../Reviews/ReviewCards';
 const review = () => {
     return (
         <>
-        <div className='' id='rating-reviews'>
-            <h1 className='container' >Rating and reviews</h1>
+        <div className='px-3 px-md-0' id='rating-reviews'>
+            <h2 className='container ps-4' >Rating and reviews</h2>
             <div className='review1'>
                 <div className='star-rating'>
                     <span className='star1 d-flex align-items-center'>

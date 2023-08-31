@@ -11,13 +11,15 @@ function Deals() {
   return (
     <Container id="deals">
       <Row className="main-deals d-flex justify-content-center align-items-center mx-auto" >
-        <Col className="deals-left" sx={12} md={12} lg={6}>
-          <h1 className="main-deals-title">
+        <Col  sx={12} md={12} lg={6}>
+        <div className="deals-left">
+        <h1 className="main-deals-title">
             We Always Have Best
             <br /> <span className="text-primary">DEALS</span>{" "}
           </h1>
           <DealsCopm title="Deluxe Room" price="26" image={img3} />
           <DealsCopm title="Deluxe Room" price="26" image={img4} />
+        </div>
         </Col>
         <Col className="deals-right" sx={12} md={12} lg={6}>
           <DealsCopm title="Deluxe Room" price="26" image={img1} />
