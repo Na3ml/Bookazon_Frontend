@@ -30,3 +30,56 @@ background-color: rgba(126, 87, 194, 0.22)
 .all-rooms  .owl-theme .owl-dots .owl-dot.active span,.all-rooms  .owl-theme .owl-dots .owl-dot:hover span {
     background-color: #7E57C2;
 }
+.all-rooms .guests {
+    background: url("../../../assets/imgs/arrow-right.png");
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 1.1rem auto;
+    outline: none;
+  }
+
+  .input-container input {
+    border: 1px solid gray;
+    box-sizing: border-box;
+    outline: 0;
+    padding: .75rem;
+    position: relative;
+    width: 100%;
+  
+  }
+  .all-rooms .date-picker {
+    width: 220px;
+  }
+  .all-rooms  .date {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+  .all-rooms .clander-img {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+  }
+  /* ::-webkit-calendar-picker-indicator {
+    background-image: url(../../../assets/imgs/arrow-right.png);
+  } */
+
+ .all-rooms input {
+    text-indent: -99em;
+    background-color: transparent;
+  }
+.all-rooms  input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0; 
+      width: auto;
+  }

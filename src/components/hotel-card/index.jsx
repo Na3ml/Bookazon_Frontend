@@ -5,6 +5,8 @@ import calender from "../../assets/imgs/calender.png";
 import {AiOutlineCalendar ,AiOutlineUser} from 'react-icons/ai'
 import { PiMapPin } from "react-icons/pi";
 import location from "../../assets/imgs/location.png";
+import egypt from "../../assets/imgs/egypt.png";
+import room from "../../assets/imgs/room1.png";
 import Rating from "../rating";
 import { Link } from "react-router-dom";
 
@@ -12,13 +14,13 @@ function HotelCard(prop) {
   const hoteleDetail = prop.item;
   return (
     <div className="ronded mb-4 position-relative ">
-      <img src={hoteleDetail.cover} className="w-100  rounded-top" alt="image" />
+      <img src={room} className="w-100  rounded-top" alt="image" />
       <div className="pt-4  bg-white position-relative">
         <img
-          src={hoteleDetail.instructor}
+          src={egypt}
           alt="image"
-          className=" position-absolute rounded-circle border-4 border-white border "
-          style={{ width: "60px", height: "60px", top: "-35px", left: "20px" }}
+          className=" position-absolute rounded-circle  "
+          style={{ width: "100px", height: "100px", top: "-45px", left: "15px" }}
         />
         <div className="d-flex align-items-center mt-2">
           <div className="d-flex align-items-center text-reject">

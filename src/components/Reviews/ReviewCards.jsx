@@ -17,11 +17,11 @@ const ReviewCards = () => {
           return (
             <Col xs={12} md={6} lg={4} className="mb-5 px-3" key={item.id}>
               <div className="reviews-card">
-                <img className="card-img" src={item.img} alt="" />
+                <img className="card-img" src={item.img} alt="image" />
                 <p className="card-text">{item.desc}</p>
                 <img className="doubleQuotes-img" src={doubleQuotes} alt="" />
                 <h6 className="card-title">
-                  {item.name} - {item.job}
+                  {item.name}
                 </h6>
               </div>
             </Col>

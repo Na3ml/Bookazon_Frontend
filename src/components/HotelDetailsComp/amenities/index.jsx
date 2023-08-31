@@ -8,10 +8,11 @@ import drink from "../../../assets/imgs/fluent_drink-wine-20-regular.jpg"
 import receive from "../../../assets/imgs/receive-square-2.jpg"
 import wind from "../../../assets/imgs/wind-2.jpg"
 import "./style.css";
+import OurAmenities from '../our-amenities'
 
 
 
-const Amenities = (props) => {
+const Amenities = () => {
  const amenitiesData = [
     { title: "Swimming Pool", images: wind },
     { title: "Conference Room", images: people },
@@ -23,9 +24,9 @@ const Amenities = (props) => {
     { title: "Gym & Yoga", images: gym }
   ];
  return (
-    <div className='banner-amenities position-relative ' style={{backgroundImage:`url(${props.image})`}}>
-      <div className={`${props.className} card-amenities border`}>
-        <div className='mx-3 mt-5 mx-sm-5 px-3 pb-3'>
+    <div className='banner-amenities position-relative '>
+      <div className={`border-secondary position-absolute card-amenities border`}>
+        {/* <div className='mx-3 mt-5 mx-sm-5 px-3 pb-3'>
           <h3 className=' text-secondary'>{props.title}</h3>
           <p className='mt-3 mb-5'>Discover an oasis of luxury at our exquisite hotel, nestled in the heart of Egypt. Experience unrivaled comfort in our elegantly designed rooms 
           </p>
@@ -42,10 +43,10 @@ const Amenities = (props) => {
           </div>
 
 
-        </div>
+        </div> */}
+        <OurAmenities  amenities={amenitiesData} title="Our Amenities" className="mx-lg-3 mx-lg-5 px-3"/>
       </div>
     </div>
   )
 }
-
 export default Amenities;

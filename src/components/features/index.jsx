@@ -17,10 +17,10 @@ function Features() {
             <p className=" text-primary m-0 mt-3 fs-20 fw-medium">FEATURES</p>
             <h2 className=" mb-4">Why Choose Us?</h2>
             <p className="describtion mb-5 mb-md-0 ">
-              Et labore harum non nobis ipsum eum molestias mollitia et corporis
-              praesentium a laudantium internos. Non quis eius quo eligendi
-              corrupti et fugiat nulla qui soluta recusandae in maxime quasi aut
-              ducimus illum aut optio quibusdam!
+            We don’t like being more expensive than anyone else. What we can offer is unique, because we have the power to add extra value to your stay for less. Book direct or subscribe for the best rate guarantee.
+            Our hotel website is the place to not only browse and book online-only promotions, but to receive exclusive offers and packages that you won’t find anywhere else.
+
+
             </p>
           </Col>
           <Col

@@ -63,3 +63,23 @@
   display: flex;
   align-items: center;
 }
+
+@media screen and (max-width: 992px) {
+  .hotel-navigate-title {
+    font-size: 48px;
+  }
+  .hotel-navigate-list {
+    display: none;
+  }
+  
+}
+@media screen and (max-width: 600px) {
+  .hotel-navigate-title {
+    font-size: 36px;
+  }
+  .hotel-navigate-share {
+    font-weight: 400;}
+}
+.hotel-mobile-btn {
+  display: none;
+}

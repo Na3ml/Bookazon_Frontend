@@ -25,3 +25,8 @@
 .reservation-detail .date-picker .input {
   text-indent: -99em;
 }
+@media (max-width:830px) {
+  .reservation-detail{
+    padding: 150px 0 50px;
+  }
+}

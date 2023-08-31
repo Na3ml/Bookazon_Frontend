@@ -1,0 +1,29 @@
+/* .our-aminites .card-amenities p{
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .our-aminites .text-amenities{
+    font-size: 14px;
+    font-weight: 500;
+  }
+  @media(max-width:767px){
+    .banner-amenities{
+      background-image: none;
+    }
+    .our-aminites .card-amenities p{
+      font-size: 14px;
+    }
+    .our-aminites .card-amenities{
+      position: static !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: none ;
+      width: 80%;
+      margin:auto;
+    } 
+    .our-aminites  .text-amenities{
+      font-size: 10px !important;
+    }
+  } */
+  

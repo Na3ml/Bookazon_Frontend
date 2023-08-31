@@ -40,6 +40,7 @@
   padding: 20px;
   /* margin: 20px; */
   position: relative;
+  transition: all .2s ;
 }
 .reviews-card:hover {
   transform: scale(1.08);

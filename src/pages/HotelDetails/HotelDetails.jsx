@@ -6,15 +6,16 @@ import HotelDesc from "../../components/HotelDetailsComp/HotelDesc/HotelDesc";
 import Amenities from "../../components/HotelDetailsComp/amenities";
 import AllRooms from "../../components/HotelDetailsComp/all-rooms";
 import Review from "../../components/HotelDetailsComp/Review/review";
+import OurAmenities from "../../components/HotelDetailsComp/our-amenities";
 
 const HotelDetails = () => {
   return (
     <div> 
-      {/* <HotelNavigate /> */}
+      <HotelNavigate />
       <HotelDesc />
-      <Amenities image="../../assets/imgs/Rectangle 19406.png" title="Our Amenities" className="border-secondary position-absolute"/>
+      <Amenities />
       <AllRooms />
-      {/* <Location /> */}
+      <Location />
       <Review />
     </div>
   );
