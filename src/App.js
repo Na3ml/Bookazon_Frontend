@@ -27,8 +27,6 @@ const App = () => {
     <>
       <Toaster />
       <HashRouter>
-
-
         <AuthContextProvider>
           <Navigation />
           <Routes>
