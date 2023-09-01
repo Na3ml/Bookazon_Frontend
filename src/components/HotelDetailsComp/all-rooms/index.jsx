@@ -59,7 +59,13 @@ function AllRooms() {
   const [value1, setValue1] = useState("");
   const [value2, setValue2] = useState("");
   const [value3, setValue3] = useState("");
+  // const [info, setInfo] = useState({
+  //   checkin,
+  //   checkout,
+  //   guests,
+  // });
   console.log(value2);
+  
   const [checkin, setCheckin] = useState(moment(minDate).format("LL"));
   const [checkout, setCheckout] = useState(moment(checkoutStartDay).format("LL"));
   const [guests, setGuests] = useState(2);
@@ -78,16 +84,18 @@ function AllRooms() {
     setGuests(e.target.value);
   };
 
-  console.log({
+  // console.log();
+
+  // window.info = {
+  //   checkin,
+  //   checkout,
+  //   guests,
+  // };
+  sessionStorage.setItem("reservationInfo",JSON.stringify({
     checkin,
     checkout,
     guests,
-  });
-  window.info = {
-    checkin,
-    checkout,
-    guests,
-  };
+  } ));
   return (
     <Container className="all-rooms position-relative py-5" id="room">
       <div className="px-5">
@@ -146,7 +154,7 @@ function AllRooms() {
           value={value3}
             name="guests"
             onChange={(e)=>{handelGuests(e)}}
-            className="d-flex align-items-center w-100 guests fw-medium fs-20 px-2 py-1 border-black border"
+            className="d-flex align-items-center w-100 guests fw-medium fs-20 px-2 py-2 border-black border"
           >
             <option value="2">2</option>
             <option value="3">3</option>
@@ -162,7 +170,11 @@ function AllRooms() {
             {data.map((item, index) => {
               return (
                 <div key={index}>
-                  <RoomCard img={item} />
+                  <RoomCard img={item}  info={{
+    checkin,
+    checkout,
+    guests,
+  }}/>
                 </div>
               );
             })}

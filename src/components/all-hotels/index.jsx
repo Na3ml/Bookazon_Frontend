@@ -27,7 +27,7 @@ function AllHotels() {
         // always executed
       });
   }, []);
-  console.log(data);
+  // console.log(data);
   const options = {
     margin: 50,
     responsiveClass: true,
