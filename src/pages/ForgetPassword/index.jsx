@@ -34,7 +34,7 @@ const ForgetPassword = () => {
             }
       
         });
-        navigate("/verify-code")
+        navigate("/reset-password")
         }
       } catch (error) {
         toast.error(error.response.data.message,{duration:2000,className:"text-danger px-4 fw-bolder"});
