@@ -158,8 +158,10 @@ const ResetPassword = () => {
             ) : null}
           </Form.Group>
 
-          <div className=" text-center mt-5">           
-          <input 
+          <div className=" mt-3">
+          <Form.Group className="mt-3">
+          <Form.Label>Confirm Verify Code</Form.Label>          
+          <Form.Control 
           className="code"
           style={{letterSpacing: '4px' }}
            type="text" 
@@ -168,6 +170,8 @@ const ResetPassword = () => {
             onChange={formik.handleChange} 
            onBlur={formik.handleBlur} 
            min={0} max={9} />
+          </Form.Group>
+         
           </div>
  
         <Button
