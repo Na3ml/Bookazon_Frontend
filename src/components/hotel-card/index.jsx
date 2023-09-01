@@ -2,50 +2,65 @@ import React from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import person from "../../assets/imgs/person.png";
 import calender from "../../assets/imgs/calender.png";
-import {AiOutlineCalendar ,AiOutlineUser} from 'react-icons/ai'
+import { AiOutlineCalendar, AiOutlineUser } from "react-icons/ai";
 import { PiMapPin } from "react-icons/pi";
 import location from "../../assets/imgs/location.png";
 import egypt from "../../assets/imgs/egypt.png";
-import room from "../../assets/imgs/room1.png";
 import Rating from "../rating";
 import { Link } from "react-router-dom";
 
 function HotelCard(prop) {
   const hoteleDetail = prop.item;
+  const id = hoteleDetail.Unique_ID;
+
   return (
     <div className="ronded mb-4 position-relative ">
-      <img src={room} className="w-100  rounded-top" alt="image" />
+      <img
+        src={hoteleDetail.main_image}
+        className="w-100  rounded-top"
+        alt=""
+        height={"200px"}
+      />
       <div className="pt-4  bg-white position-relative">
         <img
           src={egypt}
-          alt="image"
+          alt=""
           className=" position-absolute rounded-circle  "
-          style={{ width: "100px", height: "100px", top: "-45px", left: "15px" }}
+          style={{
+            width: "100px",
+            height: "100px",
+            top: "-45px",
+            left: "15px",
+          }}
         />
         <div className="d-flex align-items-center mt-2">
           <div className="d-flex align-items-center text-reject">
-           <AiOutlineCalendar/>
+            <AiOutlineCalendar />
             <span className="ms-2 ">8 Dayes</span>
           </div>
           <div className="d-flex align-items-center ms-4 text-reject">
-             <AiOutlineUser/>
+            <AiOutlineUser />
             <span className="ms-1">1,556 Reviews</span>
           </div>
         </div>
         <div className="d-flex align-items-center justify-content-between py-2">
-          <p className="fw-bold fs-5 text-dark m-0">Switzerland</p>
+          <p className="fw-bold fs-5 text-dark m-0">
+            {hoteleDetail.property_name}
+          </p>
           <Rating />
         </div>
+
         <p className="d-flex align-items-center text-reject mb-2">
-          <PiMapPin/>
-          <span className=" ms-2">  Cairo</span>
+          <PiMapPin />
+          <span className=" ms-2">{hoteleDetail.country}</span>
         </p>
-    
+
         <p style={{ fontSize: "15px" }}>
-          Nam exercitationem commodi et ducimus quia in dolore animi sit
-          mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum
-          molestias mollitia et corporis praesentium a laudantium internos.
+          {hoteleDetail.description.length > 250
+            ? ` ${hoteleDetail.description.substring(0, 180)}...`
+            : hoteleDetail.description}
         </p>
+
         <div className=" mt-5 d-flex align-items-center">
           <Link
             to="/hotel-details"
@@ -57,10 +72,8 @@ function HotelCard(prop) {
             to="/hotel-details"
             className=" fw-medium text-secondary text-decoration-none d-flex align-items-center  "
           >
-            <span>
-              See More
-            </span>
-              <MdOutlineKeyboardArrowRight className="fs-5 mt-1" />
+            <span>See More</span>
+            <MdOutlineKeyboardArrowRight className="fs-5 mt-1" />
           </Link>
         </div>
       </div>
