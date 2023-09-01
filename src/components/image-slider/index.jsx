@@ -37,11 +37,10 @@ function ImageSlider() {
         <OwlCarousel {...options} className="owl-theme">
           {data.map((item, index) => {
             return (
-              <div className="item">
+              <div className="item" key={index}>
                 <img
                   src={item}
                   alt={item}
-                  key={index}
                   className="w-100 h-100"
                 />
               </div>

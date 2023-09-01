@@ -12,13 +12,20 @@ import tv from "../../assets/imgs/tv.png"
 import GenericButton from '../../components/generic-button'
 import OurAmenities from "../../components/HotelDetailsComp/our-amenities";
 import ImageSlider from "../../components/image-slider";
+import { useLocation } from 'react-router-dom'
+import Stpes from "../../components/stpes";
+import { BsDot } from "react-icons/bs";
+import {RiLockLine} from 'react-icons/ri'
 function RoomDetails() {
+  const location = useLocation()
+  const info = location.state
+  console.log(info);
   const data=[
     { title: "Comfortable bed", images: bed },
     { title: "Coffee/tea making facilities", images: coffee },
     { title: "Private bathroom ", images: bathroom },
     { title: "Room service", images: people },
-   { title: "Air conditioning and heating", images: airConditioner },
+    { title: "Air conditioning and heating", images: airConditioner },
     { title: "Seating area", images: chair },
     { title: "Television", images: tv },
     { title: "Iron and ironing board", images: board }
@@ -27,8 +34,16 @@ function RoomDetails() {
     <div>
       <Container>
         <Row className="mt-5 pt-5">
-          <Col sx={12} lg={6} >
+          <Col sx={12} lg={6}  >
             {/* <ReservationDetail /> */}
+         <div className='align-items-center justify-content-center flex-column d-md-flex d-none'>
+         <Stpes
+            circle2="border-gray-400"
+            icon1={<BsDot />}
+            icon2={<BsDot />}
+            secondLine="bg-gray-400 "
+          ></Stpes>
+         </div>
             <ImageSlider/>
           </Col>
           <Col sx={12} lg={6} className=" ps-lg-5 mb-5" >

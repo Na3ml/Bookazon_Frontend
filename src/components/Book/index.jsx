@@ -4,7 +4,7 @@ import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { BsCalendarWeek, BsPerson } from 'react-icons/bs'
 import { Stack , Avatar} from '@mui/material'
 import Axios from 'axios';
-
+import { toast } from "react-hot-toast";
 import './Search.css';
 
 
@@ -29,6 +29,20 @@ const index = () => {
     })
     .then(res=>{
       console.log(res.data)
+      toast.success(data.message, {
+        duration: 4000,
+        className: "text-secondary px-4 fw-bolder",
+        iconTheme: {
+          primary: "#ff9900",
+        },
+      });
+    }).catch((error)=>{
+        console.log(error.response.data.message)
+        toast.error(error.response.data.message, {
+          duration: 4000,
+          className: "text-danger px-4 fw-bolder",
+        });
+      
     })
   }
   function handel(e){

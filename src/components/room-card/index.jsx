@@ -6,6 +6,7 @@ import GenericButton from "../generic-button";
 import "./style.css"
 function RoomCard(props) {
   const [value, setValue] = useState(0);
+  // console.log(props.info);
   const img=props.img
   return (
     <div className="rounded position-relative  room-card mb-3" >
@@ -33,7 +34,7 @@ function RoomCard(props) {
       <p className="fs-26 text-primary me-1 m-0"> 45$</p>
       <span className="text-white">per/night</span>
      </div>
-     <GenericButton to="room-details" text="Book Now" className="text-white border-white border-1 border my-3 my-md-0"></GenericButton>
+     <GenericButton to="room-details" text="Book Now" className="text-white border-white border-1 border my-3 my-md-0" state={props.info}></GenericButton>
     </div>
 
 

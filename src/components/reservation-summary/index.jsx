@@ -3,9 +3,9 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import room from "../../assets/imgs/room1.png";
 import { Link } from "react-router-dom";
 function ReservationSummary() {
-  console.log(window.info);
-  const info=window.info
-  
+  // console.log(window.info);
+  // const info=window.info
+  const info = JSON.parse(sessionStorage.reservationInfo)
   var diff = new Date(info.checkin).getTime() - new Date(info.checkout).getTime(); 
   // var diff =checkin>checkout ?  new Date(info.checkin).getTime() - new Date(info.checkout).getTime()
   // :new Date(info.checkout).getTime() - new Date(info.checkin).getTime(); 
@@ -21,7 +21,7 @@ function ReservationSummary() {
       >
         Reservation Summary- <span className="text-secondary">#54215</span>
       </p>
-      <div className="d-flex mb-5 " style={{ height: "200px" }}>
+      {/* <div className="d-flex mb-5 " style={{ height: "200px" }}>
         <img src={room} className="rounded" alt="room-img" />
         <div className="p-4 w-100 pe-0">
           <p className=" me-5 fw-medium fs-20">Deluxe Room</p>
@@ -43,7 +43,7 @@ function ReservationSummary() {
           </div>
         </div>
     
-      </div>
+      </div> */}
       <div className="my-4">
             <div className="d-flex align-items-center justify-content-between">
                 <p className="text-gray-500 fs-20 fw-medium">Check in</p>
