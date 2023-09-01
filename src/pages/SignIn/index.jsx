@@ -53,31 +53,31 @@ const SignIn = () => {
 
   // console.log(data);
   // validate with Yup
-  const validationSchema = Yup.object({
-    email: Yup.string()
-      .required("Email is  Required")
-      .matches(
-        /^[A-Za-z0-9._%+-]+@(gmail|yahoo)\.com$/,
-        "Email is must end @ with gmail or yahoo '.com'"
-      ),
-    password: Yup.string()
-      .required("Password is Required")
-      .min(
-        8,
-        "Password: Minimum length of 8 characters, at least one uppercase letter, one lowercase letter, and one number"
-      )
-      .matches(
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/,
-        "Password: Minimum length of 8 characters, at least one uppercase letter, one lowercase letter, and one number"
-      ),
-  });
+  // const validationSchema = Yup.object({
+  //   email: Yup.string()
+  //     .required("Email is  Required")
+  //     .matches(
+  //       /^[A-Za-z0-9._%+-]+@(gmail|yahoo)\.com$/,
+  //       "Email is must end @ with gmail or yahoo '.com'"
+  //     ),
+  //   password: Yup.string()
+  //     .required("Password is Required")
+  //     .min(
+  //       8,
+  //       "Password: Minimum length of 8 characters, at least one uppercase letter, one lowercase letter, and one number"
+  //     )
+  //     .matches(
+  //       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/,
+  //       "Password: Minimum length of 8 characters, at least one uppercase letter, one lowercase letter, and one number"
+  //     ),
+  // });
 
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
-    validationSchema,
+    // validationSchema,
     onSubmit: handleLogin,
   });
 
