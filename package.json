@@ -2,6 +2,7 @@
   "name": "bookazon",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kareem-gafer-10.github.io/Bookazon_Frontend",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -13,6 +14,7 @@
     "axios": "^1.4.0",
     "bootstrap": "^5.3.1",
     "formik": "^2.4.3",
+    "gh-pages": "^6.0.0",
     "js-cookie": "^3.0.5",
     "jwt-decode": "^3.1.2",
     "moment": "^2.29.4",
@@ -35,6 +37,8 @@
     "yup": "^1.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
