@@ -19,9 +19,9 @@ function Footer() {
           <Col className="footer-left sx={12} lg={4}">
             <img src={logo} alt="logo" />
             <p className="mt-3">
-              Vel officiis dolor ea illo aut eligendi ullam
-              <br /> non laudantium magnam et recusandae <br />
-              molestiae sit iure unde aut voluptate quaerat.
+            Bookazon allows prospects to book, modify,
+              <br />and cancel reservations online on their own, <br />
+              without making a phone call.
             </p>
           </Col>
           <Col  sx={12} lg={4} className="d-flex align-items-center justify-md-content-around justify-content-between my-4 my-md-0">
