@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Bookazon_Frontend/static/css/main.7853b088.css",
-    "main.js": "/Bookazon_Frontend/static/js/main.f608de00.js",
+    "main.css": "/Bookazon_Frontend/static/css/main.da752fc8.css",
+    "main.js": "/Bookazon_Frontend/static/js/main.b628a4c8.js",
     "static/media/mohamed.jpg": "/Bookazon_Frontend/static/media/mohamed.8992645c434fc86da6c3.jpg",
     "static/media/home.png": "/Bookazon_Frontend/static/media/home.ee55ebbce9d2f296a1fa.png",
     "static/media/Rectangle 19394.png": "/Bookazon_Frontend/static/media/Rectangle 19394.9b527ca7cfc96cfbf834.png",
@@ -35,11 +35,11 @@
     "static/media/hotelmanger.jpg": "/Bookazon_Frontend/static/media/hotelmanger.4ea796eec42f384f3df8.jpg",
     "static/media/egypt.png": "/Bookazon_Frontend/static/media/egypt.7c22eade3bcb78e65867.png",
     "index.html": "/Bookazon_Frontend/index.html",
-    "main.7853b088.css.map": "/Bookazon_Frontend/static/css/main.7853b088.css.map",
-    "main.f608de00.js.map": "/Bookazon_Frontend/static/js/main.f608de00.js.map"
+    "main.da752fc8.css.map": "/Bookazon_Frontend/static/css/main.da752fc8.css.map",
+    "main.b628a4c8.js.map": "/Bookazon_Frontend/static/js/main.b628a4c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.7853b088.css",
-    "static/js/main.f608de00.js"
+    "static/css/main.da752fc8.css",
+    "static/js/main.b628a4c8.js"
   ]
 }
