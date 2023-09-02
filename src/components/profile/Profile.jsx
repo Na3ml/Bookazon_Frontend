@@ -6,7 +6,7 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { TbLogout } from "react-icons/tb";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { TbTicket } from "react-icons/tb";
-import ProfileImage from "../../assets/imgs/profile.jpeg";
+import PersonalImage from "../../assets/imgs/profile.jpeg";
 import Brush from "../../assets/imgs/brush-icon.png";
 import "./profile.css";
 import { useState, useContext, useEffect } from "react";
@@ -199,7 +199,28 @@ function Section({ isMenuOpend, setIsMenuOpend }) {
   //   e.preventDefault();
   //   setEdit((e) => !e);
   // }
- 
+  const [imageModal, setImageModal] = useState(false);
+  const [personalImage, setPersonalImage] = useState(PersonalImage);
+  const [selectedImage, setSelectedImage] = useState();
+
+  const imageChange = (e) => {
+    if (e.target.files && e.target.files.length > 0) {
+      let file=e.target.files[0]
+    
+      setSelectedImage(file)
+  
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (reader.readyState === 2) {
+          let updateImage = reader.result 
+          setPersonalImage(updateImage);
+        }
+      };
+
+      reader.readAsDataURL(e.target.files[0]);
+    }
+    setImageModal(true);
+  }
   return (
     <div className={isMenuOpend ? " section section-close" : "section"}>
       {!isMenuOpend && (
@@ -208,11 +229,20 @@ function Section({ isMenuOpend, setIsMenuOpend }) {
         </p>
       )}
       <h4>Edit Profile</h4>
-      <div className="image">
-        <img src={ProfileImage} alt="profile" className="rounded-circle" />
-        <a href="./">
+      <div className="image position-relative">
+        <img src={personalImage} alt="profile" className="rounded-circle" />
+        {/* <a href="./">
           <img src={Brush} className="profile-edit-icon" alt="brush-icon" />
-        </a>
+        </a> */}
+        <label htmlFor="contained-button-file">
+        <input
+          accept="image/*"
+          type="file"
+           onChange={imageChange}
+         className="uploedImage position-absolute bottom-0  "
+        />
+         <img src={Brush} className="profile-edit-icon" alt="brush-icon" />
+      </label>
       </div>
       <form className=" mt-5 ">
         <div className="form-group name-form">

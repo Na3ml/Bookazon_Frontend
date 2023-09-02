@@ -15,18 +15,12 @@ import DropdownCheckboxes from "../../dropdown-checkbox";
 import DatePicker from "../../customeDatePicker";
 function AllRooms() {
   const data = [
-    room1,
-    room2,
-    room3,
-    room1,
-    room2,
-    room3,
-    room1,
-    room2,
-    room3,
-    room1,
-    room2,
-    room3,
+    {id:1,image:room1,city:"Cairo"},
+    {id:1,image:room2,city:"Cairo"},
+    {id:1,image:room3,city:"Cairo"},
+    {id:1,image:room1,city:"Cairo"},
+    {id:1,image:room3,city:"Cairo"},
+    {id:1,image:room2,city:"Cairo"},
   ];
   const options = {
     margin: 50,
@@ -84,7 +78,12 @@ function AllRooms() {
     setGuests(e.target.value);
   };
 
-  // console.log();
+console.log({
+  checkin,
+  checkout,
+  guests
+
+});
 
   // window.info = {
   //   checkin,
@@ -170,10 +169,12 @@ function AllRooms() {
             {data.map((item, index) => {
               return (
                 <div key={index}>
-                  <RoomCard img={item}  info={{
+                  <RoomCard img={item.image}  info={{
     checkin,
     checkout,
-    guests,
+    guests
+    ,id:item.id,
+    city:item.city
   }}/>
                 </div>
               );
