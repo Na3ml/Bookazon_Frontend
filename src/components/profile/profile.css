@@ -107,6 +107,7 @@
   height: 30px;
   bottom: 0;
   left: 52%;
+  cursor: pointer !important;
 }
 .profile .section .image img {
   width: 80px;
@@ -145,6 +146,11 @@
  
 .profile input[type="number"] {
   -moz-appearance: textfield;
+}
+.uploedImage{
+  z-index: 100;
+  right:-77px;  
+  opacity: 0;
 }
 @media (767px<width <= 992px) {
   .profile .sidebar {
