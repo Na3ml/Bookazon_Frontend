@@ -100,7 +100,7 @@
 .login .code {
   border-radius: 10px;
   border: 1px solid #7E57C2 !important;
-  width: 100px;
+  width: 100%;
   height: 40px;
   text-align: center;
   margin: 0 3px;
