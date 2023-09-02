@@ -92,6 +92,9 @@
     background-color: rgba(126, 87, 194, 0.038);
     border: none;
 }
+.select option{
+ color: black;
+}
 @media only screen and (max-width: 540px) {
     .headerSearch {
         width: 100%;
