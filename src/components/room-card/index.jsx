@@ -12,17 +12,17 @@ import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
 function RoomCard(props) {
 const [value, setValue] = useState(0);
-  console.log(props.info);
-  const img=props.img
+  // console.log(props.info);
+  const room=props.item
   return (
     <div className="rounded position-relative  room-card mb-3" >
-      <img src={img} className="rounded-top w-100 h-100" alt="room" />
+      <img src={room.featured_photo} className="rounded-top w-100 h-100" alt="room" />
       <div
         style={{ background: "rgba(0, 0, 0, 0.64)" }}
         className=" position-absolute bottom-0 start-0 w-100 px-3 py-3"
       >
         <div className="d-flex align-items-center justify-content-between flex-md-row flex-column mb-1">
-          <p className="fw-normal text-white fs-20 mb-0">Deluxe Room</p>
+          <p className="fw-normal text-white fs-20 mb-0">{room.type} Room</p>
           <StarsRating
         value={value}
         onChange={(value) => {
@@ -37,12 +37,15 @@ const [value, setValue] = useState(0);
         </p>
     <div className="mt-1 d-flex align-items-center justify-content-between flex-md-row flex-column ">
     <div className="d-flex align-items-center ">
-      <p className="fs-26 text-primary me-1 m-0"> 45$</p>
+      <p className="fs-26 text-primary me-1 m-0"> {room.price}$</p>
       <span className="text-white">per/night</span>
      </div>
      
    
-    <GenericButton to="room-details" text="Book Now" className="text-white border-white border-1 border my-3 my-md-0" state={props.info}></GenericButton>
+    <GenericButton to="room-details" state={{images:room.images,info:props.info}}
+     text="Book Now"
+      className="text-white border-white border-1 border my-3 my-md-0" 
+      ></GenericButton>
     </div>
 
 

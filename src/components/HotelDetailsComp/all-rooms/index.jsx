@@ -13,7 +13,11 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./style.css";
 import DropdownCheckboxes from "../../dropdown-checkbox";
 import DatePicker from "../../customeDatePicker";
+import { useLocation } from 'react-router-dom'
 function AllRooms() {
+  const location = useLocation()
+  const rooms = location.state
+console.log(rooms);
   const data = [
     {id:1,image:room1,city:"Cairo"},
     {id:1,image:room2,city:"Cairo"},
@@ -166,10 +170,10 @@ console.log({
 
         {data.length && (
           <OwlCarousel {...options} className="owl-theme">
-            {data.map((item, index) => {
+            {rooms.map((item, index) => {
               return (
                 <div key={index}>
-                  <RoomCard img={item.image}  info={{
+                  <RoomCard item={item}   info={{
     checkin,
     checkout,
     guests

@@ -33,7 +33,7 @@ function HotelCard(prop) {
             left: "15px",
           }}
         />
-        <div className="d-flex align-items-center mt-2">
+        <div className="d-flex align-items-center mt-2" >
           <div className="d-flex align-items-center text-reject">
             <AiOutlineCalendar />
             <span className="ms-2 ">8 Dayes</span>
@@ -43,7 +43,7 @@ function HotelCard(prop) {
             <span className="ms-1">1,556 Reviews</span>
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-between py-2">
+        <div className="d-flex align-items-md-center justify-content-between  py-2 flex-column flex-md-row">
           <p className="fw-bold fs-5 text-dark m-0">
             {hoteleDetail.property_name}
           </p>
@@ -54,16 +54,19 @@ function HotelCard(prop) {
           <PiMapPin />
           <span className=" ms-2">{hoteleDetail.country}</span>
         </p>
-
         <p style={{ fontSize: "15px" }}>
-          {hoteleDetail.description.length > 250
-            ? ` ${hoteleDetail.description.substring(0, 180)}...`
-            : hoteleDetail.description}
+          {hoteleDetail.description.substring(0, 120)}...
         </p>
+        {/* <p style={{ fontSize: "15px" }}>
+          {hoteleDetail.description.length > 250
+            ? ` ${hoteleDetail.description.substring(0, 150)}...`
+            : hoteleDetail.description}
+        </p> */}
 
         <div className=" mt-5 d-flex align-items-center">
           <Link
             to="/hotel-details"
+            state={hoteleDetail.rooms}
             className="bg-info text-white text-decoration-none rounded px-4 py-2 me-3 d-block"
           >
             Book Now
