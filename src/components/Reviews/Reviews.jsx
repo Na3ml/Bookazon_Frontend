@@ -1,6 +1,5 @@
 import React from "react";
 import "./Reviews.css";
-import HandImg from "../../assets/imgs/hand-iamge.png";
 import { Container } from "react-bootstrap";
 import ReviewCards from "./ReviewCards";
 

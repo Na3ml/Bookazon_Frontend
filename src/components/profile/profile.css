@@ -92,11 +92,12 @@
 .profile .section .image {
   display: flex;
   justify-content: center;
-  position: relative;
+  /* position: relative; */
   margin: 8px 0 34px;
+
 }
 .profile .section .image img:not(.profile-edit-icon) {
-  width: 97px;
+  /* width: 97px; */
 }
 .profile .section .image .profile-edit-icon {
   position: absolute;
@@ -110,7 +111,9 @@
   cursor: pointer !important;
 }
 .profile .section .image img {
-  width: 80px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 .profile .section .name-form {
   gap: 33px;
