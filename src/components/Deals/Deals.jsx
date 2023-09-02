@@ -17,13 +17,13 @@ function Deals() {
             We Always Have Best
             <br /> <span className="text-primary">DEALS</span>{" "}
           </h1>
-          <DealsCopm title="Deluxe Room" price="26" image={img3} />
-          <DealsCopm title="Deluxe Room" price="26" image={img4} />
+          <DealsCopm title="Deluxe Room" price="650" image={img3} />
+          <DealsCopm title="Suite" price="375" image={img4} />
         </div>
         </Col>
         <Col className="deals-right" sx={12} md={12} lg={6}>
-          <DealsCopm title="Deluxe Room" price="26" image={img1} />
-          <DealsCopm title="Deluxe Room" price="26" image={img2} />
+          <DealsCopm title="Double Room" price="400" image={img1} />
+          <DealsCopm title="Triple Room" price="500" image={img2} />
         </Col>
       </Row>
     </Container>
