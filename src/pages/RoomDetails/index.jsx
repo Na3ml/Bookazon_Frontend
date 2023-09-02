@@ -25,7 +25,7 @@ function RoomDetails() {
   const location = useLocation()
   const info = location.state.info
   const images = location.state.images
-  
+  const price =location.state.price
   const jwt_token = Cookies.get("jwt_token");
   console.log({total_guests:info.guests,
     property_id:info.id,
@@ -104,7 +104,9 @@ function RoomDetails() {
           <OurAmenities  amenities={data} title="Room Amenities" className=" mx-lg-5 px-3"/>
           <div className='d-flex align-items-center ms-lg-5 ms-3  mt-3'>
         <Button onClick={handleClick} className="bg-secondary border-secondary">
-        <GenericButton to="/payment" className="bg-secondary  text-white " text="Book Now"/>
+        <GenericButton to="/payment"
+         state={price}
+         className="bg-secondary text-white " text="Book Now"/>
         </Button>
          {/* <Button onClick={handleClick}>
                  test

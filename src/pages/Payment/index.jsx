@@ -7,11 +7,12 @@ import ReservationSummary from "../../components/reservation-summary";
 import { RiLockLine } from "react-icons/ri";
 import ModalComponent from "../../components/popup";
 import PaymentInfo from "../../components/PaymentInfo/PaymentInfo";
+
 function Payment() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
- 
+
  
   return (
     <Container  className="pt-md-5 pb-5  mt-md-5 px-5">

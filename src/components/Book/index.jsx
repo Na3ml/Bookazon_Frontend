@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { BsCalendarWeek, BsPerson } from 'react-icons/bs'
 import { Stack , Avatar} from '@mui/material'
+import GenericButton from "../generic-button"
 import Axios from 'axios';
+import { Link } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import './Search.css';
 
@@ -99,9 +101,20 @@ const index = () => {
                       </select>
                   </div>
                 </div>
+                {/* <button  type='submit'  className="btn-find btn text-center text-white"> */}
+                {/* <button  type='submit'  className="text-white border-primary bg-primary">
+                  <GenericButtonutton to="/search-result" 
+        text="Find Now"
+      className="text-white my-md-0" 
+      ></GenericButtonutton>
+                </button> */}
+                <Link to="/search-result"  >
                 <button  type='submit'  className="btn-find btn text-center text-white">
-                  Find Now
+                Find Now
+
                 </button>
+                </Link>
+     
               </form>
               
             </div>
