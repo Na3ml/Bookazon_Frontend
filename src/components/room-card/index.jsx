@@ -42,7 +42,7 @@ const [value, setValue] = useState(0);
      </div>
      
    
-    <GenericButton to="room-details" state={{images:room.images,info:props.info}}
+    <GenericButton to="room-details" state={{images:room.images,info:props.info,price:room.price}}
      text="Book Now"
       className="text-white border-white border-1 border my-3 my-md-0" 
       ></GenericButton>

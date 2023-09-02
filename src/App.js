@@ -21,6 +21,7 @@ import RoomDetails from "./pages/RoomDetails";
 import Details from "./pages/Details";
 import Payment from "./pages/Payment";
 import Confirmation from "./pages/Confirmation";
+import SearchResult from "./pages/SearchResult";
 
 const App = () => {
   return (
@@ -45,25 +46,14 @@ const App = () => {
               }
             />
             {/* <Route path="/payment" element={<ProtectedRoute><PaymentDetails  /></ProtectedRoute>} /> */}
-            <Route
-              path="/hotel-details"
-              element={
-                <ProtectedRoute>
-                  <HotelDetails />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/hotel-details/room-details"
-              element={
-                <ProtectedRoute>
-                  <RoomDetails />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="/details" element={<Details />} />
-            <Route path="/payment" element={<Payment />} />
-            <Route path="/confirmation" element={<Confirmation />} />
+
+            <Route path="/hotel-details" element={<ProtectedRoute><HotelDetails /></ProtectedRoute>} />
+            <Route path="/hotel-details/room-details" element={<ProtectedRoute><RoomDetails/></ProtectedRoute>} />
+            <Route path="/details" element={<Details/>} />
+            <Route path="/payment" element={<Payment/>} />
+            <Route path="/confirmation" element={<Confirmation/>} />
+            <Route path="search-result" element={<SearchResult/>} />
+
           </Routes>
           <Footer />
         </AuthContextProvider>

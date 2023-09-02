@@ -2,6 +2,7 @@ import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import room from "../../assets/imgs/room1.png";
 import { Link } from "react-router-dom";
+import { useLocation } from 'react-router-dom'
 function ReservationSummary() {
   // console.log(window.info);
   // const info=window.info
@@ -9,9 +10,11 @@ function ReservationSummary() {
   var diff = new Date(info.checkin).getTime() - new Date(info.checkout).getTime(); 
   // var diff =checkin>checkout ?  new Date(info.checkin).getTime() - new Date(info.checkout).getTime()
   // :new Date(info.checkout).getTime() - new Date(info.checkin).getTime(); 
-   
+  const location = useLocation()
+  const priceofroom =location.state
+  console.log(priceofroom);
   var days = Math.floor((diff>0 ? diff :diff* -1) / (1000 * 60 * 60 * 24));
-   const price=days * 50
+   const price=days * priceofroom
   console.log(days);
   return (
     <div className="mt-5 pt-5 ">
