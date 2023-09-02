@@ -13,11 +13,13 @@ function AllHotels() {
   useEffect(() => {
     // fetch data
     axios
-      .get("https://bookazon.tadafoq.com/api/properties")
+      // .get("https://bookazon.tadafoq.com/api/properties")
+    .get("https://ayarabia.github.io/jsonData/properties.json")
       .then(function (response) {
         // handle success
         setData(response.data.data);
-        //console.log(response.data);
+        // localStorage.setItem("properties", JSON.string(data))
+       // console.log(response.data);
       })
       .catch(function (error) {
         // handle error
@@ -62,7 +64,7 @@ function AllHotels() {
         { data.map((item ,index) => {
           return (
             <div key={index} className="px-4">
-                <HotelCard item={item} />
+                <HotelCard item={item}  />
             </div>
           );
         })}

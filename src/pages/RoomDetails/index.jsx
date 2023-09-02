@@ -23,8 +23,8 @@ import Cookies from "js-cookie";
 
 function RoomDetails() {
   const location = useLocation()
-  const info = location.state
- 
+  const info = location.state.info
+  const images = location.state.images
   
   const jwt_token = Cookies.get("jwt_token");
   console.log({total_guests:info.guests,
@@ -98,7 +98,7 @@ function RoomDetails() {
             secondLine="bg-gray-400 "
           ></Stpes>
          </div>
-            <ImageSlider/>
+            <ImageSlider  images={images}/>
           </Col>
           <Col sx={12} lg={6} className=" ps-lg-5 mb-5" >
           <OurAmenities  amenities={data} title="Room Amenities" className=" mx-lg-5 px-3"/>

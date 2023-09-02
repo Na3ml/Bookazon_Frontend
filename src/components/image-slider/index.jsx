@@ -6,8 +6,9 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./style.css";
-function ImageSlider() {
-  const data = [room1, room2, room3, room1];
+function ImageSlider(props) {
+   const customedata = [room1, room2, room3, room1];
+  const data =props.images
   const options = {
     margin: 50,
     responsiveClass: true,
@@ -33,9 +34,23 @@ function ImageSlider() {
   };
   return (
     <div className=" mt-5 image-slider px-5">
-      {data.length && (
+      {data.length >0? (
         <OwlCarousel {...options} className="owl-theme">
           {data.map((item, index) => {
+            return (
+              <div className="item" key={index}>
+                <img
+                  src={item}
+                  alt={item}
+                  className="w-100 h-100"
+                />
+              </div>
+            );
+          })}
+        </OwlCarousel>
+      ):(
+        <OwlCarousel {...options} className="owl-theme">
+          {customedata.map((item, index) => {
             return (
               <div className="item" key={index}>
                 <img
